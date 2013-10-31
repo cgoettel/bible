@@ -1,0 +1,37 @@
+DEFINITE:
+fix work machine's tex engine
+Balance column text: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+Numbers 12:6-- is poetry. Need indentations from BHS.
+list of appendices
+verses in header
+    ensure correct verse being displayed
+footnotes to have verse number associated with them
+preface:
+    abbreviations (e.g., BHS) (use glossaries package?)
+center enumi
+    This article explains how to do it. Unfortunately, we will need the newest version of TeX-Live (which Linux Mint has, but it also isn't typesetting bible.tex), so put this off. http://tex.stackexchange.com/questions/33144/centre-roman-numbers-in-enumerate-environment
+change font: http://en.wikipedia.org/wiki/Hoefler_Text
+
+UNSURE:
+add thumb tabs (fancyhdr can do this)
+change enumi count but display correct number (for \bref{})
+    not sure if we're going to use hyperref
+
+CHANGELOG (in order):
+*general format/layout
+*macros? environments?
+*change name of TOC (decided against this)
+*two column TOC
+*dots in TOC (no because Hebrew names are better displayed without it)
+*clear up Makefile (add `rm -f` statements, etc)
+*add Hebrew name to TOC
+*add Hebrew book name to even page header
+*write preface
+*redefine subsubsection* so that the preface looks better
+*add appendix
+*add chapter summaries
+*syriac
+*greek
+*hieroglyphs
+*fix chapter:verse header so that only chapter:verse is displayed (e.g., 1 Kings 10:1 showing as Kings 10:1 instead of 10:1)
+*fix syriac font

@@ -1,0 +1,257 @@
+% xelatex (use Makefile)
+\documentclass[twoside,twocolumn,8pt]{extbook} % extbook allows for smaller font sizes.
+
+% Packages that don't necessary belong elsewhere.
+\usepackage{mathtools}
+
+% Page layout options
+\usepackage[paperwidth=4.6in, paperheight=6in, margin=1cm]{geometry}
+\setlength{\topmargin}{-0.7in} % Relative to 1in default
+\setlength{\headsep}{0.1cm} % Distance from header to top of text
+
+\usepackage{multicol} % For copyright page. Possibly for poetry.
+
+% Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
+% 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
+% Never use 10000.
+\sloppy\hyphenpenalty=4000
+
+% %%%%%%%%%%%%%%%%%%
+%     APPENDICES
+% %%%%%%%%%%%%%%%%%%
+\usepackage[toc,page]{appendix}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CHAPTER and SECTION
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[explicit]{titlesec}
+
+% Options for reconfiguring book (\chapter{}) headings.
+\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{\textsc{#1}}[]
+
+% Spacing around book (\chapter{}) headers.
+\titlespacing*{\chapter}{0pt}{0pt}{7ex}
+
+% Options for reconfiguring chapter (\section{}) headings.
+\titleformat{\section}{\centering\MakeUppercase}{}{1em}{\textsc{#1}}
+
+% Options for reconfiguring preface (\subsection*{}) headings.
+\titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
+
+% Shorter way of declaring a chapter with both a Hebrew and an English name.
+\newcommand\chap[2]{%
+    \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
+    \renewcommand\chaptername{#2}}
+
+% More changes happen within the actual document (below). This is because the Appendix needs different styles.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%
+%     CHAPTER HEADINGS
+% %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\heading[1]{%
+    \vspace{-0.5em}%
+    {\small\emph{#1.}}%
+    \vspace{0.5em}%
+}
+
+% %%%%%%%%%%%%%%%%%
+%     ENUMERATE
+% %%%%%%%%%%%%%%%%%
+% NOTE: Do not \usepackage{paralist} because it conflicts with options set for enumitem.
+
+% Changes spacing inside enumerate environment. TODO: Change to center.
+\usepackage{enumitem}
+\setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, labelsep=0.7em, nolistsep}
+% labelsep   = distance from label to beginning of text (default 0.5em)
+% itemindent = distance from left margin to start of label
+
+% Changes enumerate label to be a number without a period following it.
+\renewcommand\labelenumi{\arabic{enumi}}
+
+% %%%%%%%%%%%%%%%%%
+%     FOOTNOTES
+% %%%%%%%%%%%%%%%%%
+% Resets footnote numbering for each page (perpage) and adds the symbol option to number footnotes according to verse.
+% Allows footnotes to be separated by a comma (multiple).
+% Hang and flushmargin remove the indentation.
+\usepackage[symbol,perpage,multiple,hang,flushmargin]{footmisc}
+
+% Makes footnotes lowercase, italic alpha instead of Arabic numerals.
+\renewcommand{\thefootnote}{\textit\alph{footnote}}
+
+% Force footnotes to stay on the same page and not bleed over. Long footnotes should be placed in the appendix.
+\interfootnotelinepenalty=10000
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+%     HEADER and FOOTER
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+% Header options for dictionary style headers.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{fix2col} % Fixes potential problems with marks on two column pages.
+\usepackage{substr}
+
+% Extracts book name and chapters from rightmark and leftmark.
+\newcommand\bookname{\BeforeSubString{^}{\leftmark}}
+\newcommand\rightchap{\BehindSubString{^}{\rightmark}}
+\newcommand\leftchap{\BehindSubString{^}{\leftmark}}
+\fancyhead[LE]{~\rightchap} % The "~" is for cushioning.
+\fancyhead[RO]{\leftchap~}
+\fancyhead[LO,RE]{~\thepage~}
+\fancyhead[CE]{\bookname} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
+\fancyhead[CO]{\chaptername} % Puts Hebrew book name in center header on odd pages.
+\cfoot{} % Removes page number from center foot on \chapter{} pages.
+
+% %%%%%%%%%%%%%%%%%%%%%%%
+%     FOREIGN SCRIPTS
+% %%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xltxtra}
+
+% Egyptian hieroglyphs
+\usepackage{graphicx}
+
+% Greek
+\newfontfamily{\sblg}[Script=Greek,Scale=1.2]{SBL Greek}
+\newcommand\Greek[1]{{\sblg #1}}
+
+% Hebrew
+\newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
+\newcommand\Hebrew[1]{{\sblh #1}}
+
+% Phoenician
+\usepackage{phoenician}
+
+% Syriac
+\newfontfamily{\sbls}[Script=Syriac]{Estrangelo (V1.1)}
+\newcommand\Syriac[1]{{\large\sbls #1}}
+
+% %%%%%%%%%%%%%%%
+%     SYMBOLS
+% %%%%%%%%%%%%%%%
+% What are these for?
+\usepackage{marvosym}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+%     TABLE OF CONTENTS
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[toc]{multitoc} % Two column TOC.
+\setcounter{tocdepth}{0} % So TOC only displays chapters (books).
+\def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     VERSES and REFERENCES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Patch enumi counter to always start with 1.
+\usepackage{etoolbox}
+\newcounter{myc}[enumi]
+\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
+
+\renewcommand\verse[1]{%
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
+    \label{#1}% Reference name.
+    \item% Print verse number.
+}
+
+% POETRY
+% Note: Don't use smaller text because then the (entire) book of Isaiah will be tiny.
+\newcommand\pverse[2]{%
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark
+    \label{#1}% Reference name.
+    \item {\small #2}% Print verse number and contents.
+}
+
+% For referencing a verse.
+\newcommand\vref[1]{\hyperref[#1]{#1}}
+
+% %%%%%%%%%%%%
+%     YEAR
+% %%%%%%%%%%%%
+\usepackage{datetime}
+\newdateformat{justtheyear}{\THEYEAR}
+
+% %%%%%%%%%%%%%%%%
+%     HYPERREF
+% %%%%%%%%%%%%%%%%
+% hyperfootnotes must be turned to 'false' for commas to appear in instances of multiple footnotes.
+% \usepackage[xetex, hyperfootnotes=false, colorlinks=false, pdfborder={0 0 0}, pdftitle={The Holy Bible}, pdfauthor={Colby Goettel}, pdfproducer={pdfLaTeX}, pagebackref, pdfpagemode=None]{hyperref}
+
+% %%%%%%%%%%%%%%%%
+%     DOCUMENT
+% %%%%%%%%%%%%%%%%
+\begin{document}
+    \frontmatter
+    \input{half-title}
+    \clearpage\thispagestyle{empty}
+    \input{title-page}
+    \input{dedication}
+    \clearpage\thispagestyle{empty}
+    \input{preface}
+    {\pagestyle{empty}\cleardoublepage}
+    \tableofcontents % Should there be a blank page before this?
+    \clearpage\thispagestyle{empty}
+    \mainmatter
+    % openrightfalse forces TeX to not generate a blank page between chapters.
+    \makeatletter\@openrightfalse
+    \chap{Genesis}{\Hebrew{בראשית}}
+    \input{Genesis/1}
+    % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
+    \input{Genesis/17}
+    \input{Genesis/22}
+    \input{Genesis/31}
+    % Whenever you get to the coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as \emph{coat of many colors}. Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \emph{hapax legomenon}.
+    % \input{Genesis/49}
+    \chap{Exodus}{\Hebrew{שמות}}
+    \input{Exodus/19}
+    \input{Exodus/20}
+    \input{Exodus/21}
+    \input{Exodus/23}
+    \input{Exodus/24}
+    \chap{Numbers}{\Hebrew{במדבר}}
+    \input{Numbers/5}
+    \input{Numbers/6}
+    \input{Numbers/10}
+    \input{Numbers/11}
+    \input{Numbers/12}
+    \chap{Deuteronomy}{\Hebrew{דברים}}
+    \input{Deuteronomy/5}
+    \chap{1 Kings}{\Hebrew{מלכים א}}
+    \input{1Kings/17}
+    \chap{Ezra}{\Hebrew{עזרא}}
+    \input{Ezra/4}
+    \input{Ezra/5}
+    \input{Ezra/6}
+    \input{Ezra/7}
+    % psalm 2: Kingship/temple kind of psalm
+    % Psalm 15:4:
+    % footnote c, Greek "to his neighbor, fellow companion"
+    % footnote d, Perhaps you could insert the writing "and does not turn away from (that) evil \Hebrew{בְּרָע}" [in other words, what was already put in explanatory brackets]
+    % \input{Psalms/110} % Add reference to Appendix on psalm 110
+    \chap{Isaiah}{\Hebrew{ישעה}}
+    \heading{See Appendix~\ref{app:isaiah} for more information on the book of Isaiah}
+    \input{Isaiah/1}
+    \input{Isaiah/2}
+    \chap{Daniel}{\Hebrew{דניאל}}
+    \input{Daniel/2}
+    \input{Daniel/3}
+    % In Malachi, add a reference to Appendix on yada for whatever verse talks about marriage
+    \appendix
+    % Redefine \chapter for use in \appendix.
+    \titleformat{\chapter}[display]{\centering\normalfont\LARGE}{}{0ex}{\textsc{Appendix \thechapter: #1}}[]
+    % Change spacing around \chapter in \appendix.
+    \titlespacing*{\chapter}{0em}{-5ex}{5ex}
+    % Redefine \section so that it is used instead of \subsection in appendices.
+    \titlespacing*{\section}{0em}{0.65em}{0.65em}
+    \titleformat{\section}{\large\bfseries}{}{1em}{#1}
+    \titlespacing*{\subsection}{0em}{0.65em}{0.65em}
+    \titleformat{\subsection}{\bfseries}{}{1.25em}{#1} % Set to 1.25em so \section and \subsection are vertically aligned.
+    ~\clearpage\thispagestyle{empty}
+    ~\clearpage\thispagestyle{empty}
+    \onecolumn
+    \input{Appendix/psalm-110}
+    \input{Appendix/isaiah}
+    \input{Appendix/aramaic-in-the-ot}
+    \input{Appendix/covenants-in-antiquity}
+    \input{Appendix/tetragrammaton}
+    \@openrighttrue\makeatother
+    \twocolumn
+\end{document}
