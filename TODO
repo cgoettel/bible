@@ -11,6 +11,8 @@ preface:
 center enumi
     This article explains how to do it. Unfortunately, we will need the newest version of TeX-Live (which Linux Mint has, but it also isn't typesetting bible.tex), so put this off. http://tex.stackexchange.com/questions/33144/centre-roman-numbers-in-enumerate-environment
 change font: http://en.wikipedia.org/wiki/Hoefler_Text
+poetry:
+    http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/verse/verse.pdf
 
 UNSURE:
 add thumb tabs (fancyhdr can do this)
