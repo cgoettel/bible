@@ -1,5 +1,5 @@
 DEFINITE:
-fix work machine's tex engine
+check if marvosym needed
 Balance column text: http://cs.brown.edu/system/software/latex/doc/balance.pdf
 Numbers 12:6-- is poetry. Need indentations from BHS.
 list of appendices
@@ -37,3 +37,4 @@ CHANGELOG (in order):
 *hieroglyphs
 *fix chapter:verse header so that only chapter:verse is displayed (e.g., 1 Kings 10:1 showing as Kings 10:1 instead of 10:1)
 *fix syriac font
+*fix work machine's tex engine (had \MakeUppercase in the chapter definition even though there was also \textsc{#1} which makes no sense. Home computer did just fine, work freaked out. Good to know.)
