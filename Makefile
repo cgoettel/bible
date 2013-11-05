@@ -7,4 +7,4 @@ bible.pdf: $(DEPENDENCIES)
 	$(TYPESETTER) $(FLAGS) bible.tex
 	$(TYPESETTER) bible.tex
 	$(TYPESETTER) bible.tex
-	# $(TYPESETTER) bible.tex
+	$(TYPESETTER) bible.tex
