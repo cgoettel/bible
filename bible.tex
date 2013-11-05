@@ -27,13 +27,13 @@
 \usepackage[explicit]{titlesec}
 
 % Options for reconfiguring book (\chapter{}) headings.
-\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{\textsc{#1}}[]
+\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{#1}
 
 % Spacing around book (\chapter{}) headers.
 \titlespacing*{\chapter}{0pt}{0pt}{7ex}
 
 % Options for reconfiguring chapter (\section{}) headings.
-\titleformat{\section}{\centering}{}{1em}{\textsc{#1}}
+\titleformat{\section}{\centering}{}{1em}{#1}
 
 % Options for reconfiguring preface (\subsection*{}) headings.
 \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
@@ -68,6 +68,34 @@
 % Changes enumerate label to be a number without a period following it.
 \renewcommand\labelenumi{\arabic{enumi}}
 
+% %%%%%%%%%%%%%
+%     FONTS
+% %%%%%%%%%%%%%
+\usepackage{xltxtra}
+
+% Egyptian hieroglyphs
+\usepackage{graphicx}
+
+% Greek
+\newfontfamily{\sblg}[Script=Greek,Scale=1.2]{SBL Greek}
+\newcommand\Greek[1]{{\sblg #1}}
+
+% Hebrew
+\newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
+\newcommand\Hebrew[1]{{\sblh #1}}
+
+% Hoefler text
+% \usepackage{fontspec}
+% \setromanfont[Mapping=tex-text]{Hoefler Text}
+% \fontspec[Mapping=tex-text, Ligatures={Common, Rare, Historic}]{Hoefler Text}
+
+% Phoenician
+\usepackage{phoenician}
+
+% Syriac
+\newfontfamily{\sbls}[Script=Syriac]{Estrangelo (V1.1)}
+\newcommand\Syriac[1]{{\large\sbls #1}}
+
 % %%%%%%%%%%%%%%%%%
 %     FOOTNOTES
 % %%%%%%%%%%%%%%%%%
@@ -101,29 +129,6 @@
 \fancyhead[CE]{\bookname} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
 \fancyhead[CO]{\chaptername} % Puts Hebrew book name in center header on odd pages.
 \cfoot{} % Removes page number from center foot on \chapter{} pages.
-
-% %%%%%%%%%%%%%%%%%%%%%%%
-%     FOREIGN SCRIPTS
-% %%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{xltxtra}
-
-% Egyptian hieroglyphs
-\usepackage{graphicx}
-
-% Greek
-\newfontfamily{\sblg}[Script=Greek,Scale=1.2]{SBL Greek}
-\newcommand\Greek[1]{{\sblg #1}}
-
-% Hebrew
-\newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
-\newcommand\Hebrew[1]{{\sblh #1}}
-
-% Phoenician
-\usepackage{phoenician}
-
-% Syriac
-\newfontfamily{\sbls}[Script=Syriac]{Estrangelo (V1.1)}
-\newcommand\Syriac[1]{{\large\sbls #1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     TABLE OF CONTENTS
@@ -262,7 +267,7 @@
     \input{Malachi/4}
     \appendix
     % Redefine \chapter for use in \appendix.
-    \titleformat{\chapter}[display]{\centering\normalfont\LARGE}{}{0ex}{\textsc{Appendix \thechapter: #1}}[]
+    \titleformat{\chapter}[display]{\centering\normalfont\LARGE}{}{0ex}{Appendix \thechapter: #1}
     % Change spacing around \chapter in \appendix.
     \titlespacing*{\chapter}{0em}{-5ex}{5ex}
     % Redefine \section so that it is used instead of \subsection in appendices.
