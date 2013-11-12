@@ -2,7 +2,8 @@
 \documentclass[twoside,twocolumn,9pt]{extbook} % extbook allows for smaller font sizes.
 
 % Packages that don't necessary belong elsewhere.
-\usepackage{mathtools}
+\usepackage{mathtools} % For underlining. This seems like a bad joke. There's got to be a better way to underline (especially one that doesn't involve loading a massive package).
+\usepackage{textcomp} % For copyleft symbol.
 
 % Page layout options
 % \usepackage[paperwidth=4.6in, paperheight=6in, margin=1cm]{geometry} % Small size, like my personal scriptures.
@@ -42,7 +43,9 @@
 % Shorter way of declaring a chapter with both a Hebrew and an English name.
 \newcommand\chap[2]{%
     \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
-    \renewcommand\chaptername{#2}}
+    \renewcommand\chaptername{#2}%
+    \thispagestyle{empty}% Forces no page number in cfoot.
+}
 
 % More changes happen within the actual document (below). This is because the Appendix needs different styles.
 
@@ -73,7 +76,6 @@
 %     FONTS
 % %%%%%%%%%%%%%
 \usepackage{xltxtra}
-\usepackage{textcomp} % For copyleft symbol.
 
 % Egyptian hieroglyphs
 \usepackage{graphicx}
