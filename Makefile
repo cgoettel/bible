@@ -1,4 +1,4 @@
-DEPENDENCIES = *.tex */*.tex Makefile
+DEPENDENCIES = *.tex */*.tex Makefile images/*
 TYPESETTER = xelatex
 FLAGS=-halt-on-error
 
