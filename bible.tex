@@ -78,6 +78,11 @@
 % %%%%%%%%%%%%%
 \usepackage{xltxtra}
 
+% Hoefler text
+\usepackage{fontspec}
+\setmainfont[BoldFont={HoeflerText-Bold},ItalicFont={Hoefler Text Italic},BoldItalicFont={Hoefler Text Black Italic},SmallCapsFont={HoeflerText-RomanSC},Ligatures={NoCommon}]{Hoefler Text}
+\newfontface\fancy{HoeflerTitling-HTF-LtSwash}
+
 % Egyptian hieroglyphs
 \usepackage{graphicx}
 
@@ -88,11 +93,6 @@
 % Hebrew
 \newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
 \newcommand\Hebrew[1]{{\sblh #1}}
-
-% Hoefler text
-\usepackage{fontspec}
-\setmainfont[BoldFont={HoeflerText-Bold},ItalicFont={Hoefler Text Italic},BoldItalicFont={Hoefler Text Black Italic},SmallCapsFont={HoeflerText-RomanSC}]{Hoefler Text}
-\newfontface\fancy{HoeflerTitling-HTF-LtSwash}
 
 % Phoenician
 \usepackage{phoenician}
