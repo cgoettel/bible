@@ -65,9 +65,11 @@
 
 % Changes spacing inside enumerate environment. TODO: Change to center.
 \usepackage{enumitem}
-\setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, labelsep=0.7em, nolistsep}
-% labelsep   = distance from label to beginning of text (default 0.5em)
+\setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, nolistsep}
 % itemindent = distance from left margin to start of label
+
+% Center aligns number.
+\SetLabelAlign{center}{\hfil#1\hfil}
 
 % Changes enumerate label to be a number without a period following it.
 \renewcommand\labelenumi{\arabic{enumi}}
