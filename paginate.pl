@@ -17,7 +17,7 @@ print OUT "\\begin{enumerate}[align=center]\n";
 
 for ( $i = 1; $i <= $total_verses; $i++ )
 {
-    print OUT "    \\verse{$book^$chapter:$i} %\n";
+    print OUT "    \\verse{$book^$chapter:$i} %%\n";
 }
 
 print OUT "\\end{enumerate}\n";
