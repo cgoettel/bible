@@ -6,6 +6,7 @@ use warnings;
 my $DEBUG = 1;
 
 # Open directory.
+# my @directories = ("sandbox");
 my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Genesis", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
 
 foreach ( @directories )
@@ -33,7 +34,7 @@ sub translate
         {
             chomp(my $current_line = $_);
             # print "\$_:\t" . $current_line . "\n" if $DEBUG;
-            $current_line =~ s/\%/\%\%/;
+            $current_line =~ s/\\verse{([0-9] )?[A-Z][a-z]+\^/\\verse{/;
             # print "cl:\t" . $current_line . "\n" if $DEBUG;
             print TMP $current_line . "\n";
         }
