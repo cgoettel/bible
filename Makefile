@@ -8,3 +8,6 @@ bible.pdf: $(DEPENDENCIES)
 	$(TYPESETTER) bible.tex
 	$(TYPESETTER) bible.tex
 	$(TYPESETTER) bible.tex
+
+clean:
+	rm -f *.aux *.log *.toc

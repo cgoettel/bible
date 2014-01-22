@@ -41,10 +41,15 @@
 % Options for reconfiguring preface (\subsection*{}) headings.
 \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
 
+% Defining two new commands which will be dynamically changed on each call of \chap
+\newcommand\englishchaptertitle{}
+\newcommand\hebrewchaptertitle{}
+
 % Shorter way of declaring a chapter with both a Hebrew and an English name.
 \newcommand\chap[2]{%
     \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
-    \renewcommand\chaptername{#2}%
+    \renewcommand\englishchaptertitle{#1}%
+    \renewcommand\hebrewchaptertitle{#2}%
     \thispagestyle{empty}% Forces no page number in cfoot.
 }
 
@@ -64,7 +69,7 @@
 % %%%%%%%%%%%%%%%%%
 % NOTE: Do not \usepackage{paralist} because it conflicts with options set for enumitem.
 
-% Changes spacing inside enumerate environment. TODO: Change to center.
+% Changes spacing inside enumerate environment.
 \usepackage{enumitem}
 \setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, nolistsep}
 % itemindent = distance from left margin to start of label
@@ -128,14 +133,13 @@
 \usepackage{substr}
 
 % Extracts book name and chapters from rightmark and leftmark.
-\newcommand\bookname{\BeforeSubString{^}{\leftmark}}
 \newcommand\rightchap{\BehindSubString{^}{\rightmark}}
 \newcommand\leftchap{\BehindSubString{^}{\leftmark}}
 \fancyhead[LE]{~\rightchap} % The "~" is for cushioning.
 \fancyhead[RO]{\leftchap~}
 \fancyhead[LO,RE]{~\thepage~}
-\fancyhead[CE]{\bookname} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
-\fancyhead[CO]{\chaptername} % Puts Hebrew book name in center header on odd pages.
+\fancyhead[CE]{\englishchaptertitle} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
+\fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
 \cfoot{} % Removes page number from center foot.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,6 +158,7 @@
 \newcounter{myc}[enumi]
 \patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
 
+% TODO: try using \setmarks
 \renewcommand\verse[1]{%
     \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
     \label{#1}% Reference name.
@@ -202,7 +207,9 @@
     \clearpage\thispagestyle{empty}
     \mainmatter
     % openrightfalse forces TeX to not generate a blank page between chapters.
-    \makeatletter\@openrightfalse
+    \makeatletter
+    \@openrightfalse
+    \makeatother
     \chap{Genesis}{\Hebrew{בראשית}}
     \input{Genesis/1}
     % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
@@ -302,6 +309,8 @@
     \input{Appendix/tabernacle}
     \input{Appendix/tetragrammaton}
     \input{Appendix/idioms}
-    \@openrighttrue\makeatother
+    \makeatletter
+    \@openrighttrue
+    \makeatother
     \twocolumn
 \end{document}
