@@ -6,7 +6,7 @@ use warnings;
 my $DEBUG = 1;
 
 # Open directory.
-my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
+my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Genesis", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
 
 foreach ( @directories )
 {
