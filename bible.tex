@@ -133,10 +133,8 @@
 \usepackage{substr}
 
 % Extracts book name and chapters from rightmark and leftmark.
-\newcommand\rightchap{\BehindSubString{^}{\rightmark}}
-\newcommand\leftchap{\BehindSubString{^}{\leftmark}}
-\fancyhead[LE]{~\rightchap} % The "~" is for cushioning.
-\fancyhead[RO]{\leftchap~}
+\fancyhead[LE]{~\rightmark} % The "~" is for cushioning.
+\fancyhead[RO]{\leftmark~}
 \fancyhead[LO,RE]{~\thepage~}
 \fancyhead[CE]{\englishchaptertitle} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
 \fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
