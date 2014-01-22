@@ -156,7 +156,6 @@
 \newcounter{myc}[enumi]
 \patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
 
-% TODO: try using \setmarks
 \renewcommand\verse[1]{%
     \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
     \label{#1}% Reference name.
