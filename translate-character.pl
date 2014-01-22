@@ -6,14 +6,15 @@ use warnings;
 my $DEBUG = 1;
 
 # Open directory.
-my @directories = ["1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah"];
+my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
 
-foreach @directories
+foreach ( @directories )
 {
-    translate-character($_);
+    print "Current dir:\t$_\n" if $DEBUG;
+    translate($_);
 }
 
-sub translate-character
+sub translate
 {
     my $directory = shift;
     opendir DIR, "$directory" or die "Cannot open DIR: $!\n";
@@ -23,7 +24,7 @@ sub translate-character
     while ( my $current_file = shift @files )
     {
         next if $current_file =~ /^\./;
-        print "Current file: $directory/$current_file\n" if $DEBUG;
+        print "Current file:\t$directory/$current_file\n" if $DEBUG;
         
         open IN, "<$directory/$current_file" or die "Failed to open IN: $!\n";
         open TMP, ">/tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
