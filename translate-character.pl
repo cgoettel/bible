@@ -3,11 +3,12 @@
 use strict;
 use warnings;
 
-my $DEBUG = 0;
+my $DEBUG = 1;
 
-# Open sandbox directory.
-opendir SANDBOX, "sandbox" or die "Cannot open SANDBOX: $!\n";
-my @files = sort readdir(SANDBOX);
+# Open directory.
+my $directory = "Genesis";
+opendir DIR, "$directory" or die "Cannot open DIR: $!\n";
+my @files = sort readdir(DIR);
 
 # Run through each file in open directory translating % to %%.
 while ( my $current_file = shift @files )
@@ -15,15 +16,15 @@ while ( my $current_file = shift @files )
     next if $current_file =~ /^\./;
     print "Current file: " . $current_file . "\n" if $DEBUG;
     
-    open IN, "<sandbox/$current_file" or die "Failed to open IN: $!\n";
+    open IN, "<$directory/$current_file" or die "Failed to open IN: $!\n";
     open TMP, ">/tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
     
     while ( <IN> )
     {
         chomp(my $current_line = $_);
-        print "\$_:\t" . $current_line . "\n" if $DEBUG;
+        # print "\$_:\t" . $current_line . "\n" if $DEBUG;
         $current_line =~ s/\%/\%\%/;
-        print "cl:\t" . $current_line . "\n" if $DEBUG;
+        # print "cl:\t" . $current_line . "\n" if $DEBUG;
         print TMP $current_line . "\n";
     }
     
@@ -32,7 +33,7 @@ while ( my $current_file = shift @files )
     
     # Read from TMP file, print to original IN file.
     open TMP_IN, "</tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
-    open OUT, ">sandbox/$current_file" or die "Failed to open OUT: $!\n";
+    open OUT, ">$directory/$current_file" or die "Failed to open OUT: $!\n";
     
     while ( <TMP_IN> )
     {
@@ -43,6 +44,6 @@ while ( my $current_file = shift @files )
     close OUT;
 }
 
-closedir SANDBOX;
+closedir DIR;
 close IN;
 close OUT;
