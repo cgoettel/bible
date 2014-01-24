@@ -34,7 +34,7 @@ sub translate
         {
             chomp(my $current_line = $_);
             # print "\$_:\t" . $current_line . "\n" if $DEBUG;
-            $current_line =~ s/\\verse{([0-9] )?[A-Z][a-z]+\^/\\verse{/;
+            $current_line =~ s/\\section{([0-9] )?[A-Z][a-z]+ /\\section{/;
             # print "cl:\t" . $current_line . "\n" if $DEBUG;
             print TMP $current_line . "\n";
         }
