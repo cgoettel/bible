@@ -1,5 +1,5 @@
 % xelatex (use Makefile)
-\documentclass[twoside,twocolumn,9pt]{extbook} % extbook allows for smaller font sizes.
+\documentclass[twoside,twocolumn]{book} % extbook allows for smaller font sizes.
 
 % Packages that don't necessary belong elsewhere.
 \usepackage{mathtools} % For underlining. This seems like a bad joke. There's got to be a better way to underline (especially one that doesn't involve loading a massive package).
@@ -30,7 +30,7 @@
 \usepackage[explicit]{titlesec}
 
 % Options for reconfiguring book (\chapter{}) headings.
-\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{\fancy#1}
+\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{#1}
 
 % Spacing around book (\chapter{}) headers.
 \titlespacing*{\chapter}{0pt}{0pt}{7ex}
@@ -81,7 +81,6 @@
 % Hoefler text
 \usepackage{fontspec}
 \setmainfont[BoldFont={HoeflerText-Bold},ItalicFont={Hoefler Text Italic},BoldItalicFont={Hoefler Text Black Italic},SmallCapsFont={HoeflerText-RomanSC},Ligatures={NoCommon, TeX}]{Hoefler Text}
-\newfontface\fancy{HoeflerTitling-HTF-LtSwash}
 
 % Egyptian hieroglyphs
 \usepackage{graphicx}
@@ -120,7 +119,6 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 % Header options for dictionary style headers.
 \usepackage{fancyhdr}
-\pagestyle{fancy}
 \usepackage{fix2col} % Fixes potential problems with marks on two column pages.
 \usepackage{substr}
 
@@ -165,9 +163,6 @@
     \item {\small #2}% Print verse number and contents.
 }
 
-% For referencing a verse.
-\newcommand\vref[1]{\hyperref[#1]{#1}}
-
 % %%%%%%%%%%%%
 %     YEAR
 % %%%%%%%%%%%%
@@ -175,31 +170,27 @@
 \newdateformat{justtheyear}{\THEYEAR}
 
 % %%%%%%%%%%%%%%%%
-%     HYPERREF
-% %%%%%%%%%%%%%%%%
-% hyperfootnotes must be turned to 'false' for commas to appear in instances of multiple footnotes.
-% \usepackage[xetex, hyperfootnotes=false, colorlinks=false, pdfborder={0 0 0}, pdftitle={The Holy Bible}, pdfauthor={Colby Goettel}, pdfproducer={pdfLaTeX}, pagebackref, pdfpagemode=None]{hyperref}
-
-% %%%%%%%%%%%%%%%%
 %     DOCUMENT
 % %%%%%%%%%%%%%%%%
 \begin{document}
     \frontmatter
+    \pagestyle{empty}
     \input{half-title}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{title-page}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{license}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{dedication}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{preface}
-    {\pagestyle{empty}\cleardoublepage}
+    {\cleardoublepage}
     \tableofcontents
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \mainmatter
     % openrightfalse forces TeX to not generate a blank page between chapters.
     \makeatletter\@openrightfalse
+    \pagestyle{fancy}
     \chap{Genesis}{\Hebrew{בראשית}}
     \input{Genesis/1}
     % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
