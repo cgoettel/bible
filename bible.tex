@@ -1,10 +1,6 @@
 % xelatex (use Makefile)
 \documentclass[twoside,twocolumn]{book} % extbook allows for smaller font sizes.
 
-% Packages that don't necessary belong elsewhere.
-\usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
-\usepackage{textcomp} % For copyleft symbol.
-
 % Page layout options
 % \usepackage[paperwidth=4.6in, paperheight=6in, margin=1cm]{geometry} % Small size, like my personal scriptures.
 \usepackage[paperwidth=5.75in, paperheight=8in, top=1in, bottom=1in, left=0.5in, right=0.5in, headsep=0.5in]{geometry} % This is an abomination. The page height needs to be a bit longer, but it can't be because there are too many footnotes. Fix that bug, then fix this.
@@ -12,6 +8,9 @@
 \setlength{\topmargin}{-0.7in} % Relative to 1in default
 \setlength{\headsep}{0.1cm} % Distance from header to top of text
 
+% Packages that don't necessarily belong elsewhere.
+\usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
+\usepackage{textcomp} % For copyleft symbol.
 \usepackage{multicol} % For copyright page. Possibly for poetry.
 
 % Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
