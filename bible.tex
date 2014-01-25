@@ -1,5 +1,5 @@
 % xelatex (use Makefile)
-\documentclass[twoside,twocolumn,9pt]{extbook} % extbook allows for smaller font sizes.
+\documentclass[twoside,twocolumn]{book} % extbook allows for smaller font sizes.
 
 % Packages that don't necessary belong elsewhere.
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
@@ -96,12 +96,6 @@
 \newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
 \newcommand\Hebrew[1]{{\sblh #1}}
 
-% Hoefler text
-% \usepackage{fontspec}
-% \setromanfont[Mapping=tex-text]{Hoefler Text}
-% \fontspec[Mapping=tex-text, Ligatures={Common, Rare, Historic}]{Hoefler Text}
-% \newfontinstance\scshape[Letters=SmallCaps, Numbers=Uppercase]{Hoefler Text}
-
 % Phoenician
 \usepackage{phoenician}
 
@@ -128,7 +122,6 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 % Header options for dictionary style headers.
 \usepackage{fancyhdr}
-\pagestyle{fancy}
 
 \renewcommand{\headrulewidth}{0pt} % Removes horizontal line.
 
@@ -173,9 +166,6 @@
     \item {\small #2}% Print verse number and contents.
 }
 
-% For referencing a verse.
-\newcommand\vref[1]{\hyperref[#1]{#1}}
-
 % %%%%%%%%%%%%
 %     YEAR
 % %%%%%%%%%%%%
@@ -183,33 +173,29 @@
 \newdateformat{justtheyear}{\THEYEAR}
 
 % %%%%%%%%%%%%%%%%
-%     HYPERREF
-% %%%%%%%%%%%%%%%%
-% hyperfootnotes must be turned to 'false' for commas to appear in instances of multiple footnotes.
-% \usepackage[xetex, hyperfootnotes=false, colorlinks=false, pdfborder={0 0 0}, pdftitle={The Holy Bible}, pdfauthor={Colby Goettel}, pdfproducer={pdfLaTeX}, pagebackref, pdfpagemode=None]{hyperref}
-
-% %%%%%%%%%%%%%%%%
 %     DOCUMENT
 % %%%%%%%%%%%%%%%%
 \begin{document}
     \frontmatter
+    \pagestyle{empty}
     \input{half-title}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{title-page}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{license}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{dedication}
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \input{preface}
-    {\pagestyle{empty}\cleardoublepage}
+    {\cleardoublepage}
     \tableofcontents
-    \clearpage\thispagestyle{empty}
+    \clearpage
     \mainmatter
     % openrightfalse forces TeX to not generate a blank page between chapters.
     \makeatletter
     \@openrightfalse
     \makeatother
+    \pagestyle{fancy}
     \chap{Genesis}{\Hebrew{בראשית}}
     \input{Genesis/1}
     % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
