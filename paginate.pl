@@ -11,7 +11,7 @@ chomp($total_verses = <>);
 
 open OUT,">$book/$chapter.tex" or die "Failed to open OUT: $!\n";
 
-print OUT "\\section{$book $chapter}\\label{$book $chapter}\n";
+print OUT "\\section{$chapter}\n";
 print OUT "\\heading{xxxx}\n";
 print OUT "\\begin{enumerate}[align=center]\n";
 
