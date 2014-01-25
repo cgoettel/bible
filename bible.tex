@@ -26,19 +26,9 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     CHAPTER and SECTION
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[explicit]{titlesec}
+\usepackage[explicit]{titlesec} % Explicit requires the title to be given, supplied as #1.
 
-% Options for reconfiguring book (\chapter{}) headings.
-\titleformat{\chapter}[display]{\centering\normalfont\Huge}{}{0ex}{#1}
-
-% Spacing around book (\chapter{}) headers.
-\titlespacing*{\chapter}{0pt}{0pt}{7ex}
-
-% Options for reconfiguring chapter (\section{}) headings.
-\titleformat{\section}{\centering}{}{1em}{#1}
-
-% Options for reconfiguring preface (\subsection*{}) headings.
-\titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
+% Options for reconfiguring headings is found in the document.
 
 % Defining two new commands which will be dynamically changed on each call of \chap
 \newcommand\englishchaptertitle{}
@@ -151,9 +141,12 @@
 \newcounter{myc}[enumi]
 \patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
 
+% Need to remove \markboth from \section declaration because header is messed up when a section starts or ends a page.
+% \renewcommand\sectionmark{}
 \renewcommand\verse[1]{%
-    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
     \label{#1}% Reference name.
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
+    % \renewcommand\sectionmark{}
     \item% Print verse number.
 }
 
@@ -161,7 +154,6 @@
 % Note: Don't use smaller text because then the (entire) book of Isaiah will be tiny.
 \newcommand\pverse[2]{%
     \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark
-    \label{#1}% Reference name.
     \item {\small #2}% Print verse number and contents.
 }
 
@@ -177,6 +169,9 @@
 \begin{document}
     \frontmatter
     \pagestyle{empty}
+    \titleformat{\chapter}[display]{\centering\Huge}{}{0ex}{#1}
+    \titlespacing*{\chapter}{0pt}{0pt}{7ex}
+    \titleformat{\section}{\large\bfseries}{}{1em}{#1}
     \input{half-title}
     \clearpage
     \input{title-page}
@@ -190,6 +185,10 @@
     \tableofcontents
     \clearpage
     \mainmatter
+    
+    \titleformat{\section}{\centering}{}{1em}{\englishchaptertitle\ #1}
+    \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
+    
     % openrightfalse forces TeX to not generate a blank page between chapters.
     \makeatletter
     \@openrightfalse
