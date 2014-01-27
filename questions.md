@@ -1,3 +1,3 @@
-Exodus 23:5
-
-Ruth 2:22
+- Exodus 23:5
+- Exodus 24:11
+- Ruth 2:22
