@@ -18,6 +18,10 @@
 % Never use 10000.
 \sloppy\hyphenpenalty=4000
 
+% Widow and orphan penalty. 7000 was an arbitrary pick, but it seems to work.
+\widowpenalty=7000
+\clubpenalty=7000
+
 % %%%%%%%%%%%%%%%%%%
 %     APPENDICES
 % %%%%%%%%%%%%%%%%%%
@@ -30,16 +34,21 @@
 
 % Options for reconfiguring headings is found in the document.
 
-% Defining two new commands which will be dynamically changed on each call of \chap
+% Defining two new commands which will be dynamically changed on each call of \book
 \newcommand\englishchaptertitle{}
 \newcommand\hebrewchaptertitle{}
 
 % Shorter way of declaring a chapter with both a Hebrew and an English name.
-\newcommand\chap[2]{%
+\newcommand\book[2]{%
     \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
     \renewcommand\englishchaptertitle{#1}%
     \renewcommand\hebrewchaptertitle{#2}%
     \thispagestyle{empty}% Forces no page number in cfoot.
+}
+
+\newcommand\chap[1]{%
+    \begin{center}\englishchaptertitle\ #1\end{center}%
+    \markboth{#1:1}{#1:1}%
 }
 
 % More changes happen within the actual document (below). This is because the Appendix needs different styles.
@@ -186,14 +195,12 @@
     \clearpage
     \mainmatter
     
-    \titleformat{\section}{\centering}{}{1em}{\englishchaptertitle\ #1}
     \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
     
     % openrightfalse forces TeX to not generate a blank page between chapters.
     \makeatletter
     \@openrightfalse
     \makeatother
-    \pagestyle{fancy}
     \chap{Genesis}{\Hebrew{בראשית}}
     \input{Genesis/1}
     % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
@@ -202,13 +209,13 @@
     % \input{Genesis/31}
     % Whenever you get to the coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as \emph{coat of many colors}. Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \emph{hapax legomenon}.
     % \input{Genesis/49}
-    \chap{Exodus}{\Hebrew{שמות}}
+    \book{Exodus}{\Hebrew{שמות}}
     \input{Exodus/19}
     \input{Exodus/20}
     \input{Exodus/21}
     \input{Exodus/23}
     \input{Exodus/24}
-    \chap{Numbers}{\Hebrew{במדבר}}
+    \book{Numbers}{\Hebrew{במדבר}}
     \input{Numbers/5}
     \input{Numbers/6}
     \input{Numbers/10}
@@ -216,61 +223,62 @@
     \input{Numbers/12}
     \input{Numbers/13}
     \input{Numbers/14}
-    \chap{Deuteronomy}{\Hebrew{דברים}}
+    \input{Numbers/16}
+    \book{Deuteronomy}{\Hebrew{דברים}}
     \input{Deuteronomy/5}
     \input{Deuteronomy/6}
     \input{Deuteronomy/25}
-    \chap{Joshua}{\Hebrew{יהושע}}
+    \book{Joshua}{\Hebrew{יהושע}}
     \input{Joshua/3}
-    \chap{Judges}{\Hebrew{שופטים}}
+    \book{Judges}{\Hebrew{שופטים}}
     \input{Judges/7}
-    \chap{Ruth}{\Hebrew{רות}}
+    \book{Ruth}{\Hebrew{רות}}
     \input{Ruth/1}
     \input{Ruth/2}
     \input{Ruth/3}
     \input{Ruth/4}
-    \chap{1 Samuel}{\Hebrew{א שמואל}}
+    \book{1 Samuel}{\Hebrew{א שמואל}}
     \input{1Samuel/15}
-    \chap{2 Samuel}{\Hebrew{ב שמואל}}
+    \book{2 Samuel}{\Hebrew{ב שמואל}}
     \input{2Samuel/6}
-    \chap{1 Kings}{\Hebrew{א מלכים}}
+    \book{1 Kings}{\Hebrew{א מלכים}}
     \input{1Kings/17}
     \input{1Kings/18}
-    \chap{2 Kings}{\Hebrew{ב מלכים}}
+    \book{2 Kings}{\Hebrew{ב מלכים}}
     \input{2Kings/2}
     \input{2Kings/5}
     \input{2Kings/6}
-    \chap{2 Chronicles}{\Hebrew{ב הימים דברי}}
+    \book{2 Chronicles}{\Hebrew{ב הימים דברי}}
     \input{2Chronicles/26}
     \input{2Chronicles/31}
-    \chap{Ezra}{\Hebrew{עזרא}}
+    \book{Ezra}{\Hebrew{עזרא}}
     \input{Ezra/4}
     \input{Ezra/5}
     \input{Ezra/6}
     \input{Ezra/7}
-    \chap{Nehemiah}{\Hebrew{נחמיה}}
+    \book{Nehemiah}{\Hebrew{נחמיה}}
     \input{Nehemiah/6}
     % psalm 2: Kingship/temple kind of psalm
     % Psalm 15:4:
     % footnote c, Greek "to his neighbor, fellow companion"
     % footnote d, Perhaps you could insert the writing "and does not turn away from (that) evil \Hebrew{בְּרָע}" [in other words, what was already put in explanatory brackets]
     % \input{Psalms/110} % Add reference to Appendix on psalm 110
-    \chap{Isaiah}{\Hebrew{ישעה}}
+    \book{Isaiah}{\Hebrew{ישעה}}
     {\noindent\heading{See Appendix~\ref{app:isaiah} for more information on the book of Isaiah}}
     \input{Isaiah/1}
     \input{Isaiah/2}
     \input{Isaiah/36}
-    \chap{Jeremiah}{\Hebrew{ירמיה}}
+    \book{Jeremiah}{\Hebrew{ירמיה}}
     \input{Jeremiah/3}
-    \chap{Daniel}{\Hebrew{דניאל}}
+    \book{Daniel}{\Hebrew{דניאל}}
     \input{Daniel/2}
     \input{Daniel/3}
     % In Malachi, add a reference to Appendix on yada for whatever verse talks about marriage
-    \chap{Obadiah}{\Hebrew{עבדיה}}
+    \book{Obadiah}{\Hebrew{עבדיה}}
     \input{Obadiah/1}
-    \chap{Zephaniah}{\Hebrew{צפניה}}
+    \book{Zephaniah}{\Hebrew{צפניה}}
     \input{Zephaniah/1}
-    \chap{Malachi}{\Hebrew{מלאכי}}
+    \book{Malachi}{\Hebrew{מלאכי}}
     \input{Malachi/3}
     \input{Malachi/4}
     \appendix
