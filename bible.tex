@@ -43,6 +43,11 @@
     \thispagestyle{empty}% Forces no page number in cfoot.
 }
 
+\newcommand\chap[1]{%
+    \begin{center}\englishchaptertitle\ #1\end{center}%
+    \markboth{#1:1}{#1:1}%
+}
+
 % More changes happen within the actual document (below). This is because the Appendix needs different styles.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,7 +206,6 @@
     \clearpage\thispagestyle{empty}
     \mainmatter
     
-    \titleformat{\section}{\centering}{}{1em}{\englishchaptertitle\ #1}
     \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
     
     % openrightfalse forces TeX to not generate a blank page between chapters.
@@ -230,6 +234,7 @@
     \input{Numbers/12}
     \input{Numbers/13}
     \input{Numbers/14}
+    \input{Numbers/16}
     \book{Deuteronomy}{\Hebrew{דברים}}
     \input{Deuteronomy/5}
     \input{Deuteronomy/6}
