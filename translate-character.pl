@@ -6,12 +6,12 @@ use warnings;
 my $DEBUG = 1;
 
 # Open directory.
-my @directories = ("Sandbox");
-# my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Genesis", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
+# my @directories = ("Sandbox");
+my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Genesis", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
 
 foreach ( @directories )
 {
-    print "Current dir:\t$_\n" if $DEBUG;
+    # print "Current dir:\t$_\n" if $DEBUG;
     translate($_);
 }
 sub translate
@@ -25,7 +25,7 @@ sub translate
     while ( my $current_file = shift @files )
     {
         next if $current_file =~ /^\./;
-        print "Current file:\t$directory/$current_file\n" if $DEBUG;
+        print "$directory/$current_file\n" if $DEBUG;
         
         open IN, "<$directory/$current_file" or die "Failed to open IN: $!\n";
         open TMP, ">/tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
@@ -33,7 +33,7 @@ sub translate
         while ( <IN> )
         {
             chomp(my $current_line = $_);
-            $current_line =~ s/\\chap{.*//;
+            # $current_line =~ s/\\heading{/\\heading{$chapter_number}{/;
             print TMP $current_line . "\n";
         }
         
