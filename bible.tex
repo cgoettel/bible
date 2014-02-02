@@ -61,14 +61,12 @@
 % %%%%%%%%%%%%%%%%%
 %     ENUMERATE
 % %%%%%%%%%%%%%%%%%
-% NOTE: Do not \usepackage{paralist} because it conflicts with options set for enumitem.
+% paralist allows for separate paragraphs in the same enumeration environment.
 \usepackage{paralist}
-% Changes spacing inside enumerate environment.
-\usepackage[inline]{enumitem}
 
 % Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
-\renewcommand\labelenumi{\color{Blue}{[\hspace*{0.1em}\arabic{enumi}\hspace*{0.1em}]}}
+\renewcommand\labelenumi{\hspace*{0.25em}\color{Blue}{[\hspace*{0.1em}\arabic{enumi}\hspace*{0.1em}]}}
 
 % %%%%%%%%%%%%%
 %     FONTS
