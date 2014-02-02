@@ -11,15 +11,15 @@ chomp($total_verses = <>);
 
 open OUT,">$book/$chapter.tex" or die "Failed to open OUT: $!\n";
 
-print OUT "\\section{$chapter}\n";
-print OUT "\\heading{xxxx}\n";
-print OUT "\\begin{enumerate}[align=center]\n";
+print OUT "\\chap{$chapter}\n\n";
+print OUT "\\heading{xxxx}\n\n";
+print OUT "\\begin{enumerate*}\n";
 
 for ( $i = 1; $i <= $total_verses; $i++ )
 {
     print OUT "    \\verse{$chapter:$i} %%\n";
 }
 
-print OUT "\\end{enumerate}\n";
+print OUT "\\end{enumerate*}\n";
 
 close OUT;

@@ -34,7 +34,7 @@ sub translate
         {
             chomp(my $current_line = $_);
             # print "\$_:\t" . $current_line . "\n" if $DEBUG;
-            $current_line =~ s/\\section{/\\chap{/;
+            $current_line =~ s/\\begin{enumerate\*}/\\begin{enumerate\*}[mode=unboxed]/;
             # print "cl:\t" . $current_line . "\n" if $DEBUG;
             print TMP $current_line . "\n";
         }
