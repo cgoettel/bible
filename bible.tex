@@ -47,19 +47,16 @@
     \thispagestyle{empty}% Forces no page number in cfoot.
 }
 
-\newcommand\chap[1]{%
-    \marginpar{\color{Gray}{{\Huge\textbf{~#1}}}}%
-    \markboth{#1:1}{#1:1}%
-}
-
 % More changes happen within the actual document (below). This is because the Appendix needs different styles.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%
 %     CHAPTER HEADINGS
 % %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\heading[1]{%
+\newcommand\heading[2]{%
     \vspace{1em}%
-    {\small\emph{#1.}}%
+    \marginpar{\color{Gray}{{\Huge\textbf{~#1}}}}%
+    \markboth{#1:1}{#1:1}%
+    {\small\emph{#2.}}%
     \vspace{0.5em}%
 }
 
