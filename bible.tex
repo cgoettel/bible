@@ -2,13 +2,13 @@
 \documentclass[twoside]{book}
 
 % Page layout options
-\usepackage[paperwidth=5.25in, paperheight=8in, top=1in, bottom=1in, left=0.5in, right=0.5in, headsep=0.5in]{geometry}
-\setlength{\topmargin}{-0.7in} % Relative to 1in default
-\setlength{\headsep}{0.1cm} % Distance from header to top of text
+\usepackage[showframe, paperwidth=5.25in, paperheight=8in, top=0.5in, bottom=0.25in, outer=1in, inner=0.44in, marginparwidth=0.5in, headsep=0.125in, footskip=0.25in]{geometry}
+% \setlength{\topmargin}{-0.7in} % Relative to 1in default
 
 % Font spacing options
 % \renewcommand\baselinestretch{12pt}
 \textwidth=23pc
+\parindent=2em
 
 % Packages that don't necessarily belong elsewhere.
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
@@ -33,7 +33,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[explicit]{titlesec} % Explicit requires the title to be given, supplied as #1.
 
-% Options for reconfiguring headings is found in the document.
+% Options for reconfiguring titles is found in the document.
 
 % Defining two new commands which will be dynamically changed on each call of \book
 \newcommand\englishchaptertitle{}
@@ -47,16 +47,13 @@
     \thispagestyle{empty}% Forces no page number in cfoot.
 }
 
-% More changes happen within the actual document (below). This is because the Appendix needs different styles.
-
 % %%%%%%%%%%%%%%%%%%%%%%%%
 %     CHAPTER HEADINGS
 % %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[2]{%
     \vspace{1em}%
-    \marginpar{\vspace{7pt}\color{Gray}{{\Huge\textbf{~#1}}}}%
     \markboth{#1:1}{#1:1}%
-    {\small\emph{#2.}}%
+    {\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
     \vspace{0.5em}%
 }
 
@@ -67,11 +64,6 @@
 
 % Changes spacing inside enumerate environment.
 \usepackage[inline]{enumitem}
-\setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, nolistsep}
-% itemindent = distance from left margin to start of label
-
-% Center aligns number.
-\SetLabelAlign{center}{\hfil#1\hfil}
 
 % Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
@@ -126,9 +118,9 @@
 \usepackage{substr}
 
 % Extracts book name and chapters from rightmark and leftmark.
-\fancyhead[LE]{~\rightmark} % The "~" is for cushioning.
-\fancyhead[RO]{\leftmark~}
-\fancyhead[LO,RE]{~\thepage~}
+\fancyhead[LE]{\rightmark}
+\fancyhead[RO]{\leftmark}
+\fancyhead[LO,RE]{\thepage}
 \fancyhead[CE]{\englishchaptertitle} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
 \fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
 \cfoot{} % Removes page number from center foot.
@@ -149,12 +141,8 @@
 \newcounter{myc}[enumi]
 \patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
 
-% Need to remove \markboth from \section declaration because header is messed up when a section starts or ends a page.
-% \renewcommand\sectionmark{}
 \renewcommand\verse[1]{%
-    \label{#1}% Reference name.
     \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
-    % \renewcommand\sectionmark{}
     \item% Print verse number.
 }
 
@@ -177,8 +165,8 @@
 \begin{document}
     \frontmatter
     \pagestyle{empty}
-    \titleformat{\chapter}[display]{\large}{}{0ex}{\uppercase{#1}}
-    \titlespacing*{\chapter}{0pt}{0pt}{7ex}
+    \titleformat{\chapter}[display]{\large}{}{0em}{\uppercase{#1}}
+    \titlespacing*{\chapter}{0pt}{0pt}{12pt}
     \titleformat{\section}{\scshape}{}{1em}{#1}
     \input{half-title}
     \clearpage
@@ -202,105 +190,144 @@
     \pagestyle{fancy}
     \book{Genesis}{\Hebrew{בראשית}}
     \input{Genesis/1}
+    
     % Genesis 10:25 --- Peleg and the countries being split up probably refers to the nations and not the tectonic plates.
     \input{Genesis/17}
+    
     \input{Genesis/22}
+    
     % \input{Genesis/31}
+    
     % Whenever you get to the coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as \emph{coat of many colors}. Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \emph{hapax legomenon}.
     % \input{Genesis/49}
+    
     \book{Exodus}{\Hebrew{שמות}}
     \input{Exodus/19}
+    
     \input{Exodus/20}
+    
     \input{Exodus/21}
+    
     \input{Exodus/23}
+    
     \input{Exodus/24}
+    
     \book{Numbers}{\Hebrew{במדבר}}
     \input{Numbers/5}
+    
     \input{Numbers/6}
+    
     \input{Numbers/10}
+    
     \input{Numbers/11}
+    
     \input{Numbers/12}
+    
     \input{Numbers/13}
+    
     \input{Numbers/14}
+    
     \input{Numbers/16}
+    
     \book{Deuteronomy}{\Hebrew{דברים}}
     \input{Deuteronomy/5}
+    
     \input{Deuteronomy/6}
+    
     \input{Deuteronomy/25}
+    
     \book{Joshua}{\Hebrew{יהושע}}
     \input{Joshua/3}
+    
     \book{Judges}{\Hebrew{שופטים}}
     \input{Judges/7}
+    
     \book{Ruth}{\Hebrew{רות}}
     \input{Ruth/1}
+    
     \input{Ruth/2}
+    
     \input{Ruth/3}
+    
     \input{Ruth/4}
+    
     \book{1 Samuel}{\Hebrew{א שמואל}}
     \input{1Samuel/15}
+    
     \book{2 Samuel}{\Hebrew{ב שמואל}}
     \input{2Samuel/6}
+    
     \book{1 Kings}{\Hebrew{א מלכים}}
     \input{1Kings/17}
+    
     \input{1Kings/18}
+    
     \book{2 Kings}{\Hebrew{ב מלכים}}
     \input{2Kings/2}
+    
     \input{2Kings/5}
+    
     \input{2Kings/6}
+    
     \book{2 Chronicles}{\Hebrew{ב הימים דברי}}
     \input{2Chronicles/26}
+    
     \input{2Chronicles/31}
+    
     \book{Ezra}{\Hebrew{עזרא}}
     \input{Ezra/4}
+    
     \input{Ezra/5}
+    
     \input{Ezra/6}
+    
     \input{Ezra/7}
+    
     \book{Nehemiah}{\Hebrew{נחמיה}}
     \input{Nehemiah/6}
+    
     % psalm 2: Kingship/temple kind of psalm
     % Psalm 15:4:
     % footnote c, Greek "to his neighbor, fellow companion"
     % footnote d, Perhaps you could insert the writing "and does not turn away from (that) evil \Hebrew{בְּרָע}" [in other words, what was already put in explanatory brackets]
     % \input{Psalms/110} % Add reference to Appendix on psalm 110
+    
     \book{Isaiah}{\Hebrew{ישעה}}
     {\noindent\textit{\small See Appendix~\ref{app:isaiah} for more information on the book of Isaiah.}}
     
     \input{Isaiah/1}
+    
     \input{Isaiah/2}
+    
     \input{Isaiah/36}
+    
     \book{Jeremiah}{\Hebrew{ירמיה}}
     \input{Jeremiah/3}
+    
     \book{Daniel}{\Hebrew{דניאל}}
     \input{Daniel/2}
+    
     \input{Daniel/3}
+    
     % In Malachi, add a reference to Appendix on yada for whatever verse talks about marriage
     \book{Obadiah}{\Hebrew{עבדיה}}
     \input{Obadiah/1}
+    
     \book{Zephaniah}{\Hebrew{צפניה}}
     \input{Zephaniah/1}
+    
     \book{Malachi}{\Hebrew{מלאכי}}
     \input{Malachi/3}
+    
     \input{Malachi/4}
+    ~\clearpage\thispagestyle{empty}
     \appendix
-    % Redefine \chapter for use in \appendix.
-    \titleformat{\chapter}[display]{\centering\normalfont\LARGE}{}{0ex}{Appendix \thechapter: #1}
-    % Change spacing around \chapter in \appendix.
-    \titlespacing*{\chapter}{0em}{-5ex}{5ex}
-    % Redefine \section so that it is used instead of \subsection in appendices.
-    \titlespacing*{\section}{0em}{0.65em}{0.65em}
-    \titleformat{\section}{\large\bfseries}{}{1em}{#1}
-    \titlespacing*{\subsection}{0em}{0.65em}{0.65em}
-    \titleformat{\subsection}{\bfseries}{}{1.25em}{#1} % Set to 1.25em so \section and \subsection are vertically aligned.
-    ~\clearpage\thispagestyle{empty}
-    ~\clearpage\thispagestyle{empty}
+    \titleformat{\subsection}{}{}{1.25em}{\textit{#1}}
     \input{Appendix/psalm-110}
     \input{Appendix/isaiah}
-    \input{Appendix/aramaic-in-the-ot}
+    % \input{Appendix/aramaic-in-the-ot}
     \input{Appendix/covenants-in-antiquity}
     \input{Appendix/tabernacle}
     \input{Appendix/tetragrammaton}
     \input{Appendix/idioms}
-    \makeatletter
-    \@openrighttrue
-    \makeatother
 \end{document}
