@@ -33,7 +33,7 @@ sub translate
         while ( <IN> )
         {
             chomp(my $current_line = $_);
-            # $current_line =~ s/\\heading{/\\heading{$chapter_number}{/;
+            $current_line =~ s/\[mode=unboxed\]//;
             print TMP $current_line . "\n";
         }
         
