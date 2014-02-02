@@ -1,17 +1,18 @@
 % xelatex (use Makefile)
-\documentclass[twoside,twocolumn]{book} % extbook allows for smaller font sizes.
+\documentclass[twoside]{book}
 
 % Page layout options
-% \usepackage[paperwidth=4.6in, paperheight=6in, margin=1cm]{geometry} % Small size, like my personal scriptures.
-\usepackage[paperwidth=5.75in, paperheight=8in, top=1in, bottom=1in, left=0.5in, right=0.5in, headsep=0.5in]{geometry} % This is an abomination. The page height needs to be a bit longer, but it can't be because there are too many footnotes. Fix that bug, then fix this.
-% \usepackage[paperwidth=5.75in, paperheight=8.5in, top=1in, bottom=1in, left=0.5in, right=0.5in]{geometry} % The size of Virginia Tufte's Syntax as Style
+\usepackage[paperwidth=5.25in, paperheight=8in, top=1in, bottom=1in, left=0.5in, right=0.5in, headsep=0.5in]{geometry}
 \setlength{\topmargin}{-0.7in} % Relative to 1in default
 \setlength{\headsep}{0.1cm} % Distance from header to top of text
+
+% Font spacing options
+% \renewcommand\baselinestretch{12pt}
+\textwidth=23pc
 
 % Packages that don't necessarily belong elsewhere.
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
 \usepackage{textcomp} % For copyleft symbol.
-\usepackage{multicol} % For copyright page. Possibly for poetry.
 
 % Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
 % 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
@@ -47,7 +48,7 @@
 }
 
 \newcommand\chap[1]{%
-    \begin{center}\englishchaptertitle\ #1\end{center}%
+    \marginpar{\color{Gray}{{\Huge\textbf{~#1}}}}%
     \markboth{#1:1}{#1:1}%
 }
 
@@ -57,7 +58,7 @@
 %     CHAPTER HEADINGS
 % %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[1]{%
-    \vspace{-0.5em}%
+    \vspace{1em}%
     {\small\emph{#1.}}%
     \vspace{0.5em}%
 }
@@ -68,15 +69,16 @@
 % NOTE: Do not \usepackage{paralist} because it conflicts with options set for enumitem.
 
 % Changes spacing inside enumerate environment.
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \setenumerate{leftmargin=0em, itemindent=2.2em, listparindent=-1em, nolistsep}
 % itemindent = distance from left margin to start of label
 
 % Center aligns number.
 \SetLabelAlign{center}{\hfil#1\hfil}
 
-% Changes enumerate label to be a number without a period following it.
-\renewcommand\labelenumi{\arabic{enumi}}
+% Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\renewcommand\labelenumi{\color{Blue}{[\hspace*{0.1em}\arabic{enumi}\hspace*{0.1em}]}}
 
 % %%%%%%%%%%%%%
 %     FONTS
@@ -104,13 +106,13 @@
 % %%%%%%%%%%%%%%%%%
 %     FOOTNOTES
 % %%%%%%%%%%%%%%%%%
-\usepackage[symbol,perpage,multiple,hang,flushmargin]{footmisc}
-% Resets footnote numbering for each page (perpage) and adds the symbol option to number footnotes according to verse.
+\usepackage[perpage,multiple,hang,flushmargin]{footmisc}
+% Resets footnote numbering for each page (perpage).
 % Allows footnotes to be separated by a comma (multiple).
 % Hang and flushmargin remove the indentation.
 
 % Makes footnotes lowercase, italic alpha instead of Arabic numerals.
-\renewcommand{\thefootnote}{\textit\alph{footnote}}
+% \renewcommand{\thefootnote}{\textit\alph{footnote}}
 
 % Force footnotes to stay on the same page and not bleed over. Long footnotes should be placed in the appendix.
 \interfootnotelinepenalty=10000
@@ -178,9 +180,9 @@
 \begin{document}
     \frontmatter
     \pagestyle{empty}
-    \titleformat{\chapter}[display]{\centering\huge}{}{0ex}{#1}
+    \titleformat{\chapter}[display]{\large}{}{0ex}{\uppercase{#1}}
     \titlespacing*{\chapter}{0pt}{0pt}{7ex}
-    \titleformat{\section}{\large\bfseries}{}{1em}{#1}
+    \titleformat{\section}{\scshape}{}{1em}{#1}
     \input{half-title}
     \clearpage
     \input{title-page}
@@ -194,8 +196,6 @@
     \tableofcontents
     \clearpage
     \mainmatter
-    
-    \titleformat{\subsection}{\large\bfseries}{}{1em}{#1}
     
     % openrightfalse forces TeX to not generate a blank page between chapters.
     \makeatletter
@@ -295,7 +295,6 @@
     \titleformat{\subsection}{\bfseries}{}{1.25em}{#1} % Set to 1.25em so \section and \subsection are vertically aligned.
     ~\clearpage\thispagestyle{empty}
     ~\clearpage\thispagestyle{empty}
-    \onecolumn
     \input{Appendix/psalm-110}
     \input{Appendix/isaiah}
     \input{Appendix/aramaic-in-the-ot}
@@ -306,5 +305,4 @@
     \makeatletter
     \@openrighttrue
     \makeatother
-    \twocolumn
 \end{document}
