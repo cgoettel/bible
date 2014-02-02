@@ -13,7 +13,7 @@ open OUT,">$book/$chapter.tex" or die "Failed to open OUT: $!\n";
 
 print OUT "\\chap{$chapter}\n\n";
 print OUT "\\heading{xxxx}\n\n";
-print OUT "\\begin{enumerate*}\n";
+print OUT "\\begin{enumerate*}[mode=unboxed]\n";
 
 for ( $i = 1; $i <= $total_verses; $i++ )
 {
