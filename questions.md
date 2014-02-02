@@ -1,3 +1,4 @@
 - Exodus 23:5
 - Exodus 24:11
+- Numbers 6:3
 - Ruth 2:22
