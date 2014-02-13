@@ -1,4 +1,5 @@
 - Exodus 23:5
 - Exodus 24:11
 - Numbers 6:3
+- Numbers 11:13,18 - Can I omit "because"? It sounds out of place idiomatically.
 - Ruth 2:22
