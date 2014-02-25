@@ -2,4 +2,5 @@
 - Exodus 24:11
 - Numbers 6:3
 - Numbers 11:13,18 - Can I omit "because"? It sounds out of place idiomatically.
+- Deuteronomy 5:24 - Which part of the sentence is "today/this day" attached to? I think it makes more sense attached to the first part. Why, grammatically, would it be the second part without a conjugation?
 - Ruth 2:22
