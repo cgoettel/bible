@@ -12,13 +12,13 @@ chomp($total_verses = <>);
 open OUT,">$book/$chapter.tex" or die "Failed to open OUT: $!\n";
 
 print OUT "\\heading{$chapter}{xxxx}\n\n";
-print OUT "\\begin{enumerate*}[mode=unboxed]\n";
+print OUT "\\begin{inparaenum}\n";
 
 for ( $i = 1; $i <= $total_verses; $i++ )
 {
     print OUT "    \\verse{$chapter:$i} %%\n";
 }
 
-print OUT "\\end{enumerate*}\n";
+print OUT "\\end{inparaenum}\n";
 
 close OUT;
