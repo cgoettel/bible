@@ -146,11 +146,31 @@
 }
 
 % POETRY
-% Note: Don't use smaller text because then the (entire) book of Isaiah will be tiny.
-\newcommand\pverse[2]{%
-    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark
-    \item {\small #2}% Print verse number and contents.
+\usepackage{substr}
+% vn stands for verse number.
+\newcommand\vn[1]{%
+    \markboth{#1}{#1}
+    \hspace*{0.25em}\color{Blue}{[\hspace*{0.1em}\BehindSubString{:}{#1}\hspace*{0.1em}]}~%
+    \color{Black}% For some reason the previous line turns the rest of the chapter blue, this fixes it.
 }
+% pv stands for poetry verse.
+% o stands for one, t for two, h for three, f for four.
+\newcommand\pvoo[1]{#1}
+\newcommand\pvot[2]{#1\ \ \ \ #2}
+\newcommand\pvoh[3]{#1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvof[4]{#1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvto[1]{\ \ \ \ #1}
+\newcommand\pvtt[2]{\ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvth[3]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvtf[4]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvho[1]{\ \ \ \ \ \ \ \ #1}
+\newcommand\pvht[2]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvhh[3]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvhf[4]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvfo[1]{\ \ \ \ \ \ \ \ \ \ \ \ #1}
+\newcommand\pvft[2]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvfh[3]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvff[4]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
 
 % %%%%%%%%%%%%
 %     YEAR
