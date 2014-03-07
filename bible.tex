@@ -146,6 +146,9 @@
 }
 
 % POETRY
+\usepackage{mathtools}
+\allowdisplaybreaks[4]
+
 \usepackage{substr}
 % vn stands for verse number.
 \newcommand\vn[1]{%
@@ -156,7 +159,7 @@
 % pv stands for poetry verse.
 % o stands for one, t for two, h for three, f for four.
 \newcommand\pvoo[1]{#1}
-\newcommand\pvot[2]{#1\ \ \ \ #2}
+\newcommand\pvot[2]{\begin{align*}\text{#1}\ \ \ \ \text{#2}\end{align*}}
 \newcommand\pvoh[3]{#1\ \ \ \ #2\ \ \ \ #3}
 \newcommand\pvof[4]{#1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
 \newcommand\pvto[1]{\ \ \ \ #1}
