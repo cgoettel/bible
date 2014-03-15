@@ -4,4 +4,6 @@
 - Numbers 11:13,18 - Can I omit "because"? It sounds out of place idiomatically.
 - Deuteronomy 5:24 - Which part of the sentence is "today/this day" attached to? I think it makes more sense attached to the first part. Why, grammatically, would it be the second part without a conjugation?
 - Deuteronomy 5:29 - How are the various translations getting "Oh, that there were such a heart in them" from this? Specifically referring to "Oh!"
+- Joshua 3:13 - "the waters that come down from above." Is this referring to precipitation, springs, general upstream water?
+- Judges 7:1 - This is a complete mess. "The camp of Midian was on the [south (YLT)|north (DARBY, LSG)] [on the height (YLT)|by the hill (DARBY, LSG)] of Moreh in the valley." What is it? Mitzpon means hidden, secreted away, treasure, sheltered; it certainly doesn't seem to mean north or south.
 - Ruth 2:22
