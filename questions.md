@@ -7,4 +7,5 @@
 - Joshua 3:13 - "the waters that come down from above." Is this referring to precipitation, springs, general upstream water?
 - Judges 7:1 - This is a complete mess. "The camp of Midian was on the [south (YLT)|north (DARBY, LSG)] [on the height (YLT)|by the hill (DARBY, LSG)] of Moreh in the valley." What is it? Mitzpon means hidden, secreted away, treasure, sheltered; it certainly doesn't seem to mean north or south.
 - Judges 7:8 - What does tsaedah mean?
+- Judges 7:17 - what does memeni mean?
 - Ruth 2:22
