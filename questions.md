@@ -8,4 +8,5 @@
 - Judges 7:1 - This is a complete mess. "The camp of Midian was on the [south (YLT)|north (DARBY, LSG)] [on the height (YLT)|by the hill (DARBY, LSG)] of Moreh in the valley." What is it? Mitzpon means hidden, secreted away, treasure, sheltered; it certainly doesn't seem to mean north or south.
 - Judges 7:8 - What does tsaedah mean?
 - Judges 7:17 - what does memeni mean?
+- Judges 7:24 - "Come here to meet Midian." Loosely can qara mean a meeting or convocation, but this seems off.
 - Ruth 2:22
