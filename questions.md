@@ -9,4 +9,6 @@
 - Judges 7:8 - What does tsaedah mean?
 - Judges 7:17 - what does memeni mean?
 - Judges 7:24 - "Come here to meet Midian." Loosely can qara mean a meeting or convocation, but this seems off.
+- Ruth 2:1 - l'eesh eesh. "a relation of her husband's." How? I get a man of her husband (possibly a friend)
+- Ruth 2:3 - "and her chance happeneth" is in no way similar to "and it really happened."
 - Ruth 2:22
