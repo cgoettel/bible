@@ -1,0 +1,122 @@
+\documentclass[twoside]{book}
+\usepackage[paperwidth=5.25in, paperheight=8in, top=0.5in, bottom=0.25in, outer=1in, inner=0.44in, marginparwidth=0.5in, headsep=0.125in, footskip=0.25in]{geometry}
+
+% paralist allows for separate paragraphs in the same enumeration environment.
+\usepackage{paralist}
+
+% Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\renewcommand\labelenumi{\thinspace\color{Red}{$^{\arabic{enumi}}$}}
+
+\newcommand\heading[2]{%
+    \vspace{1em}%
+    \markboth{#1:1}{#1:1}%
+    {\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
+    \vspace{0.5em}%
+}
+
+% Header options for dictionary style headers.
+\usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0pt} % Removes horizontal line.
+
+\usepackage{fix2col} % Fixes potential problems with marks on two column pages.
+\usepackage{substr}
+
+% Extracts book name and chapters from rightmark and leftmark.
+\fancyhead[LE]{\rightmark}
+\fancyhead[RO]{\leftmark}
+\fancyhead[LO,RE]{\thepage}
+\fancyhead[CE]{\englishchaptertitle} % Puts book name (e.g., Genesis, Exodus) in center header on even pages.
+\fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
+\cfoot{} % Removes page number from center foot.
+
+% Patch enumi counter to always start with 1.
+\usepackage{etoolbox}
+\newcounter{myc}[enumi]
+\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
+
+\renewcommand\verse[1]{%
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
+    \item% Print verse number.
+}
+
+% POETRY
+\usepackage{substr}
+% vn stands for verse number.
+\newcommand\vn[1]{%
+    \markboth{#1}{#1}
+    \thinspace\color{Red}{$^{\arabic{enumi}}$}%
+    \color{Black}% For some reason the previous line turns the rest of the chapter red. This fixes it.
+}
+% pv stands for poetry verse.
+% a stands for one, b for two, c for three, d for four.
+\newcommand\pvaa[1]{#1}
+\newcommand\pvab[2]{#1\ \ \ \ #2}
+\newcommand\pvac[3]{#1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvad[4]{#1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvba[1]{\ \ \ \ #1}
+\newcommand\pvbb[2]{\ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvbc[3]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvbd[4]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvca[1]{\ \ \ \ \ \ \ \ #1}
+\newcommand\pvcb[2]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvcc[3]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvcd[4]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvda[1]{\ \ \ \ \ \ \ \ \ \ \ \ #1}
+\newcommand\pvdb[2]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2}
+\newcommand\pvdc[3]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
+\newcommand\pvdd[4]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+
+\begin{document}
+\noindent
+\fbox{\parbox[b][4em][t]{0.33\textwidth}{Some \\ text} }
+\fbox{\parbox[c][4em][s]{0.33\textwidth}{Some \vfill text} }
+\fbox{\parbox[t][4em][c]{0.33\textwidth}{Some \\ text} }
+
+\heading{1}{Few in Israel remain faithful to the Lord~--- the Lord rejects their sacrifices and feasts~--- repentance proclaimed~--- Zion to be redeemed in the latter days}
+
+\begin{inparaenum}
+    \verse{1:16} %%
+    \verse{1:17} %%
+    
+    \pvbb{Judge the fatherless;\footnote{orphans}}{learn to do good.}%%
+    
+    \pvab{\vn{1:18} I pray thee, come and let us reason together,''}{saith the \textsc{Lord}.}%%
+
+    \pvbb{``If your sins are as scarlet,}{as snow they shall be white.}%%
+
+    \pvbb{If they are blood\footnote{earth} red,}{they shall be as wool.\footnote{The dye that was used back then was permanent. The cloth could fade, but would never again be truly white.}}%%
+    
+    \pvab{\vn{1:19} If you're willing and hearken,}{you shall consume\footnote{eat of} the good of the land.}%%
+    
+    \verse{1:20} And if you refuse and rebel The sword shall consume you:%%
+
+:For the mouth of the \textsc{Lord} hath proclaimed it.\footnote{so spoken.}%%
+    \verse{1:21} %%
+    \verse{1:22} %%
+    \verse{1:23} %%
+    \verse{1:24} Therefore, thus saith the \textsc{Lord} of Hosts, The Mighty One of Israel:\footnote{The one in Israel who is mighty}%%
+
+:``Ah, now I will be relieved\footnote{eased} of mine adversaries: I am avenged of mine enemies.%%
+    \verse{1:25} Lest I turn my hand on thee\footnote{I will turn my hand back on thee}%%
+
+:I will purify thine dross~--- I will turn aside all thine tin.\footnote{Tin \emph{is} useful. It is used to make brass (a copper and tin alloy). One of the symbolisms here is that although tin is useful, the Lord has a greater plan in mind for each of us. Therefore, we need to listen to Him and do as He commands although we may think that what we are doing in lieu of obeying is important and useful.}%%
+    \verse{1:26} I will restore\footnote{return} thine judges as at first And thy counselors as in the beginning.%%
+
+:After this though shalt be called \textit{A City of Righteousness: A Faithful City}.%%
+    \verse{1:27} Zion is redeemed through judgment~--- Also those who are returned\footnote{rescued ones, captives}\footnote{i.e., they are also redeemed} in righteousness.%%
+    \verse{1:28} The sinners and transgressors are destroyed together; Those forsaking the \textsc{Lord} are consumed.%%
+    \verse{1:29} You are ashamed of the oaks\footnote{Idols used for fertility worship.} That you've desired.%%
+
+:And you're confused because of the groves\footnote{gardens} That you've chosen.%%
+    \verse{1:30} For you are as an oak Whose leaf is fading%%
+
+:And as a grove That hath no water.%%
+    \verse{1:31} The strong shall be as tow\footnote{Synonymous to oakum (n): Loose fiber from untwisted rope, used esp. to caulk wooden ships.} And its maker as spark.%%
+
+:They shall burn together: None shall quench them.''%%
+\end{inparaenum}
+
+
+\end{document}
