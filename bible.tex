@@ -48,15 +48,22 @@
     \thispagestyle{empty}% Forces no page number in cfoot.
 }
 
-% %%%%%%%%%%%%%%%%%%%%%%%%
-%     CHAPTER HEADINGS
-% %%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CHAPTER HEADINGS and EPILOGUES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[2]{%
     \vspace{1em}%
     \markboth{#1:1}{#1:1}%
     {\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
     \vspace{0.5em}%
 }
+
+\newcommand\epilogue[1]{{%
+    \medskip\small\itshape%
+    \begin{center}%
+        #1%
+    \end{center}%
+}}
 
 % %%%%%%%%%%%%%%%%%
 %     ENUMERATE
