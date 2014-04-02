@@ -12,3 +12,4 @@
 - Ruth 2:1 - l'eesh eesh. "a relation of her husband's." How? I get a man of her husband (possibly a friend)
 - Ruth 2:3 - "and her chance happeneth" is in no way similar to "and it really happened."
 - Ruth 2:22
+- 2 Samuel 6:10 - Can we justify translating soor as "bring"?
