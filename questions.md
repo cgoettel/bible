@@ -13,3 +13,5 @@
 - Ruth 2:3 - "and her chance happeneth" is in no way similar to "and it really happened."
 - Ruth 2:22
 - 2 Samuel 6:10 - Can we justify translating soor as "bring"?
+- 2 Samuel 6:12 - How does ba'avoor fit into all this?
+- 2 Samuel 6:14 - How does m'char'care fit into all this?
