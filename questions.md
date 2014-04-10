@@ -15,3 +15,4 @@
 - 2 Samuel 6:10 - Can we justify translating soor as "bring"?
 - 2 Samuel 6:12 - How does ba'avoor fit into all this?
 - 2 Samuel 6:14 - How does m'char'care fit into all this?
+- 2 Samuel 6:20 - Can we render c'bad as "magnificent" or "respectable" instead of just "honorable"?
