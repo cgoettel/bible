@@ -17,3 +17,4 @@
 - 2 Samuel 6:14 - How does m'char'care fit into all this?
 - 2 Samuel 6:20 - Can we render c'bad as "magnificent" or "respectable" instead of just "honorable"?
 - 2 Samuel 6:22 - "I will make myself more vile than thus" compared to "I will humble myself." qalal seems to mean humbling oneself, not becoming more vile.
+- 1 Kings 17:7 - See footnote.
