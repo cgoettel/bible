@@ -19,3 +19,5 @@
 - 2 Samuel 6:22 - "I will make myself more vile than thus" compared to "I will humble myself." qalal seems to mean humbling oneself, not becoming more vile.
 - 1 Kings 17:7 - See footnote.
 - 1 Kings 18:7 - Can we please have a serious talk about translating he'nay idiomatically?
+- 1 Kings 18:9 - Is "your servant" the person speaking?
+- 1 Kings 18:10 - What is this talking about? "Is there not a nation or kingdom that my master has sent YOU to seek YOU?"
