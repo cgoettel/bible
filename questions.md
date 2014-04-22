@@ -21,3 +21,6 @@
 - 1 Kings 18:7 - Can we please have a serious talk about translating he'nay idiomatically?
 - 1 Kings 18:9 - Is "your servant" the person speaking?
 - 1 Kings 18:10 - What is this talking about? "Is there not a nation or kingdom that my master has sent YOU to seek YOU?"
+- 2 Kings 2:2 - What does the idiom "Your soul lives" mean? Also appears in v. 4.
+
+- Is there a reason ילך doesn't appear in the KB?
