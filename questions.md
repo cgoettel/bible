@@ -23,5 +23,6 @@
 - 1 Kings 18:10 - What is this talking about? "Is there not a nation or kingdom that my master has sent YOU to seek YOU?"
 - 2 Kings 2:2 - What does the idiom "Your soul lives" mean? Also appears in v. 4.
 - 2 Kings 2:16 - What does "You shall not send" mean? Can we render this, "You don't get to send."? (As in, you don't have the authority to do this action)
+- 2 Kings 5:8 - Can we justify rendering it "horses" and "chariots"?
 
 - Is there a reason ילך doesn't appear in the KB?
