@@ -66,7 +66,7 @@
 
 % Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
-\renewcommand\labelenumi{\hspace*{0.25em}\color{Blue}{[\hspace*{0.1em}\arabic{enumi}\hspace*{0.1em}]}}
+\renewcommand\labelenumi{~\color{Red}{$^{\arabic{enumi}}\!\!\thinspace$}}
 
 % %%%%%%%%%%%%%
 %     FONTS
@@ -150,27 +150,27 @@
 % vn stands for verse number.
 \newcommand\vn[1]{%
     \markboth{#1}{#1}
-    \hspace*{0.25em}\color{Blue}{[\hspace*{0.1em}\BehindSubString{:}{#1}\hspace*{0.1em}]}~%
-    \color{Black}% For some reason the previous line turns the rest of the chapter blue, this fixes it.
+    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$}~%
+    \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
 % pv stands for poetry verse.
 % o stands for one, t for two, h for three, f for four.
-\newcommand\pvoo[1]{#1}
-\newcommand\pvot[2]{#1\ \ \ \ #2}
-\newcommand\pvoh[3]{#1\ \ \ \ #2\ \ \ \ #3}
-\newcommand\pvof[4]{#1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
-\newcommand\pvto[1]{\ \ \ \ #1}
-\newcommand\pvtt[2]{\ \ \ \ #1\ \ \ \ #2}
-\newcommand\pvth[3]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
-\newcommand\pvtf[4]{\ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
-\newcommand\pvho[1]{\ \ \ \ \ \ \ \ #1}
-\newcommand\pvht[2]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2}
-\newcommand\pvhh[3]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
-\newcommand\pvhf[4]{\ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
-\newcommand\pvfo[1]{\ \ \ \ \ \ \ \ \ \ \ \ #1}
-\newcommand\pvft[2]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2}
-\newcommand\pvfh[3]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3}
-\newcommand\pvff[4]{\ \ \ \ \ \ \ \ \ \ \ \ #1\ \ \ \ #2\ \ \ \ #3\ \ \ \ #4}
+\newcommand\pvaa[1]{#1}
+\newcommand\pvab[2]{#1\hspace*{1em}#2}
+\newcommand\pvac[3]{#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvad[4]{#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvba[1]{\hspace*{1em}#1}
+\newcommand\pvbb[2]{\hspace*{1em}#1\hspace*{1em}#2}
+\newcommand\pvbc[3]{\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvbd[4]{\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvca[1]{\hspace*{1em}\hspace*{1em}#1}
+\newcommand\pvcb[2]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2}
+\newcommand\pvcc[3]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvcd[4]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvda[1]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1}
+\newcommand\pvdb[2]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2}
+\newcommand\pvdc[3]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvdd[4]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
 
 % %%%%%%%%%%%%
 %     YEAR
