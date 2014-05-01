@@ -54,7 +54,7 @@
 \newcommand\heading[2]{%
     \vspace{1em}%
     \markboth{#1:1}{#1:1}%
-    {\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
+    {\noindent\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
     \vspace{0.5em}%
 }
 
@@ -146,31 +146,30 @@
 }
 
 % POETRY
-\usepackage{substr}
 % vn stands for verse number.
 \newcommand\vn[1]{%
     \markboth{#1}{#1}
-    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$}~%
+    \thinspace\color{Red}{$\!\!\!^{\BehindSubString{:}{#1}}$\thinspace}%
     \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
 % pv stands for poetry verse.
 % o stands for one, t for two, h for three, f for four.
-\newcommand\pvaa[1]{#1}
-\newcommand\pvab[2]{#1\hspace*{1em}#2}
-\newcommand\pvac[3]{#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvad[4]{#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvba[1]{\hspace*{1em}#1}
-\newcommand\pvbb[2]{\hspace*{1em}#1\hspace*{1em}#2}
-\newcommand\pvbc[3]{\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvbd[4]{\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvca[1]{\hspace*{1em}\hspace*{1em}#1}
-\newcommand\pvcb[2]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2}
-\newcommand\pvcc[3]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvcd[4]{\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvda[1]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1}
-\newcommand\pvdb[2]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2}
-\newcommand\pvdc[3]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvdd[4]{\hspace*{1em}\hspace*{1em}\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvaa[1]{\noindent\hspace*{1em}#1}
+\newcommand\pvab[2]{\noindent\hspace*{1em}#1\hspace*{1em}#2}
+\newcommand\pvac[3]{\noindent\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvad[4]{\noindent\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvba[1]{\noindent\hspace*{2em}#1}
+\newcommand\pvbb[2]{\noindent\hspace*{2em}#1\hspace*{1em}#2}
+\newcommand\pvbc[3]{\noindent\hspace*{2em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvbd[4]{\noindent\hspace*{2em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvca[1]{\noindent\hspace*{3em}#1}
+\newcommand\pvcb[2]{\noindent\hspace*{3em}#1\hspace*{1em}#2}
+\newcommand\pvcc[3]{\noindent\hspace*{3em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvcd[4]{\noindent\hspace*{3em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+\newcommand\pvda[1]{\noindent\hspace*{4em}#1}
+\newcommand\pvdb[2]{\noindent\hspace*{4em}#1\hspace*{1em}#2}
+\newcommand\pvdc[3]{\noindent\hspace*{4em}#1\hspace*{1em}#2\hspace*{1em}#3}
+\newcommand\pvdd[4]{\noindent\hspace*{4em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
 
 % %%%%%%%%%%%%
 %     YEAR
