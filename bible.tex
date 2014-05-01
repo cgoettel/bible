@@ -78,24 +78,25 @@
 % %%%%%%%%%%%%%
 %     FONTS
 % %%%%%%%%%%%%%
-\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{metalogo}
 
 % Egyptian hieroglyphs
 \usepackage{graphicx}
 
 % Greek
-\newfontfamily{\sblg}[Script=Greek,Scale=1.2]{SBL Greek}
+\newfontfamily\sblg[Script=Greek,Scale=MatchUppercase]{SBL Greek}
 \newcommand\Greek[1]{{\sblg #1}}
 
 % Hebrew
-\newfontfamily{\sblh}[Script=Hebrew,Scale=1.2]{SBL Hebrew}
+\newfontfamily\sblh[Script=Hebrew,Scale=MatchUppercase]{SBL Hebrew}
 \newcommand\Hebrew[1]{{\sblh #1}}
 
 % Phoenician
 \usepackage{phoenician}
 
 % Syriac
-\newfontfamily{\sbls}[Script=Syriac]{Estrangelo (V1.1)}
+\newfontfamily\sbls[Script=Syriac]{Estrangelo (V1.1)}
 \newcommand\Syriac[1]{{\large\sbls #1}}
 
 % %%%%%%%%%%%%%%%%%
@@ -136,7 +137,6 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from TOC.
 \renewcommand\contentsname{CONTENTS}
-% \usepackage[toc]{multitoc} % Two column TOC.
 \setcounter{tocdepth}{0} % So TOC only displays chapters (books).
 \def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
 
