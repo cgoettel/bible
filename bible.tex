@@ -135,7 +135,8 @@
 %     TABLE OF CONTENTS
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from TOC.
-\usepackage[toc]{multitoc} % Two column TOC.
+\renewcommand\contentsname{CONTENTS}
+% \usepackage[toc]{multitoc} % Two column TOC.
 \setcounter{tocdepth}{0} % So TOC only displays chapters (books).
 \def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
 
@@ -171,7 +172,7 @@
 \begin{document}
     \frontmatter
     \pagestyle{empty}
-    \titleformat{\chapter}[display]{\large}{}{0em}{\uppercase{#1}}
+    \titleformat{\chapter}{\large}{}{0em}{\uppercase{#1}}
     \titlespacing*{\chapter}{0pt}{0pt}{12pt}
     \titleformat{\section}{\scshape}{}{1em}{#1}
     \input{half-title}
