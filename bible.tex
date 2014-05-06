@@ -150,6 +150,7 @@
 \newcommand\vn[1]{%
     \markboth{#1}{#1}
     \thinspace\color{Red}{$\!\!\!^{\BehindSubString{:}{#1}}$\thinspace}%
+    \addtocounter{enumi}{1}%
     \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
 % pv stands for poetry verse.
