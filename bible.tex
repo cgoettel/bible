@@ -124,17 +124,9 @@
 \fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
 \cfoot{} % Removes page number from center foot.
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-%     TABLE OF CONTENTS
-% %%%%%%%%%%%%%%%%%%%%%%%%%
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from TOC.
-\usepackage[toc]{multitoc} % Two column TOC.
-\setcounter{tocdepth}{0} % So TOC only displays chapters (books).
-\def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     VERSES and REFERENCES
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%
+%     POETRY
+% %%%%%%%%%%%%%%
 % Patch enumi counter to always start with 1.
 \usepackage{etoolbox}
 \newcounter{myc}[enumi]
@@ -148,13 +140,13 @@
 % POETRY
 % vn stands for verse number.
 \newcommand\vn[1]{%
-    \markboth{#1}{#1}
-    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$\thinspace}%
-    \addtocounter{enumi}{1}%
+    \markboth{#1}{#1}% For header marking.
+    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$\thinspace}% Print verse number.
+    \addtocounter{enumi}{1}% Add to enumi counter. This was, when we switch back to normal verses (in chapters including both prose and poetry) the numbering will be correct.
     \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
 
-\usepackage{calc}
+% Length definitions. These are used in the pv commands below so that the document \textwidth is adhered to.
 \newlength{\lengtha}
 \setlength{\lengtha}{0.965\textwidth}
 \newlength{\lengthb}
@@ -169,163 +161,123 @@
 % aa means one indent, one section. ab means one indent, two sections. Etc.
 \newcommand\pvaa[1]{%
     \noindent\hspace*{1em}%
-    \begin{minipage}[t]{\lengtha}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengtha}%
+        #1%
     \end{minipage}%
 }
 
 \newcommand\pvab[2]{%
     \noindent\hspace*{1em}%
-    \begin{minipage}[t]{\lengtha}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengtha}%
+        #1\hspace*{1.5em}#2%
     \end{minipage}%
 }
 
 \newcommand\pvac[3]{%
     \noindent\hspace*{1.5em}%
-    \begin{minipage}[t]{\lengtha}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengtha}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
     \end{minipage}%
 }
 
 \newcommand\pvad[4]{%
     \noindent\hspace*{1.5em}%
-    \begin{minipage}[t]{\lengtha}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengtha}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
     \end{minipage}%
 }
 
 \newcommand\pvba[1]{%
     \noindent\hspace*{2em}%
-    \begin{minipage}[t]{\lengthb}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthb}%
+        #1%
     \end{minipage}%
 }
 
 \newcommand\pvbb[2]{%
     \noindent\hspace*{2em}%
-    \begin{minipage}[t]{\lengthb}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthb}%
+        #1\hspace*{1.5em}#2%
     \end{minipage}%
 }
 
 \newcommand\pvbc[3]{%
     \noindent\hspace*{2em}%
-    \begin{minipage}[t]{\lengthb}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthb}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
     \end{minipage}%
 }
 
 \newcommand\pvbd[4]{%
     \noindent\hspace*{2em}%
-    \begin{minipage}[t]{\lengthb}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthb}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
     \end{minipage}%
 }
 
 \newcommand\pvca[1]{%
     \noindent\hspace*{3em}%
-    \begin{minipage}[t]{\lengthc}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthc}%
+        #1%
     \end{minipage}%
 }
 
 \newcommand\pvcb[2]{%
     \noindent\hspace*{3em}%
-    \begin{minipage}[t]{\lengthc}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthc}%
+        #1\hspace*{1.5em}#2%
     \end{minipage}%
 }
 
 \newcommand\pvcc[3]{%
     \noindent\hspace*{3em}%
-    \begin{minipage}[t]{\lengthc}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthc}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
     \end{minipage}%
 }
 
 \newcommand\pvcd[4]{%
     \noindent\hspace*{3em}%
-    \begin{minipage}[t]{\lengthc}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthc}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
     \end{minipage}%
 }
 
 \newcommand\pvda[1]{%
     \noindent\hspace*{4em}%
-    \begin{minipage}[t]{\lengthd}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthd}%
+        #1%
     \end{minipage}%
 }
 
 \newcommand\pvdb[2]{%
     \noindent\hspace*{4em}%
-    \begin{minipage}[t]{\lengthd}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthd}%
+        #1\hspace*{1.5em}#2%
     \end{minipage}%
 }
 
 \newcommand\pvdc[3]{%
     \noindent\hspace*{4em}%
-    \begin{minipage}[t]{\lengthd}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthd}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
     \end{minipage}%
 }
 
 \newcommand\pvdd[4]{%
     \noindent\hspace*{4em}%
-    \begin{minipage}[t]{\lengthd}%
-    \setcounter{mpfootnote}{\value{footnote}}%
-    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
-    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
-    \setcounter{footnote}{\value{mpfootnote}}%
+    \begin{minipage}[b]{\lengthd}%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
     \end{minipage}%
 }
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+%     TABLE OF CONTENTS
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from TOC.
+\usepackage[toc]{multitoc} % Two column TOC.
+\setcounter{tocdepth}{0} % So TOC only displays chapters (books).
+\def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
 
 % %%%%%%%%%%%%
 %     YEAR
