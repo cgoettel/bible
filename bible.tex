@@ -149,28 +149,183 @@
 % vn stands for verse number.
 \newcommand\vn[1]{%
     \markboth{#1}{#1}
-    \thinspace\color{Red}{$\!\!\!^{\BehindSubString{:}{#1}}$\thinspace}%
+    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$\thinspace}%
     \addtocounter{enumi}{1}%
     \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
+
+\usepackage{calc}
+\newlength{\lengtha}
+\setlength{\lengtha}{0.965\textwidth}
+\newlength{\lengthb}
+\setlength{\lengthb}{0.925\textwidth}
+\newlength{\lengthc}
+\setlength{\lengthc}{0.89\textwidth}
+\newlength{\lengthd}
+\setlength{\lengthd}{0.855\textwidth}
+
 % pv stands for poetry verse.
-% o stands for one, t for two, h for three, f for four.
-\newcommand\pvaa[1]{\noindent\hspace*{1em}#1}
-\newcommand\pvab[2]{\noindent\hspace*{1em}#1\hspace*{1em}#2}
-\newcommand\pvac[3]{\noindent\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvad[4]{\noindent\hspace*{1em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvba[1]{\noindent\hspace*{2em}#1}
-\newcommand\pvbb[2]{\noindent\hspace*{2em}#1\hspace*{1em}#2}
-\newcommand\pvbc[3]{\noindent\hspace*{2em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvbd[4]{\noindent\hspace*{2em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvca[1]{\noindent\hspace*{3em}#1}
-\newcommand\pvcb[2]{\noindent\hspace*{3em}#1\hspace*{1em}#2}
-\newcommand\pvcc[3]{\noindent\hspace*{3em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvcd[4]{\noindent\hspace*{3em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
-\newcommand\pvda[1]{\noindent\hspace*{4em}#1}
-\newcommand\pvdb[2]{\noindent\hspace*{4em}#1\hspace*{1em}#2}
-\newcommand\pvdc[3]{\noindent\hspace*{4em}#1\hspace*{1em}#2\hspace*{1em}#3}
-\newcommand\pvdd[4]{\noindent\hspace*{4em}#1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4}
+% a stands for one, b for two, c for three, d for four.
+% aa means one indent, one section. ab means one indent, two sections. Etc.
+\newcommand\pvaa[1]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[t]{\lengtha}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvab[2]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[t]{\lengtha}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvac[3]{%
+    \noindent\hspace*{1.5em}%
+    \begin{minipage}[t]{\lengtha}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvad[4]{%
+    \noindent\hspace*{1.5em}%
+    \begin{minipage}[t]{\lengtha}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvba[1]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[t]{\lengthb}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvbb[2]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[t]{\lengthb}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvbc[3]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[t]{\lengthb}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvbd[4]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[t]{\lengthb}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvca[1]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[t]{\lengthc}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvcb[2]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[t]{\lengthc}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvcc[3]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[t]{\lengthc}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvcd[4]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[t]{\lengthc}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvda[1]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[t]{\lengthd}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvdb[2]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[t]{\lengthd}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvdc[3]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[t]{\lengthd}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
+
+\newcommand\pvdd[4]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[t]{\lengthd}%
+    \setcounter{mpfootnote}{\value{footnote}}%
+    \renewcommand{\thempfootnote}{\arabic{mpfootnote}}%
+    #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+    \setcounter{footnote}{\value{mpfootnote}}%
+    \end{minipage}%
+}
 
 % %%%%%%%%%%%%
 %     YEAR
