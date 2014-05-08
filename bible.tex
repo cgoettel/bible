@@ -68,6 +68,16 @@
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
 \renewcommand\labelenumi{~\color{Red}{$^{\arabic{enumi}}\!\!\thinspace$}}
 
+% Patch enumi counter to always start with 1.
+\usepackage{etoolbox}
+\newcounter{myc}[enumi]
+\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
+
+\renewcommand\verse[1]{%
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
+    \item% Print verse number.
+}
+
 % %%%%%%%%%%%%%
 %     FONTS
 % %%%%%%%%%%%%%
@@ -95,9 +105,9 @@
 %     FOOTNOTES
 % %%%%%%%%%%%%%%%%%
 \usepackage[perpage,multiple,hang,flushmargin]{footmisc}
-% Resets footnote numbering for each page (perpage).
-% Allows footnotes to be separated by a comma (multiple).
-% Hang and flushmargin remove the indentation.
+% perpage: Resets footnote numbering for each page.
+% multiple: Allows footnotes to be separated by a comma.
+% hang and flushmargin: Removes the indentation.
 
 % Makes footnotes lowercase, italic alpha instead of Arabic numerals.
 % \renewcommand{\thefootnote}{\textit\alph{footnote}}
@@ -127,17 +137,6 @@
 % %%%%%%%%%%%%%%
 %     POETRY
 % %%%%%%%%%%%%%%
-% Patch enumi counter to always start with 1.
-\usepackage{etoolbox}
-\newcounter{myc}[enumi]
-\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
-
-\renewcommand\verse[1]{%
-    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
-    \item% Print verse number.
-}
-
-% POETRY
 % vn stands for verse number.
 \newcommand\vn[1]{%
     \markboth{#1}{#1}% For header marking.
@@ -159,115 +158,164 @@
 % pv stands for poetry verse.
 % a stands for one, b for two, c for three, d for four.
 % aa means one indent, one section. ab means one indent, two sections. Etc.
+% The [b] option for minipage is for alignment. Other options are [t] and [m], but [b] seems to work best.
 \newcommand\pvaa[1]{%
     \noindent\hspace*{1em}%
     \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvab[2]{%
     \noindent\hspace*{1em}%
     \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvac[3]{%
     \noindent\hspace*{1.5em}%
     \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvad[4]{%
     \noindent\hspace*{1.5em}%
     \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvba[1]{%
     \noindent\hspace*{2em}%
     \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvbb[2]{%
     \noindent\hspace*{2em}%
     \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvbc[3]{%
     \noindent\hspace*{2em}%
     \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvbd[4]{%
     \noindent\hspace*{2em}%
     \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvca[1]{%
     \noindent\hspace*{3em}%
     \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvcb[2]{%
     \noindent\hspace*{3em}%
     \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvcc[3]{%
     \noindent\hspace*{3em}%
     \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvcd[4]{%
     \noindent\hspace*{3em}%
     \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvda[1]{%
     \noindent\hspace*{4em}%
     \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvdb[2]{%
     \noindent\hspace*{4em}%
     \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvdc[3]{%
     \noindent\hspace*{4em}%
     \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
 \newcommand\pvdd[4]{%
     \noindent\hspace*{4em}%
     \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
         #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
 
