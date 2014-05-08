@@ -13,7 +13,7 @@
 
 % Packages that don't necessarily belong elsewhere.
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
-\usepackage{textcomp} % For copyleft symbol.
+\usepackage{textcomp} % For miscellaneous symbols, viz.: copyleft, degree.
 
 % Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
 % 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
@@ -114,7 +114,8 @@
 \interfootnotelinepenalty=10000
 
 % To indicate when a word used in English rendering is understood from the Hebrew, but not explicitly stated.
-\newcommand\understood{\marginpar{U}}
+\usepackage[mathscr]{euscript}
+\newcommand\understood{\textdegree\marginpar{~~~~$\mathscr{U}$~~~~}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     HEADER and FOOTER
