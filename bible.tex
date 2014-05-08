@@ -141,7 +141,7 @@
 \newcommand\vn[1]{%
     \markboth{#1}{#1}% For header marking.
     \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$\thinspace}% Print verse number.
-    \addtocounter{enumi}{1}% Add to enumi counter. This was, when we switch back to normal verses (in chapters including both prose and poetry) the numbering will be correct.
+    \addtocounter{enumi}{1}% Add to enumi counter. This way, when we switch back to normal verses (in chapters including both prose and poetry) the numbering will be correct.
     \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
 }
 
