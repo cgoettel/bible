@@ -6,7 +6,7 @@ use warnings;
 my $DEBUG = 1;
 
 # Open directory.
-# my @directories = ("Sandbox");
+# my @directories = ("sandbox");
 my @directories = ("1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Daniel", "Deuteronomy", "Exodus", "Ezra", "Genesis", "Isaiah", "Jeremiah", "Joshua", "Judges", "Malachi", "Nehemiah", "Numbers", "Obadiah", "Ruth", "Zephaniah");
 
 foreach ( @directories )
@@ -33,7 +33,7 @@ sub translate
         while ( <IN> )
         {
             chomp(my $current_line = $_);
-            $current_line =~ s/\\,/\\thinspace/;
+            $current_line =~ s/\\footnote{Understood}/\\understood\\/g;
             print TMP $current_line . "\n";
         }
         
