@@ -55,7 +55,7 @@
 \newcommand\heading[2]{%
     \vspace{1em}%
     \markboth{#1:1}{#1:1}%
-    {\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
+    {\noindent\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
     \vspace{0.5em}%
 }
 
@@ -74,7 +74,17 @@
 
 % Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
-\renewcommand\labelenumi{\hspace*{0.25em}\color{Blue}{[\hspace*{0.1em}\arabic{enumi}\hspace*{0.1em}]}}
+\renewcommand\labelenumi{~\color{Red}{$^{\arabic{enumi}}\!\!\thinspace$}}
+
+% Patch enumi counter to always start with 1.
+\usepackage{etoolbox}
+\newcounter{myc}[enumi]
+\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
+
+\renewcommand\verse[1]{%
+    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
+    \item% Print verse number.
+}
 
 % %%%%%%%%%%%%%
 %     FONTS
@@ -104,9 +114,9 @@
 %     FOOTNOTES
 % %%%%%%%%%%%%%%%%%
 \usepackage[perpage,multiple,hang,flushmargin]{footmisc}
-% Resets footnote numbering for each page (perpage).
-% Allows footnotes to be separated by a comma (multiple).
-% Hang and flushmargin remove the indentation.
+% perpage: Resets footnote numbering for each page.
+% multiple: Allows footnotes to be separated by a comma.
+% hang and flushmargin: Removes the indentation.
 
 % Makes footnotes lowercase, italic alpha instead of Arabic numerals.
 \renewcommand{\thefootnote}{\textit\alph{footnote}}
@@ -140,6 +150,191 @@
 \fancyhead[CO]{\hebrewchaptertitle} % Puts Hebrew book name in center header on odd pages.
 \cfoot{} % Removes page number from center foot.
 
+% %%%%%%%%%%%%%%
+%     POETRY
+% %%%%%%%%%%%%%%
+% vn stands for verse number.
+\newcommand\vn[1]{%
+    \markboth{#1}{#1}% For header marking.
+    \thinspace\color{Red}{$^{\BehindSubString{:}{#1}}$\thinspace}% Print verse number.
+    \addtocounter{enumi}{1}% Add to enumi counter. This way, when we switch back to normal verses (in chapters including both prose and poetry) the numbering will be correct.
+    \color{Black}% For some reason, the previous line turns the rest of the chapter blue. This fixes it.
+}
+
+% Length definitions. These are used in the pv commands below so that the document \textwidth is adhered to.
+\newlength{\lengtha}
+\setlength{\lengtha}{0.965\textwidth}
+\newlength{\lengthb}
+\setlength{\lengthb}{0.925\textwidth}
+\newlength{\lengthc}
+\setlength{\lengthc}{0.89\textwidth}
+\newlength{\lengthd}
+\setlength{\lengthd}{0.855\textwidth}
+
+% pv stands for poetry verse.
+% a stands for one, b for two, c for three, d for four.
+% aa means one indent, one section. ab means one indent, two sections. Etc.
+% The [b] option for minipage is for alignment. Other options are [t] and [m], but [b] seems to work best.
+\newcommand\pvaa[1]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvab[2]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvac[3]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvad[4]{%
+    \noindent\hspace*{1em}%
+    \begin{minipage}[b]{\lengtha}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvba[1]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvbb[2]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvbc[3]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvbd[4]{%
+    \noindent\hspace*{2em}%
+    \begin{minipage}[b]{\lengthb}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvca[1]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvcb[2]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvcc[3]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvcd[4]{%
+    \noindent\hspace*{3em}%
+    \begin{minipage}[b]{\lengthc}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvda[1]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvdb[2]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvdc[3]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvdd[4]{%
+    \noindent\hspace*{4em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1em}#2\hspace*{1em}#3\hspace*{1em}#4%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     TABLE OF CONTENTS
 % %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,26 +342,6 @@
 \renewcommand\contentsname{CONTENTS}
 \setcounter{tocdepth}{0} % So TOC only displays chapters (books).
 \def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     VERSES and REFERENCES
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Patch enumi counter to always start with 1.
-\usepackage{etoolbox}
-\newcounter{myc}[enumi]
-\patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
-
-\renewcommand\verse[1]{%
-    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
-    \item% Print verse number.
-}
-
-% POETRY
-% Note: Don't use smaller text because then the (entire) book of Isaiah will be tiny.
-\newcommand\pverse[2]{%
-    \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark
-    \item {\small #2}% Print verse number and contents.
-}
 
 % %%%%%%%%%%%%
 %     YEAR
