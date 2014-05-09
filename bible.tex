@@ -45,7 +45,8 @@
     \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
     \renewcommand\englishchaptertitle{#1}%
     \renewcommand\hebrewchaptertitle{#2}%
-    \thispagestyle{empty}% Forces no page number in cfoot.
+    \thispagestyle{fancy}% Forces no page number in cfoot.
+    \markboth{1\thinspace:\thinspace1}{1\thinspace:\thinspace1}%
 }
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
