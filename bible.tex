@@ -345,13 +345,34 @@
     \book{Malachi}{\Hebrew{מלאכי}}
     \input{Malachi/3}
     ~\clearpage\thispagestyle{empty}
+    
     \appendix
-    \titleformat{\subsection}{}{}{1.25em}{\textit{#1}}
+    \fancyhead[LE,RO]{APPENDIX}
+    \fancyhead[LO,RE]{\thepage}
+    \fancyhead[CH]{} % Removes book name from center head.
+    % \titleformat{\chapter}{\scshape}{}{0em}{#1}
+    % \titlespacing*{\chapter}{0pt}{0pt}{12pt}
+    \titleformat{\section}{\scshape}{}{0em}{#1}
+    \titleformat{\subsection}{}{}{0em}{\textsc{#1}}
+    \titleformat{\subsubsection}{}{}{0em}{\textsc{#1}}
+    \chapter{Appendix}
     \input{Appendix/psalm-110}
+    \clearpage
     \input{Appendix/isaiah}
+    \clearpage
     % \input{Appendix/aramaic-in-the-ot}
+    % \clearpage
     \input{Appendix/covenants-in-antiquity}
+    \clearpage
+    % \input{Appendix/dead-sea-scrolls}
+    % \clearpage
     \input{Appendix/tabernacle}
+    \clearpage
     \input{Appendix/tetragrammaton}
+    \clearpage
     \input{Appendix/idioms}
+    
+    % Let the book breath.
+    ~\clearpage\thispagestyle{empty}
+    ~\clearpage\thispagestyle{empty}
 \end{document}
