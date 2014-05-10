@@ -29,3 +29,4 @@
 - 2 Kings 6:25 - Was it worth eighty pieces of silver? Or was it fattened to silver? Is it a verb or a number? Because the number means fifty, not eighty.
 
 - Is there a reason ילך doesn't appear in the KB?
+- Can we render amar as "reply" and not just "speak" or "say"?
