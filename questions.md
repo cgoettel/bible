@@ -27,6 +27,7 @@
 - 2 Kings 6:5 - How are we supposed to render "he asked"? It seems like it's describing what he's saying and not that he's literally saying, "Ah, my master, he asked!" Or even worse (DARBY), "it was borrowed!"
 - 2 Kings 6:21 - How are we to render "shall I smite, shall I smite?"
 - 2 Kings 6:25 - Was it worth eighty pieces of silver? Or was it fattened to silver? Is it a verb or a number? Because the number means fifty, not eighty.
+- 2 Kings 6:30 - What does "he had sackcloth on his flesh within" mean?
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
