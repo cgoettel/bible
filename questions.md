@@ -29,6 +29,7 @@
 - 2 Kings 6:25 - Was it worth eighty pieces of silver? Or was it fattened to silver? Is it a verb or a number? Because the number means fifty, not eighty.
 - 2 Kings 6:30 - What does "he had sackcloth on his flesh within" mean?
 - 2 Chronicles 26:6 - Built cities in? Or built cities in the territory of? I say the first, other translations the second.
+- 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
