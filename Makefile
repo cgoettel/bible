@@ -7,7 +7,6 @@ bible.pdf: $(DEPENDENCIES)
 	$(TYPESETTER) $(FLAGS) bible.tex
 	$(TYPESETTER) bible.tex
 	$(TYPESETTER) bible.tex
-	$(TYPESETTER) bible.tex
 
 clean:
 	rm -f *.aux *.log *.toc
