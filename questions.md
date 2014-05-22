@@ -29,8 +29,11 @@
 - 2 Kings 6:25 - Was it worth eighty pieces of silver? Or was it fattened to silver? Is it a verb or a number? Because the number means fifty, not eighty.
 - 2 Kings 6:30 - What does "he had sackcloth on his flesh within" mean?
 - 2 Kings 7:4 - I don't think it's saying "If they keep us alive, we live," I think my translation is correct.
+- 2 Kings 7:16 - Can we say "just as the LORD had said" instead of "according to the word of the LORD."? It would be immensely more idiomatic, although "said" is in noun form, not verb form.
+- 2 Kings 7:17 - Can בּ be rendered to mean "at" instead of "in"? Or can "gate" be rendered "gateway"?
 - 2 Chronicles 26:6 - Built cities in? Or built cities in the territory of? I say the first, other translations the second.
 - 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
+- Must we always translate laymore ("saying")?
