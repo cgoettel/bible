@@ -127,9 +127,10 @@
 % Remove line above footnotes.
 \renewcommand{\footnoterule}{\hrule height 0pt}
 
-% To indicate when a word used in English rendering is understood from the Hebrew, but not explicitly stated.
-\usepackage[mathscr]{euscript}
-\newcommand\understood{\textdegree\marginpar{~~~~$\mathscr{U}$~~~~}}
+% To indicate when a word used in English rendering is understood from the Hebrew, but not explicitly stated. The KJV simply italicizes all such instances, but this is cleaner and more in keeping with the BHS.
+\usepackage{morefloats} % Allows more floats to be placed on a page. The \understood command generates a hefty amount of floats and this helps alleviate some problems with using this command so often. Note that this is not a panacea.
+\usepackage[mathscr]{euscript} % Allows for \mathscr command.
+\newcommand\understood{\textdegree\marginpar{{\tiny\hfil$\mathscr{U}$\hfil}}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     HEADER and FOOTER
