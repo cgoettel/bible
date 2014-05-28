@@ -34,6 +34,7 @@
 - 2 Chronicles 26:6 - Built cities in? Or built cities in the territory of? I say the first, other translations the second.
 - 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 - 2 Chronicles 31:3 - What do we do with "l'olot l'olot"? Could it possibly be allah (lifted up) in infinitive form followed by "l'olot" (burnt offering), thereby being "lifted up as (a) burnt offering"? Or is it simply repetitious therefore showing importance?
+- 2 Chronicles 31:15 - Am I alright in saying "who faithfully distributed"?
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
