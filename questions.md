@@ -35,6 +35,7 @@
 - 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 - 2 Chronicles 31:3 - What do we do with "l'olot l'olot"? Could it possibly be allah (lifted up) in infinitive form followed by "l'olot" (burnt offering), thereby being "lifted up as (a) burnt offering"? Or is it simply repetitious therefore showing importance?
 - 2 Chronicles 31:15 - Am I alright in saying "who faithfully distributed"?
+- 2 Chronicles 31:17 - first word (et). Other translations give "both," but I can only seem to justify it as "with."
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
