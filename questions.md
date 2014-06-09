@@ -37,6 +37,7 @@
 - 2 Chronicles 31:15 - Am I alright in saying "who faithfully distributed"?
 - 2 Chronicles 31:17 - first word (et). Other translations give "both," but I can only seem to justify it as "with."
 - Ezra 4:2 - Can we render the jussive as "allow us" and not just as "let's"?
+- Ezra 7:27 - What in the world are we supposed to do with cuzote?
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
