@@ -39,6 +39,7 @@
 - Ezra 4:2 - Can we render the jussive as "allow us" and not just as "let's"?
 - Ezra 7:27 - What in the world are we supposed to do with cuzote?
 - Daniel 2:24-25 - Am I justified in rendering cane as "the following" instead of "thus"?
+- Daniel 2:34 - "Until"? Is this "up until"? As in, you saw a whole bunch of stuff up until this bit?
 
 - Is there a reason ילך doesn't appear in the KB?
 - Can we render amar as "reply" and not just "speak" or "say"?
