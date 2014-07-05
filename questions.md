@@ -36,6 +36,7 @@
 - 2 Chronicles 31:3 - What do we do with "l'olot l'olot"? Could it possibly be allah (lifted up) in infinitive form followed by "l'olot" (burnt offering), thereby being "lifted up as (a) burnt offering"? Or is it simply repetitious therefore showing importance?
 - 2 Chronicles 31:15 - Am I alright in saying "who faithfully distributed"?
 - 2 Chronicles 31:17 - first word (et). Other translations give "both," but I can only seem to justify it as "with."
+- 2 Chronicles 32:5 - Does "in abundance" refer to just the javelins? Or also to the shields?
 - Ezra 4:2 - Can we render the jussive as "allow us" and not just as "let's"?
 - Ezra 7:27 - What in the world are we supposed to do with cuzote?
 - Daniel 2:24-25 - Am I justified in rendering cane as "the following" instead of "thus"?
