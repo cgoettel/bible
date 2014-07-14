@@ -31,6 +31,7 @@
 - 2 Kings 7:4 - I don't think it's saying "If they keep us alive, we live," I think my translation is correct.
 - 2 Kings 7:16 - Can we say "just as the LORD had said" instead of "according to the word of the LORD."? It would be immensely more idiomatic, although "said" is in noun form, not verb form.
 - 2 Kings 7:17 - Can בּ be rendered to mean "at" instead of "in"? Or can "gate" be rendered "gateway"?
+- 2 Kings 20:1 - Does "the prophet" refer to Isaiah or Amoz?
 - 2 Chronicles 26:6 - Built cities in? Or built cities in the territory of? I say the first, other translations the second.
 - 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 - 2 Chronicles 31:3 - What do we do with "l'olot l'olot"? Could it possibly be allah (lifted up) in infinitive form followed by "l'olot" (burnt offering), thereby being "lifted up as (a) burnt offering"? Or is it simply repetitious therefore showing importance?
