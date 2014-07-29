@@ -34,6 +34,7 @@
 - 2 Kings 20:1 - Does "the prophet" refer to Isaiah or Amoz?
 - 2 Kings 20:8 - How does the grammar work here?
 - 2 Kings 20:9 - What is a ma'alote?
+- 2 Kings 20:13 - Can I justify saying "a single thing"?
 - 2 Chronicles 26:6 - Built cities in? Or built cities in the territory of? I say the first, other translations the second.
 - 2 Chronicles 26:10 - What are we to understand from "adama haya"? Darby gives "husbandry" and YLT gives "ground."
 - 2 Chronicles 31:3 - What do we do with "l'olot l'olot"? Could it possibly be allah (lifted up) in infinitive form followed by "l'olot" (burnt offering), thereby being "lifted up as (a) burnt offering"? Or is it simply repetitious therefore showing importance?
