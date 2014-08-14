@@ -137,14 +137,14 @@
 \newcommand\alt[1]{\footnote{\textsc{alt} #1}}
 \newcommand\ed[1]{\footnote{\textsc{ed} #1}}
 \newcommand\heb[2]{\footnote{\textsc{heb} \Hebrew{#1} #2}}
-\newcommand\kb[1]{\footnote{\textsc{kb} #1}}
+\newcommand\halot[1]{\footnote{\textsc{halot} #1}}
 \newcommand\lit[1]{\footnote{\textsc{lit} #1}}
 
 % Abbreviated footnote commands for \footnotetext command
 \newcommand\fntalt[1]{\footnotetext{\textsc{alt} #1}}
 \newcommand\fnted[1]{\footnotetext{\textsc{ed} #1}}
 \newcommand\fntheb[2]{\footnotetext{\textsc{heb} \Hebrew{#1} #2}}
-\newcommand\fntkb[1]{\footnotetext{\textsc{kb} #1}}
+\newcommand\fnthalot[1]{\footnotetext{\textsc{halot} #1}}
 \newcommand\fntlit[1]{\footnotetext{\textsc{lit} #1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,7 +196,7 @@
     \begin{minipage}[b]{\lengtha}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1%
+        #1\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -206,7 +206,7 @@
     \begin{minipage}[b]{\lengtha}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2%
+        #1\hspace*{1.5em}#2\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -216,7 +216,7 @@
     \begin{minipage}[b]{\lengtha}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -226,7 +226,7 @@
     \begin{minipage}[b]{\lengtha}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -236,7 +236,7 @@
     \begin{minipage}[b]{\lengthb}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1%
+        #1\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -246,7 +246,7 @@
     \begin{minipage}[b]{\lengthb}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2%
+        #1\hspace*{1.5em}#2\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -256,7 +256,7 @@
     \begin{minipage}[b]{\lengthb}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -266,7 +266,7 @@
     \begin{minipage}[b]{\lengthb}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -276,7 +276,7 @@
     \begin{minipage}[b]{\lengthc}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1%
+        #1\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -286,7 +286,7 @@
     \begin{minipage}[b]{\lengthc}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2%
+        #1\hspace*{1.5em}#2\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -296,7 +296,7 @@
     \begin{minipage}[b]{\lengthc}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -306,7 +306,7 @@
     \begin{minipage}[b]{\lengthc}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -316,7 +316,7 @@
     \begin{minipage}[b]{\lengthd}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1%
+        #1\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -326,7 +326,7 @@
     \begin{minipage}[b]{\lengthd}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2%
+        #1\hspace*{1.5em}#2\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -336,7 +336,7 @@
     \begin{minipage}[b]{\lengthd}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
@@ -346,7 +346,7 @@
     \begin{minipage}[b]{\lengthd}%
         \setcounter{mpfootnote}{\value{footnote}}
         \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
-        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4%
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4\smallskip%
         \setcounter{footnote}{\value{mpfootnote}}
     \end{minipage}%
 }
