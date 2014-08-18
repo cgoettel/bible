@@ -14,6 +14,7 @@
 % Packages that don't necessarily belong elsewhere.
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
 \usepackage{textcomp} % For miscellaneous symbols, viz.: copyleft, degree.
+\usepackage{mathtools}
 
 % Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
 % 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
@@ -23,6 +24,28 @@
 % Widow and orphan penalty. 7000 was an arbitrary pick, but it seems to work.
 \widowpenalty=10000
 \clubpenalty=10000
+
+% %%%%%%%%%%%%%%%%%%%%%
+%     ABBREVIATIONS
+% %%%%%%%%%%%%%%%%%%%%%
+% \usepackage{ucs}
+% \usepackage[utf8x]{inputenc}
+% \usepackage{textcomp}
+% \DeclareUnicodeCharacter{214F}{\sampen}
+% \DeclareRobustCommand\sampen{%
+    % \unskip\nobreak⅏\allowbreak\ignorespaces}
+% \usepackage{newunicodechar}
+% \newunicodechar{⅏}{\sampen}
+
+% ⅏ is U+214F
+% 𝔙 is U+1D519
+
+\newcommand\masoretic{M}
+\newcommand\peshitta{s}
+\newcommand\sampen{⅏}
+\newcommand\septuagint{S}
+\newcommand\targum{T}
+\newcommand\vulgate{𝔙}
 
 % %%%%%%%%%%%%%%%%%%
 %     APPENDICES
