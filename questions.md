@@ -1,2 +1,0 @@
-- Exodus 24:11 - Does this refer to the sacrament?
-- Numbers 6:3 - is "vinegar beer" an archaic way of saying "wine"?
