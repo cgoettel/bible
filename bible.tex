@@ -149,7 +149,7 @@
 \interfootnotelinepenalty=10000
 
 % Remove line above footnotes.
-\renewcommand{\footnoterule}{\hrule height 0pt}
+% \renewcommand{\footnoterule}{\hrule height 0pt}
 
 % To indicate when a word used in English rendering is understood from the Hebrew, but not explicitly stated. The KJV simply italicizes all such instances, but this is cleaner and more in keeping with the BHS.
 \usepackage{morefloats} % Allows more floats to be placed on a page. The \understood command generates a hefty amount of floats and this helps alleviate some problems with using this command so often. Note that this is not a panacea.
@@ -163,14 +163,16 @@
 \newcommand\halot[1]{\footnote{\textsc{halot} #1}}
 \newcommand\ie[1]{\footnote{\textsc{ie} #1}}
 \newcommand\lit[1]{\footnote{\textsc{lit} #1}}
+\newcommand\ylt[1]{\footnote{\textsc{ylt} #1}}
 
 % Abbreviated footnote commands for \footnotetext command
 \newcommand\fntalt[1]{\footnotetext{\textsc{alt} #1}}
 \newcommand\fnted[1]{\footnotetext{\textsc{ed} #1}}
 \newcommand\fntheb[2]{\footnotetext{\textsc{heb} \Hebrew{#1} #2}}
 \newcommand\fnthalot[1]{\footnotetext{\textsc{halot} #1}}
-\newcommand\fntie[1]{\footnote{\textsc{ie} #1}}
+\newcommand\fntie[1]{\footnotetext{\textsc{ie} #1}}
 \newcommand\fntlit[1]{\footnotetext{\textsc{lit} #1}}
+\newcommand\fntylt[1]{\footnotetext{\textsc{ylt} #1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     HEADER and FOOTER
