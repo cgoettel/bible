@@ -72,9 +72,9 @@
     \markboth{1\thinspace:\thinspace1}{1\thinspace:\thinspace1}%
 }
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     CHAPTER HEADINGS and EPILOGUES
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%
+%     CHAPTER HEADINGS
+% %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[2]{%
     \vspace{1em}%
     \markboth{#1:1}{#1:1}%
@@ -82,16 +82,9 @@
     \vspace{0.5em}%
 }
 
-\newcommand\epilogue[1]{{%
-    \medskip\small\itshape%
-    \begin{center}%
-        #1%
-    \end{center}%
-}}
-
-% %%%%%%%%%%%%%%%%%
-%     ENUMERATE
-% %%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ENUMERATE and VERSE
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % paralist allows for separate paragraphs in the same enumeration environment.
 \usepackage{paralist}
 
@@ -108,6 +101,8 @@
     \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
     \item% Print verse number.
 }
+
+\newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
 
 % %%%%%%%%%%%%%
 %     FONTS
