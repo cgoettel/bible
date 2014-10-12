@@ -25,3 +25,5 @@ print OUT "\\end{inparaenum}\n";
 close OUT;
 
 `git add $book/$chapter.tex`;
+
+print "\nADD FILE TO bible.tex\n";
