@@ -24,6 +24,8 @@ print OUT "\\end{inparaenum}\n";
 
 close OUT;
 
+print "Adding file to git... ";
 `git add $book/$chapter.tex`;
+print "done.\n";
 
 print "\nADD FILE TO bible.tex\n";
