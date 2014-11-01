@@ -25,30 +25,6 @@
 \widowpenalty=10000
 \clubpenalty=10000
 
-% %%%%%%%%%%%%%%%%%%%%%
-%     ABBREVIATIONS
-% %%%%%%%%%%%%%%%%%%%%%
-% \usepackage{ucs}
-% \usepackage[utf8x]{inputenc}
-% \usepackage{textcomp}
-% \DeclareUnicodeCharacter{214F}{\sampen}
-% \DeclareRobustCommand\sampen{%
-    % \unskip\nobreak⅏\allowbreak\ignorespaces}
-% \usepackage{newunicodechar}
-% \newunicodechar{⅏}{\sampen}
-
-% ⅏ is U+214F
-% 𝔙 is U+1D519
-
-\newcommand\masoretic{M}
-\newcommand\peshitta{s}
-% \newcommand\sampen{⅏}
-\newcommand\sampen{W}
-\newcommand\septuagint{S}
-\newcommand\targum{T}
-% \newcommand\vulgate{𝔙}
-\newcommand\vulgate{V}
-
 % %%%%%%%%%%%%%%%%%%
 %     APPENDICES
 % %%%%%%%%%%%%%%%%%%
@@ -107,9 +83,9 @@
 \newcommand\haref[3]{#1~#2$_{#3}$}
 \newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
 
-% %%%%%%%%%%%%%
-%     FONTS
-% %%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     FONTS and ABBREVIATIONS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fontspec}
 \usepackage{metalogo}
 
@@ -130,6 +106,19 @@
 % Syriac
 \newfontfamily\sbls[Script=Syriac]{Estrangelo (V1.1)}
 \newcommand\Syriac[1]{{\large\sbls #1}}
+
+% ABBREVIATIONS
+\newfontfamily\abbrev[Scale=MatchUppercase]{Apparatus SIL}
+
+\newcommand\latina{{\abbrev 𝔏}}
+\newcommand\masoretic{{\abbrev 𝔐}}
+\newcommand\peshitta{{\abbrev 𝔖}} % Source Code Pro messes up the appearance here, but it's correct.
+\newcommand\qumran{{\abbrev 𝔔}}
+\newcommand\sampen{{\abbrev\large ⅏}}
+\newcommand\septuagint{{\abbrev 𝔊}}
+\newcommand\targum{{\abbrev 𝔗}}
+\newcommand\vulgate{{\abbrev 𝔙}}
+% \newcommand\vulgate{V}
 
 % %%%%%%%%%%%%%%%%%
 %     FOOTNOTES
