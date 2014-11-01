@@ -33,7 +33,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     CHAPTER and SECTION
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[explicit]{titlesec} % Explicit requires the title to be given, supplied as #1.
+\usepackage[explicit]{titlesec} % "explicit" requires the title to be given, supplied as #1.
 
 % Options for reconfiguring titles is found in the document.
 
@@ -68,7 +68,7 @@
 
 % Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
-\renewcommand\labelenumi{~\color{Red}{$^{\arabic{enumi}}\!\!\thinspace$}}
+\renewcommand\labelenumi{\hspace*{0.5em}\color{Red}{$^{\arabic{enumi}}\hspace*{-0.1em}$}}
 
 % Patch enumi counter to always start with 1.
 \usepackage{etoolbox}
@@ -82,6 +82,17 @@
 
 \newcommand\haref[3]{#1~#2$_{#3}$}
 \newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
+
+% Abbreviations enumeration list
+\usepackage{enumitem}
+
+\newlist{abbreviations}{description}{1}
+\setlist[abbreviations,1]{
+    label={abbreviations},
+    leftmargin=*,
+    align=left,
+    labelsep=3em,
+}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     FONTS and ABBREVIATIONS
@@ -118,7 +129,6 @@
 \newcommand\septuagint{{\abbrev 𝔊}}
 \newcommand\targum{{\abbrev 𝔗}}
 \newcommand\vulgate{{\abbrev 𝔙}}
-% \newcommand\vulgate{V}
 
 % %%%%%%%%%%%%%%%%%
 %     FOOTNOTES
@@ -389,7 +399,8 @@
     \pagestyle{empty}
     \titleformat{\chapter}{\large}{}{0em}{\uppercase{#1}}
     \titlespacing*{\chapter}{0pt}{0pt}{12pt}
-    \titleformat{\section}{\scshape}{}{1em}{#1}
+    \titleformat{\section}{\scshape}{}{0em}{#1}
+    \titleformat{\subsection}{}{}{0em}{\textit{#1}}
     \input{half-title}
     \clearpage
     \input{title-page}
