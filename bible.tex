@@ -386,6 +386,46 @@
     \end{minipage}%
 }
 
+\newcommand\pvea[1]{%
+    \noindent\hspace*{5em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\smallskip%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pveb[2]{%
+    \noindent\hspace*{5em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1.5em}#2\smallskip%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pvec[3]{%
+    \noindent\hspace*{5em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\smallskip%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
+\newcommand\pved[4]{%
+    \noindent\hspace*{5em}%
+    \begin{minipage}[b]{\lengthd}%
+        \setcounter{mpfootnote}{\value{footnote}}
+        \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+        #1\hspace*{1.5em}#2\hspace*{1.5em}#3\hspace*{1.5em}#4\smallskip%
+        \setcounter{footnote}{\value{mpfootnote}}
+    \end{minipage}%
+}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     TABLE OF CONTENTS
 % %%%%%%%%%%%%%%%%%%%%%%%%%
