@@ -17,19 +17,19 @@ Be sure to include %% even after footnote marks in poetry verses.
 ###Alternate and literal readings, explanations, and editor's notes
 Match the punctuation and capitalization of the verse to give context. For example:
 
-> LIT number (Gen 13:16)
+> LIT number (Gen&nbsp;13:16)
 
-> LIT not numbered from great. (Gen 16:10)
+> LIT not numbered from great. (Gen&nbsp;16:10)
 
-> ED Some translations give "stands at," but this verb is not present in L. (Ps 45:10)
+> ED Some translations give "stands at," but this verb is not present in L. (Ps&nbsp;45:10)
 
 However, if the footnote is a fragment sentence, do not capitalize the first word (unless a proper noun) and do not conclude with a period.
 
-> in reference to her beauty; easy on the eyes (Ps 45:13)
+> in reference to her beauty; easy on the eyes (Ps&nbsp;45:13)
 
 In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given.
 
-A notable exception to this rule is illustrated in the footnote to Ps 1:3:
+A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
 
 > IE so even in the heat it will grow.
 
@@ -37,12 +37,6 @@ This is not capitalized at the beginning but concluded with a period because it 
 
 ###Critical apparatus
 Always quote the critical apparatus in whole. The explanation should always begin in lowercase (unless a proper noun). It is not necessary to match the punctuation of the critical apparatus when providing a translation, simply write idiomatically.
-
-Known issues:
-- No standard for backtick looking characters that precede Hebrew words.
-- No standard for mdashes (ndashes?) that precede Hebrew words.
-
-When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
 When explaining, be idiomatic and take a little liberty, but put in brackets anything else. Here's a good guide:
 
@@ -54,8 +48,24 @@ can well be translated and explained:
 
 The last item per page in the critical apparatus ends with a period. Do not include this.
 
+Do not conclude translations and explanations with a period, even when the translation is a complete thought. The only exception is if the translation ends with context-relevant punctuation, as in this example from Ps&nbsp;47:7:
+
+> the Peshitta says "in splendor" [instead of "Praise!"]
+
+Often, the critical apparatus will give excerpts from both the Septuagint and Peshitta. Simply say "the Septuagint and Peshitta" and not "the Septuagint and the Peshitta."
+
+Some Hebrew quotations will be preceded with a strange tick character. Use this: ´.
+
+When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
+
+Known issues:
+- No standard for backtick looking characters that precede Hebrew words.
+- No standard for mdashes (ndashes?) that precede Hebrew words.
+
 ###Quotations from HALOT
-Only provide complete quotations. Match bolding.
+Only provide complete quotations. Match bolding. However, when the material contains abbreviations, spell things out. We're not as interested in saving space as they are. For instance, this excerpt from the entry on נַחֲלָה:
+
+> (inalienable) __hereditary possession__, __heritage__, acquired by individual or family by conquest or inheritance, both property (i.e., [originally "i.e."] land and [originally &] buildings) and \[originally &] (movable) goods
 
 If it's necessary to deviate, put editorial comments in brackets. If only a small part of the reference is needed compared to the amount of editorial comments, it is better to give an editorial footnote and provide quotations from HALOT in quotes with the referenced item following in parentheses. For example:
 
@@ -72,6 +82,11 @@ If there are multiple verses or chapters being referenced in longhand, follow th
 - `see further in verses~1 and~2`
 - `as it says in verses~13--17 of chapter~5`
 - `as seen in verses~12,13, and~14` (stylistic choice, not an incorrect form)
+
+##README
+> Use this style for quotations. Either put the reference before the quote or after (in parentheses).
+
+Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
 
 ##TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
