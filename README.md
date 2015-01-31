@@ -8,11 +8,6 @@ More information about the translation can be found in the [preface](https://git
 #Style guide
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
 
-##Why is there a %% at the end of every line?
-LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when revise the translation (starting around 2030 (the year)), I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
-
-Be sure to include %% even after footnote marks in poetry verses.
-
 ##Footnote capitalization
 ###Alternate and literal readings, explanations, and editor's notes
 Match the punctuation and capitalization of the verse to give context. For example:
@@ -92,3 +87,8 @@ Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note tha
 Mark all TODO work with `xxxx`, always in lowercase.
 
 Any inconsistencies found should be cataloged in [issue 51](https://github.com/cgoettel/bible/issues/51).
+
+##Why is there a %% at the end of every line?
+LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when revise the translation (starting around 2030 (the year)), I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
+
+Be sure to include %% even after footnotes in poetry verses.
