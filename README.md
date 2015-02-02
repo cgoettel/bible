@@ -8,7 +8,7 @@ More information about the translation can be found in the [preface](https://git
 #Style guide
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
 
-##Footnote capitalization
+##Footnote formatting
 ###Alternate and literal readings, explanations, and editor's notes
 Match the punctuation and capitalization of the verse to give context. For example:
 
@@ -78,10 +78,15 @@ If there are multiple verses or chapters being referenced in longhand, follow th
 - `as it says in verses~13--17 of chapter~5`
 - `as seen in verses~12,13, and~14` (stylistic choice, not an incorrect form)
 
-##README
+##README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
 
 Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
+
+##References to deity
+Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God. However, do not capitalize "god" or "gods" when it refers to the gods of other nations. But do capitalize the proper names of foreign gods (e.g., Baal).
+
+When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name Asherah"), always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
 
 ##TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
