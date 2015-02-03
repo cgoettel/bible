@@ -87,6 +87,9 @@ Ages should always be written in Arabic numerals.
 
 Units should be attached to their respective numbers with non-breaking spaces. See examples in [non-breaking spaces](README.md#Non-breaking-spaces).
 
+##Poetry
+Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
+
 ##Proper nouns
 The following list should be treated as proper nouns and capitalized:
 - Tabernacle
