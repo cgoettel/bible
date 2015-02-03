@@ -78,6 +78,19 @@ If there are multiple verses or chapters being referenced in longhand, follow th
 - `as it says in verses~13--17 of chapter~5`
 - `as seen in verses~12,13, and~14` (stylistic choice, not an incorrect form)
 
+Use the above rules for formatting units (e.g., ft, m, years) as well.
+
+##Numbers and units
+Numbers smaller than one hundred should generally be written out in longhand. Larger numbers should be written in Arabic numerals with a `\thinspace` delimiting thousands.
+
+Ages should always be written in Arabic numerals.
+
+Units should be attached to their respective numbers with non-breaking spaces. See examples in [non-breaking spaces](README.md#Non-breaking-spaces).
+
+##Proper nouns
+The following list should be treated as proper nouns and capitalized:
+- Tabernacle
+
 ##README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
 
