@@ -49,7 +49,7 @@ Do not conclude translations and explanations with a period, even when the trans
 
 Often, the critical apparatus will give excerpts from both the Septuagint and Peshitta. Simply say "the Septuagint and Peshitta" and not "the Septuagint and the Peshitta."
 
-Some Hebrew quotations will be preceded with a strange tick character. Use this: ´.
+Some Hebrew quotations will be preceded with a strange tick character. Use this: ´. Don't use ``\`{}``.
 
 When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
@@ -91,8 +91,14 @@ Units should be attached to their respective numbers with non-breaking spaces. S
 Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
 ##Proper nouns
-The following list should be treated as proper nouns and capitalized:
+The following list should be treated as proper nouns and capitalized as follows:
+- Ark of the Covenant
+- Atonement (but only when referring to the Atonement of Jesus Christ)
+- Heaven
+- Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
+- relevant pronouns (He, Him, Me, My, etc.)
 - Tabernacle
+- Testimony (when it refers to the Ark of the Covenant)
 
 ##README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
