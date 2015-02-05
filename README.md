@@ -106,6 +106,7 @@ The following list should be treated as proper nouns and capitalized as follows:
 - Atonement (but only when referring to the Atonement of Jesus Christ)
 - Heaven
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
+- Lord of Hosts
 - relevant pronouns (He, Him, Me, My, etc.)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
