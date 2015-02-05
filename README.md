@@ -9,7 +9,9 @@ More information about the translation can be found in the [preface](https://git
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
 
 ##Footnote formatting
-###Alternate and literal readings, explanations, and editor's notes
+The `\footnote` command should never be used. There is a specific footnote marking for every season. If, for some reason, there is not, add it.
+
+###Alternate and literal readings, explanations, and editorial notes
 Match the punctuation and capitalization of the verse to give context. For example:
 
 > LIT number (Gen&nbsp;13:16)
@@ -22,13 +24,17 @@ However, if the footnote is a fragment sentence, do not capitalize the first wor
 
 > in reference to her beauty; easy on the eyes (Ps&nbsp;45:13)
 
-In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given.
-
-A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
+In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given. A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
 
 > IE so even in the heat it will grow.
 
-This is not capitalized at the beginning but concluded with a period because it is a complete thought and a continuation of the verse. Additionally, _id est_ is the beginning of the complete sentence.
+This is not capitalized at the beginning but concluded with a period because it is a complete thought and a continuation of the verse. Additionally, _id est_ is the beginning of the complete sentence. Finally, if there are multiple, comma-separated words in a LIT or ALT at the end of a sentence, separate the words with commas and end with a period, as follows:
+
+> case, lawsuit. (Ex&nbsp;23:3)
+
+When adding an editorial note to a LIT or ALT, begin with the LIT or ALT, then a semi-colon, then the editorial note. For instance,
+
+> from afar.; but this is written from his perspective (Gen&nbsp;22:4)
 
 ###Critical apparatus
 Always quote the critical apparatus in whole. The explanation should always begin in lowercase (unless a proper noun). It is not necessary to match the punctuation of the critical apparatus when providing a translation, simply write idiomatically.
@@ -68,6 +74,10 @@ If it's necessary to deviate, put editorial comments in brackets. If only a smal
 
 The default assumption is that the definition comes from _A Concise Hebrew and Aramaic Lexicon of the Old Testament_ by Holladay. If references are given from the unabridged HALOT, use the `\halotu` command.
 
+When HALOT uses an mdash, it is always preceded and followed by a space, but not a non-breaking space. For instance,
+
+> __animals__, חַיּוֺת or collective singular, rarely a single animal Gn&nbsp;37<sub>20</sub>: --- 1.\ __animals__ of all kinds, mostly untamed... land animals... beasts of burden... water animals... --- 2. __wild, predatory animals__
+
 ##Non-breaking spaces
 If a verse reference is a quotation from HALOT, use the `\haref` command and corresponding abbreviation. If it's an editorial reference, use the `\vref` command and corresponding abbreviation.
 
@@ -99,6 +109,9 @@ The following list should be treated as proper nouns and capitalized as follows:
 - relevant pronouns (He, Him, Me, My, etc.)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
+
+##Punctuation
+When a single quote and double quote must be together, separate them with a `\thinspace`.
 
 ##README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
