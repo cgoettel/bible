@@ -107,6 +107,7 @@ The following list should be treated as proper nouns and capitalized as follows:
 - Heaven
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
 - Lord of Hosts
+- Promised Land
 - relevant pronouns (He, Him, Me, My, etc.)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
@@ -123,6 +124,10 @@ Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note tha
 Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God. However, do not capitalize "god" or "gods" when it refers to the gods of other nations. But do capitalize the proper names of foreign gods (e.g., Baal).
 
 When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name Asherah"), always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
+
+##Specific renderings
+Use the following rules when rendering non-idiomatic Hebrew:
+- children of Israel (instead of sons of Israel, unless only men are being referred to)
 
 ##TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
