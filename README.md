@@ -8,8 +8,13 @@ More information about the translation can be found in the [preface](https://git
 #Style guide
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
 
+##Appendices
+Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnotes, because there should be more information readily accessible to the reader than otherwise. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
+
 ##Footnote formatting
 The `\footnote` command should never be used. There is a specific footnote marking for every season. If, for some reason, there is not, add it.
+
+Footnotes should always come after punctuation, including periods, commas, colons, semi-colons, and quotes, both single and double.
 
 ###Alternate and literal readings, explanations, and editorial notes
 Match the punctuation and capitalization of the verse to give context. For example:
@@ -91,7 +96,9 @@ If there are multiple verses or chapters being referenced in longhand, follow th
 Use the above rules for formatting units (e.g., ft, m, years) as well.
 
 ##Numbers and units
-Numbers smaller than one hundred should generally be written out in longhand. Larger numbers should be written in Arabic numerals with a `\thinspace` delimiting thousands.
+Numbers smaller than one hundred should generally be written out in longhand. Larger numbers should be written in Arabic numerals with a `\thinspace` delimiting thousands. However, if a sentence has both large and small values, be consistent, as in:
+
+> The king of Aram said, "Go! I will send a letter to the king of Israel." So he went and took 10&nbsp;talents of silver, 6000&nbsp;gold pieces, and 10&nbsp;changes of clothes with him. (2&nbsp;Kings&nbsp;5:5)
 
 Ages should always be written in Arabic numerals.
 
@@ -121,9 +128,9 @@ When a single quote and double quote must be together, separate them with a `\th
 Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
 
 ##References to deity
-Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God. However, do not capitalize "god" or "gods" when it refers to the gods of other nations. But do capitalize the proper names of foreign gods (e.g., Baal).
+Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God. However, do not capitalize "god" or "gods" when it refers to the gods of other nations, but do capitalize the proper names of foreign gods (e.g., Baal).
 
-When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name Asherah"), always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
+When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name, Asherah?) and always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
 
 ##Specific renderings
 Use the following rules when rendering non-idiomatic Hebrew:
