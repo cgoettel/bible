@@ -70,7 +70,7 @@ Only provide complete quotations. Match bolding. However, when the material cont
 
 If it's necessary to deviate, put editorial comments in brackets. If only a small part of the reference is needed compared to the amount of editorial comments, it is better to give an editorial footnote and provide quotations from HALOT in quotes with the referenced item following in parentheses. For example:
 
-> ED In HALOT this verb is defined as ``[provided definition]'' ([referenced word, page number in HALOT]) which is interesting because....
+> ED In HALOT this verb is defined as "[provided definition]" ([referenced word, page number in HALOT]) which is interesting because....
 
 The default assumption is that the definition comes from _A Concise Hebrew and Aramaic Lexicon of the Old Testament_ by Holladay. If references are given from the unabridged HALOT, use the `\halotu` command.
 
