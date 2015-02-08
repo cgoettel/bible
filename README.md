@@ -116,6 +116,7 @@ The following list should be treated as proper nouns and capitalized as follows:
 - Lord of Hosts
 - Promised Land
 - relevant pronouns (He, Him, Me, My, etc.)
+- Sabbath (depending on context)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
 
