@@ -83,6 +83,8 @@ When HALOT uses an mdash, it is always preceded and followed by a space, but not
 
 > __animals__, חַיּוֺת or collective singular, rarely a single animal Gn&nbsp;37<sub>20</sub>: --- 1.\ __animals__ of all kinds, mostly untamed... land animals... beasts of burden... water animals... --- 2. __wild, predatory animals__
 
+When quoting HALOT, don't force too much of this style guide on it. By that I mean that if it says "i.e." just leave it as is and don't change it to "i.e.,".
+
 ##Non-breaking spaces
 If a verse reference is a quotation from HALOT, use the `\haref` command and corresponding abbreviation. If it's an editorial reference, use the `\vref` command and corresponding abbreviation.
 
