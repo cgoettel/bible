@@ -1,5 +1,4 @@
-bible
-=====
+#bible
 
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX.
 
@@ -117,7 +116,7 @@ Sometimes quotations or partial quotations will be typeset as poetry. In this in
 The following list should be treated as proper nouns and capitalized as follows:
 - Ark of the Covenant
 - Atonement (but only when referring to the Atonement of Jesus Christ)
-- Heaven
+- Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
 - Lord of Hosts
 - Promised Land
