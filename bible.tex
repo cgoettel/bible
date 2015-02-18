@@ -80,9 +80,6 @@
     \item% Print verse number.
 }
 
-\newcommand\haref[3]{#1~#2$_{#3}$}
-\newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
-
 % Abbreviations enumeration list
 \usepackage{enumitem}
 
@@ -122,7 +119,9 @@
 \newfontfamily\abbrev[Scale=MatchUppercase]{Apparatus SIL}
 
 \newcommand\aquila{\Greek{α´}}
+\newcommand\caref[3]{#1~#2,#3}
 \newcommand\fragheb{{\abbrev ℭ}}
+\newcommand\haref[3]{#1~#2$_{#3}$}
 \newcommand\latina{{\abbrev 𝔏}}
 \newcommand\masoretic{{\abbrev 𝔐}}
 \newcommand\missing{{\scriptsize>}}
@@ -134,7 +133,9 @@
 \newcommand\superit[1]{$^\textit{#1}$}
 \newcommand\symmachus{\Greek{σ´}}
 \newcommand\targum{{\abbrev 𝔗}}
+\newcommand\tetragrammaton{\Hebrew{יהוה}}
 \newcommand\theodotion{\Greek{θ´}}
+\newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
 \newcommand\vulgate{{\abbrev 𝔙}}
 % Others: http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=ApparatusSIL_ViewGlyph&filename=ApparatusSIL_ViewGlyph.pdf
 
@@ -591,6 +592,8 @@
     \input{1Kings/17}
     
     \input{1Kings/18}
+    
+    \input{1Kings/22}
     
     \book{2 Kings}{\Hebrew{ב מלכים}}
     \input{2Kings/2}
