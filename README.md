@@ -11,9 +11,12 @@ This style guide is a work in progress. It's an effort to make sure there is con
 Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnotes, because there should be more information readily accessible to the reader than otherwise. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
 
 ##Footnote formatting
-The `\footnote` command should never be used. There is a specific footnote marking for every season. If, for some reason, there is not, add it.
+The `\footnote` command should never be used. There is a specific footnote marking for every season. If, for some reason there is not, add it.
 
-Footnotes should always come after punctuation, including periods, commas, colons, semi-colons, and quotes, both single and double.
+Footnotes should always come after punctuation, including periods, commas, colons, semi-colons, and quotes, both single and double. However, if the footnote is a reference to the critical apparatus that adds information that would otherwise come before the punctuation, include the reference before the punctuation. For example:
+
+> Hear the word of the Lord<sup>a</sup>: (example, not attested)
+> a. CA: 𝔊 + θεὸν Ισραηλ (the Septuagint adds "the God of Israel")
 
 ###Alternate and literal readings, explanations, and editorial notes
 Match the punctuation and capitalization of the verse to give context. For example:
@@ -68,7 +71,6 @@ Some Hebrew quotations will be preceded with a strange tick character. Use this:
 When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
 Known issues:
-- No standard for backtick looking characters that precede Hebrew words.
 - No standard for mdashes (ndashes?) that precede Hebrew words.
 
 ###Quotations from HALOT
