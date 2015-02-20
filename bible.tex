@@ -723,22 +723,21 @@
     \fancyhead[LE,RO]{APPENDIX}
     \fancyhead[LO,RE]{\thepage}
     \fancyhead[CH]{} % Removes book name from center head.
-    % \titleformat{\chapter}{\scshape}{}{0em}{#1}
+    \titleformat{\chapter}{\large}{}{0em}{\uppercase{Appendix \thechapter~--- #1}}
     % \titlespacing*{\chapter}{0pt}{0pt}{12pt}
-    \titleformat{\section}{\scshape}{}{0em}{#1}
+    \renewcommand*\thesection{\arabic{section}}
+    \titleformat{\section}{\scshape}{}{0em}{Excursus \thesection~--- #1}
     \titleformat{\subsection}{}{}{0em}{\textsc{#1}}
     \titleformat{\subsubsection}{}{}{0em}{\textsc{#1}}
-    \chapter{Appendix}
+    
+    \chapter{Additional notes}\thispagestyle{fancy}
     \input{Appendix/psalm-110}
     \clearpage
     \input{Appendix/isaiah}
     \clearpage
-    % \input{Appendix/aramaic-in-the-ot}
-    % \clearpage
-    \input{Appendix/covenants-in-antiquity}
+    \input{Appendix/aramaic-in-the-ot}
     \clearpage
-    \section{Dead Sea Scrolls}
-    \input{Dead-sea-scrolls/4Q521}
+    \input{Appendix/covenants-in-antiquity}
     \clearpage
     \input{Appendix/misc-hebrew}
     \clearpage
@@ -747,6 +746,10 @@
     \input{Appendix/tetragrammaton}
     \clearpage
     \input{Appendix/idioms}
+    
+    \chapter{Dead Sea Scrolls}\thispagestyle{fancy}
+    \input{Dead-sea-scrolls/4Q521}
+    % \clearpage
     
     % Let the book breath.
     ~\clearpage\thispagestyle{empty}
