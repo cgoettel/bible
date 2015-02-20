@@ -1,5 +1,5 @@
-DEPENDENCIES = *.tex */*.tex Makefile images/*
-TYPESETTER = xelatex
+DEPENDENCIES=*.tex */*.tex Makefile images/*
+TYPESETTER=xelatex
 FLAGS=-halt-on-error
 
 bible.pdf: $(DEPENDENCIES)
