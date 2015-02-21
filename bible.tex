@@ -720,6 +720,7 @@
     ~\clearpage\thispagestyle{empty}
     
     \appendix
+    % Rework header and section title formatting.
     \fancyhead[LE,RO]{APPENDIX}
     \fancyhead[LO,RE]{\thepage}
     \fancyhead[CH]{} % Removes book name from center head.
@@ -747,6 +748,8 @@
     \clearpage
     \input{Appendix/idioms}
     
+    % Rework section formatting so "Excursus #" is not present.
+    \titleformat{\section}{\scshape}{}{0em}{#1}
     \chapter{Dead Sea Scrolls}\thispagestyle{fancy}
     \input{Dead-sea-scrolls/4Q521}
     % \clearpage

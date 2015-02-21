@@ -8,10 +8,10 @@ More information about the translation can be found in the [preface](https://git
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
 
 ##Appendices
-Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnotes, because there should be more information readily accessible to the reader than otherwise. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
+Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote&nbsp;&mdash; there should be more information readily accessible. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
 
 ##Footnote formatting
-The `\footnote` command should never be used. There is a specific footnote marking for every season. If, for some reason there is not, add it.
+The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
 
 Footnotes should always come after punctuation, including periods, commas, colons, semi-colons, and quotes, both single and double. However, if the footnote is a reference to the critical apparatus that adds information that would otherwise come before the punctuation, include the reference before the punctuation. For example:
 
