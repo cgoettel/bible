@@ -66,7 +66,7 @@ Do not conclude translations and explanations with a period, even when the trans
 
 Often, the critical apparatus will give excerpts from both the Septuagint and Peshitta. Simply say "the Septuagint and Peshitta" and not "the Septuagint and the Peshitta."
 
-Some Hebrew quotations will be preceded with a strange tick character. Use this: ´. Don't use ``\`{}``.
+Some Hebrew quotations will be preceded with the Hebrew single quote character, geresh. Use the punctuation mark inside the `\Hebrew` command.
 
 When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
@@ -114,6 +114,12 @@ Units should be attached to their respective numbers with non-breaking spaces. S
 ##Poetry
 Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
+When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah&nbsp;6:3:
+
+> <sup style="color:red">3</sup>They proclaimed to each other, and said,<b>`\smallskip`</b>
+> 
+> "Holy, holy, holy is the Lord of Hosts. The whole earth is full of His glory." (emphasis added)
+
 ##Proper nouns
 The following list should be treated as proper nouns and capitalized as follows:
 - Ark of the Covenant
@@ -153,3 +159,8 @@ Any inconsistencies found should be cataloged in [issue 51](https://github.com/c
 LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when revise the translation (starting around 2030 (the year)), I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
 
 Be sure to include %% even after footnotes in poetry verses.
+
+##Words in translation
+Sometimes there is no suitable translation for a word. In such cases, simply give the word in-line in Hebrew.
+
+Some words, like הַשְּׂרָפִים, are classically rendered in English while retaining the Hebrew plural ending (seraphim). Strip the Hebrew plural and add the English plural (seraphs in this case).
