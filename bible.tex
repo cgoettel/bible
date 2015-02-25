@@ -15,6 +15,7 @@
 \usepackage[normalem]{ulem} % normalem makes \emph and \em behave correctly, otherwise they would become underlined.
 \usepackage{textcomp} % For miscellaneous symbols, viz.: copyleft, degree.
 \usepackage{mathtools}
+\usepackage{nicefrac}
 
 % Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
 % 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
@@ -632,6 +633,8 @@
     \input{Nehemiah/6}
     
     \book{Job}{\Hebrew{איוב}}
+    {\noindent{\small \textsc{ca} $\nicefrac{1}{5}$ fere huius libri deest in \septuagint\ (nearly one fifth of this book is missing in the Septuagint)}}
+    
     \input{Job/1}
     
     \input{Job/19}
@@ -652,7 +655,7 @@
     \input{Psalms/46}
     
     \input{Psalms/47}
-    % ps66:5, compare 46:9
+    % ps66:5, compare 46:9 (already referenced the other way)
     
     \input{Psalms/82}
     
