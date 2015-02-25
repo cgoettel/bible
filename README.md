@@ -120,15 +120,18 @@ When poetry starts following a `\verse` command, put a `\smallskip` at the end o
 > 
 > "Holy, holy, holy is the Lord of Hosts. The whole earth is full of His glory." (emphasis added)
 
+When poetry switches back to prose without a section separator, `\noindent` the following verse.
+
 ##Proper nouns
-The following list should be treated as proper nouns and capitalized as follows:
+The following words should be treated as proper nouns and capitalized as follows:
 - Ark of the Covenant
 - Atonement (but only when referring to the Atonement of Jesus Christ)
+- gospel should not be capitalized
 - Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
 - Lord of Hosts
 - Promised Land
-- relevant pronouns (He, Him, Me, My, etc.)
+- relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
 - Sabbath (depending on context)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
