@@ -1,6 +1,6 @@
 #bible
 
-Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX.
+Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://dl.dropboxusercontent.com/u/1289422/bible.pdf).
 
 More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
 

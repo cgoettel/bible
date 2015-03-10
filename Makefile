@@ -7,6 +7,7 @@ bible.pdf: $(DEPENDENCIES)
 	$(TYPESETTER) $(FLAGS) bible.tex
 	$(TYPESETTER) bible.tex
 	$(TYPESETTER) bible.tex
+	mv bible.pdf ~/Dropbox/Public/
 
 clean:
 	rm -f *.aux *.log *.toc
