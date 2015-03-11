@@ -5,10 +5,12 @@ Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in 
 More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
 
 #Style guide
-This style guide is a work in progress. It's an effort to make sure there is consistency throughout this work.
+This style guide is a work in progress. It's an effort to make sure there is consistency throughout this growing work.
 
 ##Appendices
-Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote&nbsp;&mdash; there should be more information readily accessible. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
+Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote because there should be more information readily accessible to the reader. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
+
+This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
 
 ##Footnote formatting
 The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
