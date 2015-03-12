@@ -128,6 +128,7 @@ When poetry switches back to prose without a section separator, `\noindent` the 
 The following words should be treated as proper nouns and capitalized as follows:
 - Ark of the Covenant
 - Atonement (but only when referring to the Atonement of Jesus Christ)
+- Balaam (son of Beor)
 - City of David
 - Ezion-Geber
 - gospel should not be capitalized
