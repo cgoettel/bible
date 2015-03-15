@@ -134,6 +134,7 @@ The following words should be treated as proper nouns and capitalized as follows
 - gospel should not be capitalized
 - Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
+- Law (when referring to the Mosaic Law)
 - Lord of Hosts
 - Promised Land
 - relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
