@@ -129,6 +129,7 @@ The following words should be treated as proper nouns and capitalized as follows
 - Ark of the Covenant
 - Atonement (but only when referring to the Atonement of Jesus Christ)
 - Balaam (son of Beor)
+- Beersheba
 - City of David
 - Ezion-Geber
 - gospel should not be capitalized
