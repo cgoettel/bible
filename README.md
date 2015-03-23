@@ -135,6 +135,7 @@ The following words should be treated as proper nouns and capitalized as follows
 - gospel should not be capitalized
 - Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
+- Kiryat Arba
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
