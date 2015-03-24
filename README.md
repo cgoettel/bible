@@ -134,6 +134,8 @@ The following words should be treated as proper nouns and capitalized as follows
 - Ezion-Geber
 - gospel should not be capitalized
 - Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
+- Holy of Holies
+- Holy Place
 - Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
 - Kiryat Arba
 - Law (when referring to the Mosaic Law)
