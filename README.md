@@ -1,5 +1,4 @@
 #bible
-
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://dl.dropboxusercontent.com/u/1289422/bible.pdf).
 
 More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
@@ -11,6 +10,30 @@ This style guide is a work in progress. It's an effort to make sure there is con
 Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote because there should be more information readily accessible to the reader. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
 
 This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
+
+##Consistent spelling
+The following words should be written and capitalized as follows:
+- Ark of the Covenant
+- Atonement (but only when referring to the Atonement of Jesus Christ)
+- Balaam (son of Beor)
+- Beersheba
+- City of David
+- dwelling-place
+- Ezion-Geber
+- gospel should not be capitalized
+- Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
+- Holy of Holies
+- Holy Place
+- Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
+- Kiryat Arba
+- Law (when referring to the Mosaic Law)
+- Lord of Hosts
+- Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
+- Promised Land
+- relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
+- Sabbath (depending on context)
+- Tabernacle
+- Testimony (when it refers to the Ark of the Covenant)
 
 ##Footnote formatting
 The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
@@ -123,29 +146,6 @@ When poetry starts following a `\verse` command, put a `\smallskip` at the end o
 > "Holy, holy, holy is the Lord of Hosts. The whole earth is full of His glory." (emphasis added)
 
 When poetry switches back to prose without a section separator, `\noindent` the following verse.
-
-##Proper nouns
-The following words should be treated as proper nouns and capitalized as follows:
-- Ark of the Covenant
-- Atonement (but only when referring to the Atonement of Jesus Christ)
-- Balaam (son of Beor)
-- Beersheba
-- City of David
-- Ezion-Geber
-- gospel should not be capitalized
-- Heaven (xxxx: struggling with figuring out a hard and fast rule for this)
-- Holy of Holies
-- Holy Place
-- Kadesh-Barne'a. But always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
-- Kiryat Arba
-- Law (when referring to the Mosaic Law)
-- Lord of Hosts
-- Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
-- Promised Land
-- relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
-- Sabbath (depending on context)
-- Tabernacle
-- Testimony (when it refers to the Ark of the Covenant)
 
 ##Punctuation
 When a single quote and double quote must be together, separate them with a `\thinspace`.
