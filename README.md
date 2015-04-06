@@ -18,6 +18,7 @@ The following words should be written and capitalized as follows:
 - Balaam (son of Beor)
 - Beersheba
 - City of David
+- cornerstone
 - dwelling-place
 - Ezion-Geber
 - gospel should not be capitalized
