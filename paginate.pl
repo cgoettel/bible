@@ -37,3 +37,5 @@ print "Adding file to git... ";
 print "done.\n";
 
 print "\nADD FILE TO bible.tex\n";
+
+`xdg-open $book/$chapter.tex`;
