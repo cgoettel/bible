@@ -23,6 +23,7 @@ The following words should be written and capitalized as follows:
 - Ezion-Geber
 - gospel should not be capitalized
 - Heaven (xxxx: struggling with figuring out a hard and fast rule for this. For now, go with how you feel, it's not hard to standardize later)
+- Hebrew, Proto-Hebrew, Paleo-Hebrew, Biblical Hebrew, Rabbinic Hebrew, Medieval Hebrew, Modern Hebrew
 - (the) high priest
 - Holy of Holies
 - Holy Place
