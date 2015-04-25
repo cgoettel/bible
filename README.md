@@ -35,6 +35,7 @@ The following words should be written and capitalized as follows:
 - Promised Land
 - relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
 - Sabbath (depending on context)
+- _sof pasuq_
 - Shur desert (see _Paran desert_)
 - Tabernacle
 - Testimony (when it refers to the Ark of the Covenant)
