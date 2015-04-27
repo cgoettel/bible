@@ -7,9 +7,11 @@ More information about the translation can be found in the [preface](https://git
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this growing work.
 
 ##Appendices
-Don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote because there should be more information readily accessible to the reader. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced. However, if the information needs to be said in more than one place, add it to an appendix instead of having every other place refer to that verse.
+Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
 
-This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
+Additionally, if the information needs to be said in more than one place or would also be nice to have accessible, add it to an appendix. This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
+
+For section (and subsection, etc.) headings, use lowercase except for proper names.<!-- idea from http://en.wikipedia.org/wiki/Wikipedia:Article_titles#Article_title_format -->
 
 ##Consistent spelling
 The following words should be written and capitalized as follows:
@@ -17,8 +19,10 @@ The following words should be written and capitalized as follows:
 - Atonement (but only when referring to the Atonement of Jesus Christ)
 - Balaam (son of Beor)
 - Beersheba
+- Cairo Genizah
 - City of David
 - cornerstone
+- Day of Atonement
 - dwelling-place
 - Ezion-Geber
 - gospel should not be capitalized
