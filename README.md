@@ -19,7 +19,9 @@ The following words should be written and capitalized as follows:
 - Atonement (but only when referring to the Atonement of Jesus Christ)
 - Balaam (son of Beor)
 - Beersheba
+- burnt offering
 - Cairo Genizah
+- cherubs
 - City of David
 - cornerstone
 - Day of Atonement
@@ -42,6 +44,7 @@ The following words should be written and capitalized as follows:
 - _sof pasuq_
 - Shur desert (see _Paran desert_)
 - Tabernacle
+- targumim
 - Testimony (when it refers to the Ark of the Covenant)
 
 ##Footnote formatting
