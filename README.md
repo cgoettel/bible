@@ -43,9 +43,11 @@ The following words should be written and capitalized as follows:
 - Sabbath (depending on context)
 - _sof pasuq_
 - Shur desert (see _Paran desert_)
+- (the) Spirit of God
 - Tabernacle
 - targumim
 - Testimony (when it refers to the Ark of the Covenant)
+- toward (_towards_ is the British English way of saying it)
 
 ##Footnote formatting
 The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
@@ -54,6 +56,13 @@ Footnotes should always come after punctuation, including periods, commas, colon
 
 > Hear the word of the Lord<sup>a</sup>: (example, not attested)
 > a. CA: 𝔊 + θεὸν Ισραηλ (the Septuagint adds "the God of Israel")
+
+When placing multiple footnotes simultaneously, give them in the following order:
+- `\ca`
+- `\halot`
+- `\halotu`
+- `\ed`
+`alt` and `lit` are too big of wild cards to make a hard and fast rule on. However, if a better order can be inferred from context, place an in-line comment explaining why.
 
 ###Alternate and literal readings, explanations, and editorial notes
 Match the punctuation and capitalization of the verse to give context. For example:
@@ -121,11 +130,11 @@ If it's necessary to deviate, put editorial comments in brackets. If only a smal
 
 The default assumption is that the definition comes from _A Concise Hebrew and Aramaic Lexicon of the Old Testament_ by Holladay. If references are given from the unabridged HALOT, use the `\halotu` command.
 
-When HALOT uses an mdash, it is always preceded and followed by a space, but not a non-breaking space. For instance,
+When HALOT uses an mdash, it is always preceded and followed by a space, but never a non-breaking space; for instance,
 
 > __animals__, חַיּוֺת or collective singular, rarely a single animal Gn&nbsp;37<sub>20</sub>: --- 1.\ __animals__ of all kinds, mostly untamed... land animals... beasts of burden... water animals... --- 2. __wild, predatory animals__
 
-When quoting HALOT, don't force too much of this style guide on it. By that I mean that if it says "i.e." just leave it as is and don't change it to "i.e.,".
+References in HALOT use a `\cdot` instead of the typical `--` for ranges.
 
 ##Non-breaking spaces
 If a verse reference is a quotation from HALOT, use the `\haref` command and corresponding abbreviation. If it's an editorial reference, use the `\vref` command and corresponding abbreviation.
