@@ -37,12 +37,14 @@ The following words should be written and capitalized as follows:
 - Kiryat Arba
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
+- Meribah
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
 - Promised Land
 - relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
 - Sabbath (depending on context)
 - _sof pasuq_
 - Shur desert (see _Paran desert_)
+- Sin Desert
 - (the) Spirit of God
 - Tabernacle
 - targumim
