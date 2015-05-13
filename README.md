@@ -26,6 +26,7 @@ The following words should be written and capitalized as follows:
 - cornerstone
 - Day of Atonement
 - dwelling-place
+- Eleazar the priest
 - Ezion-Geber
 - gospel should not be capitalized
 - Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai&nbsp;2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
@@ -50,6 +51,7 @@ The following words should be written and capitalized as follows:
 - targumim
 - Testimony (when it refers to the Ark of the Covenant)
 - toward (_towards_ is the British English way of saying it)
+- Urim and Thummim
 
 ##Footnote formatting
 The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
