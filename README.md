@@ -39,6 +39,7 @@ The following words should be written and capitalized as follows:
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
 - Meribah
+- Nahor
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
 - Promised Land
 - relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
