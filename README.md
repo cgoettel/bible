@@ -52,6 +52,7 @@ The following words should be written and capitalized as follows:
 - Tabernacle
 - targumim
 - Testimony (when it refers to the Ark of the Covenant)
+- trans-Euphrates
 - toward (_towards_ is the British English way of saying it)
 - Urim and Thummim
 
