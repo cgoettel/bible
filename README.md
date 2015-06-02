@@ -39,6 +39,7 @@ The following words should be written and capitalized as follows:
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
 - Meribah
+- Mount Ephraim
 - Mount Seir
 - Nahor
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
@@ -52,6 +53,7 @@ The following words should be written and capitalized as follows:
 - Tabernacle
 - targumim
 - Testimony (when it refers to the Ark of the Covenant)
+- Timnath-serah
 - trans-Euphrates
 - toward (_towards_ is the British English way of saying it)
 - Urim and Thummim
