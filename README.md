@@ -44,6 +44,7 @@ The following words should be written and capitalized as follows:
 - Nahor
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
 - Promised Land
+- Ramah, Ramoth-Gilead (not the same places, differentiate)
 - relevant pronouns (He, Him, Me, My, etc.) that refer to the Lord
 - Sabbath (depending on context)
 - _sof pasuq_
