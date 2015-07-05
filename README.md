@@ -15,6 +15,8 @@ For section (and subsection, etc.) headings, use lowercase except for proper nam
 
 ##Consistent spelling
 The following words should be written and capitalized as follows:
+
+- Amoz
 - Ark of the Covenant
 - Atonement (but only when referring to the Atonement of Jesus Christ)
 - Balaam (son of Beor)
