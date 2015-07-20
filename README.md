@@ -57,6 +57,7 @@ The following words should be written and capitalized as follows:
 - (the) Spirit of God
 - Tabernacle
 - targumim
+- Tent of Meeting (never Meeting Tent)
 - Testimony (when it refers to the Ark of the Covenant)
 - Timnath-serah
 - trans-Euphrates
