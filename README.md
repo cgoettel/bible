@@ -30,7 +30,7 @@ The following words should be written and capitalized as follows:
 - dwelling-place
 - Eleazar the priest
 - Ezion-Geber
-- gospel should not be capitalized
+- gospel (should not be capitalized)
 - Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai&nbsp;2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
 - Hebrew, Proto-Hebrew, Paleo-Hebrew, Biblical Hebrew, Rabbinic Hebrew, Medieval Hebrew, Modern Hebrew
 - (the) high priest
@@ -91,6 +91,11 @@ Match the punctuation and capitalization of the verse to give context. For examp
 However, if the footnote is a fragment sentence, do not capitalize the first word (unless a proper noun) and do not conclude with a period.
 
 > in reference to her beauty; easy on the eyes (Ps&nbsp;45:13)
+
+Additionally, if the footnote merely explains, do not capitalize:
+
+> He* said
+> *the Lord
 
 In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given. A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
 
