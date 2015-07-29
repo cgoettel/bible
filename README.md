@@ -200,7 +200,7 @@ When a single quote and double quote must be together, separate them with a `\th
 Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
 
 ##References to deity
-Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God. However, do not capitalize "god" or "gods" when it refers to the gods of other nations, but do capitalize the proper names of foreign gods (e.g., Baal).
+Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God, except for relative pronouns referring to God (e.g., "who"). However, do not capitalize "god" or "gods" when it refers to the gods of other nations, but do capitalize the proper names of foreign gods (e.g., Baal).
 
 When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name, Asherah?) and always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
 
