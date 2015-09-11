@@ -30,6 +30,7 @@ The following words should be written and capitalized as follows:
 - Day of Atonement
 - dwelling-place
 - Eleazar the priest
+- Ephes Dammim
 - Ezion-Geber
 - gospel (should not be capitalized)
 - Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai&nbsp;2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
@@ -55,6 +56,7 @@ The following words should be written and capitalized as follows:
 - _sof pasuq_
 - Shur desert (see _Paran desert_)
 - Sin Desert
+- Sokho
 - (the) Spirit of God
 - Tabernacle
 - targumim
