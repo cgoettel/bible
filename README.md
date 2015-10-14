@@ -48,6 +48,7 @@ The following words should be written and capitalized as follows:
 - Mount Ephraim
 - Mount Seir
 - Nahor
+- Paddan Aram
 - Paran desert (it's not the name of a desert, it's the desert of Paran, so don't capitalize "desert")
 - Promised Land
 - Ramah, Ramoth-Gilead (not the same places, differentiate)
