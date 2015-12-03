@@ -14,8 +14,9 @@ Additionally, if the information needs to be said in more than one place or woul
 For section (and subsection, etc.) headings, use lowercase except for proper names.<!-- idea from http://en.wikipedia.org/wiki/Wikipedia:Article_titles#Article_title_format -->
 
 ##Consistent spelling
-The following words should be written and capitalized as follows:
+The following words should be spelled and capitalized as follows:
 
+- Abimelech
 - Amoz
 - Aram-Naharaim
 - Ark of the Covenant
