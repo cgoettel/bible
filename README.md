@@ -37,6 +37,7 @@ The following words should be spelled and capitalized as follows:
 - Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai&nbsp;2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
 - Hebrew, Proto-Hebrew, Paleo-Hebrew, Biblical Hebrew, Rabbinic Hebrew, Medieval Hebrew, Modern Hebrew
 - (the) high priest
+- _hithpael_
 - Holy of Holies
 - Holy Place
 - Kadesh-Barne'a; but always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
