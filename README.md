@@ -214,6 +214,9 @@ When there is ambiguity about a name of a foreign deity (for instance, does Ashe
 Use the following rules when rendering non-idiomatic Hebrew:
 - children of Israel (instead of sons of Israel, unless only men are being referred to)
 
+##The Tetragrammaton
+When translating the ineffable name of God, always render it in small caps. However, when referring to the Lord in an English explanation (e.g., in a heading or footnote), always spell it as "Lord" (or "God" or whatever the situation warrants) but reserve small caps to signify the Tetragrammaton.
+
 ##TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
 
