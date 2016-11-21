@@ -2,26 +2,26 @@
 \documentclass[twoside]{book}
 
 % Page layout options
-% option "showframe" is useful for debugging.
+% Note: the "showframe" option is useful for debugging.
 \usepackage[paperwidth=5.25in, paperheight=8in, top=0.5in, bottom=0.25in, outer=1in, inner=0.44in, marginparwidth=0.5in, headsep=0.125in, footskip=0.25in]{geometry}
-% \setlength{\topmargin}{-0.7in} % Relative to 1in default
+% \setlength{\topmargin}{-0.7in} % Relative to 1" default % This is for line spacing or something. See Bringhurst.
 
 % Font spacing options
-% \renewcommand\baselinestretch{12pt} % Kills compilation.
+% \renewcommand\baselinestretch{12pt} % Kills compilation. % For line spacing.
 \textwidth=23pc
 \parindent=2em
 
 % Packages that don't necessarily belong elsewhere.
-\usepackage{textcomp} % For miscellaneous symbols, viz.: copyright, degree.
 \usepackage{mathtools}
 \usepackage{nicefrac}
+\usepackage{textcomp} % For miscellaneous symbols, viz.: copyright, degree.
 
-% Hyphen penalty (higher number more greatly discourages hyphenation, up to 10000).
+% Hyphen penalty (higher numbers discourage hyphenation, up to 10000).
 % 4000 seems to work fine because it only allows hyphenation in extreme conditions (and doesn't require having to use ~ all the time). 8000 was previously being used but anything with a badness over 5000 is ugly to the naked eye, so 4000 is now being used (5000 wasn't enough because it allowed things in the range 4800--5200).
 % Never use 10000.
 \sloppy\hyphenpenalty=4000
 
-% Widow and orphan penalty. 7000 was an arbitrary pick, but it seems to work.
+% Widow and orphan penalty.
 \widowpenalty=10000
 \clubpenalty=10000
 
@@ -33,15 +33,16 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     CHAPTER and SECTION
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[explicit]{titlesec} % "explicit" requires the title to be given, supplied as #1.
+% The "explicit" option requires the title to be given, supplied as #1.
+\usepackage[explicit]{titlesec}
 
-% Options for reconfiguring titles is found in the document.
+% Note: options for reconfiguring titles are found in the document.
 
 % Defining two new commands which will be dynamically changed on each call of \book
 \newcommand\englishchaptertitle{}
 \newcommand\hebrewchaptertitle{}
 
-% Shorter way of declaring a chapter with both a Hebrew and an English name.
+%% Shorter way of declaring a chapter with both a Hebrew and an English name.
 \newcommand\book[2]{%
     \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
     \renewcommand\englishchaptertitle{#1}%
@@ -66,7 +67,7 @@
 % paralist allows for separate paragraphs in the same enumeration environment.
 \usepackage{paralist}
 
-% Changes the enumerate label to be a number without a period following it. Puts padded square brackets around it. Colors is all blue.
+% Change verse number to red superscript.
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
 \renewcommand\labelenumi{\hspace*{0.5em}\color{Red}{$^{\arabic{enumi}}\hspace*{-0.1em}$}}
 
@@ -80,16 +81,8 @@
     \item% Print verse number.
 }
 
-% Abbreviations enumeration list
+% Allows for more control of enumerations and lists.
 \usepackage{enumitem}
-
-\newlist{abbreviations}{description}{1}
-\setlist[abbreviations,1]{
-    label={abbreviations},
-    leftmargin=*,
-    align=left,
-    labelsep=3em,
-}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     FONTS and ABBREVIATIONS
