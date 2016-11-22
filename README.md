@@ -143,7 +143,7 @@ Some Hebrew quotations will be preceded with the Hebrew single quote character, 
 When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
 Known issues:
-- No standard for mdashes (ndashes?) that precede Hebrew words.
+- No standard for mdashes (ndashes?) that precede Hebrew words. (Use a maqaf or rafe?)
 
 ###Quotations from HALOT
 Only provide complete quotations. Match bolding. However, when the material contains abbreviations, spell things out. We're not as interested in saving space as they are. For instance, this excerpt from the entry on נַחֲלָה:
@@ -184,7 +184,7 @@ Ages should always be written in Arabic numerals.
 Units should be attached to their respective numbers with non-breaking spaces. See examples in [non-breaking spaces](README.md#Non-breaking-spaces).
 
 ###Years
-National Geographic's style manual says it best: "Small caps, periods, no space." For specifics, see their [style guide](http://stylemanual.ngs.org/home/A/AD-BC-CE-BCE). The only exception is that numbers greater than 999 should be formatted as above stated.
+National Geographic's style manual says it best: "Small caps, periods, no space." For specifics, see their [style guide](http://stylemanual.natgeo.com/home/D/dates). The only exception is that numbers greater than 999 should be formatted as above stated. And that AD should precede the year.
 
 ##Poetry
 Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
@@ -198,7 +198,7 @@ When poetry starts following a `\verse` command, put a `\smallskip` at the end o
 When poetry switches back to prose without a section separator, `\noindent` the following verse.
 
 ##Punctuation
-When a single quote and double quote must be together, separate them with a `\thinspace`.
+When a single quote and double quote are nested, separate them with a `\thinspace`.
 
 ##README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
