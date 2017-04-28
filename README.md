@@ -1,19 +1,19 @@
-#bible
+# bible
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://dl.dropboxusercontent.com/u/1289422/bible.pdf).
 
 More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
 
-#Style guide
+# Style guide
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this growing work.
 
-##Appendices
+## Appendices
 Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
 
 Additionally, if the information needs to be said in more than one place or would also be nice to have accessible, add it to an appendix. This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
 
 For section (and subsection, etc.) headings, use lowercase except for proper names.<!-- idea from http://en.wikipedia.org/wiki/Wikipedia:Article_titles#Article_title_format -->
 
-##Consistent spelling
+## Consistent spelling
 The following words should be spelled and capitalized as follows:
 
 - Abimelech
@@ -70,7 +70,7 @@ The following words should be spelled and capitalized as follows:
 - toward (_towards_ is the British English way of saying it)
 - Urim and Thummim
 
-##Footnote formatting
+## Footnote formatting
 The `\footnote` command should never be used. There is a specific, footnote marking for every season. If, for some reason, there is not, add it.
 
 Footnotes should always come after punctuation, including periods, commas, colons, semi-colons, and quotes, both single and double. However, if the footnote is a reference to the critical apparatus that adds information that would otherwise come before the punctuation, include the reference before the punctuation. For example:
@@ -85,7 +85,7 @@ When placing multiple footnotes simultaneously, give them in the following order
 - `\ed`
 `alt` and `lit` are too big of wild cards to make a hard and fast rule on. However, if a better order can be inferred from context, place an in-line comment explaining why.
 
-###Alternate and literal readings, explanations, and editorial notes
+### Alternate and literal readings, explanations, and editorial notes
 Match the punctuation and capitalization of the verse to give context. For example:
 
 > LIT number (Gen&nbsp;13:16)
@@ -119,7 +119,7 @@ References to a person after a quote should be given with an m-dash and the date
 
 > "Malachi&nbsp;2 is difficult because it doesn't make much sense." ---Professor Ricks, 2015-02-11 (Mal&nbsp;2)
 
-###Critical apparatus
+### Critical apparatus
 Always quote the critical apparatus in whole. The explanation should always begin in lowercase (unless a proper noun). It is not necessary to match the punctuation of the critical apparatus when providing a translation, simply write idiomatically.
 
 When explaining, be idiomatic and take a little liberty, but put in brackets anything else. Here's a good guide:
@@ -145,7 +145,7 @@ When a reference is given to a specific manuscript (e.g., a manuscript of the Se
 Known issues:
 - No standard for mdashes (ndashes?) that precede Hebrew words. (Use a maqaf or rafe?)
 
-###Quotations from HALOT
+### Quotations from HALOT
 Only provide complete quotations. Match bolding. However, when the material contains abbreviations, spell things out. We're not as interested in saving space as they are. For instance, this excerpt from the entry on נַחֲלָה:
 
 > (inalienable) __hereditary possession__, __heritage__, acquired by individual or family by conquest or inheritance, both property (i.e., [originally "i.e."] land and [originally &] buildings) and \[originally &] (movable) goods
@@ -162,7 +162,7 @@ When HALOT uses an mdash, it is always preceded and followed by a space, but nev
 
 References in HALOT use a `\cdot` instead of the typical `--` for ranges.
 
-##Non-breaking spaces
+## Non-breaking spaces
 If a verse reference is a quotation from HALOT, use the `\haref` command and corresponding abbreviation. If it's an editorial reference, use the `\vref` command and corresponding abbreviation.
 
 If there are multiple verses or chapters being referenced in longhand, follow these examples:
@@ -183,10 +183,10 @@ Ages should always be written in Arabic numerals.
 
 Units should be attached to their respective numbers with non-breaking spaces. See examples in [non-breaking spaces](README.md#Non-breaking-spaces).
 
-###Years
+### Years
 National Geographic's style manual says it best: "Small caps, periods, no space." For specifics, see their [style guide](http://stylemanual.natgeo.com/home/D/dates). The only exception is that numbers greater than 999 should be formatted as above stated. And that AD should precede the year.
 
-##Poetry
+## Poetry
 Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
 When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah&nbsp;6:3:
@@ -197,37 +197,37 @@ When poetry starts following a `\verse` command, put a `\smallskip` at the end o
 
 When poetry switches back to prose without a section separator, `\noindent` the following verse.
 
-##Punctuation
+## Punctuation
 When a single quote and double quote are nested, separate them with a `\thinspace`.
 
-##README.md formatting
+## README.md formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
 
 Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
 
-##References to deity
+## References to deity
 Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God, except for relative pronouns referring to God (e.g., "who"). However, do not capitalize "god" or "gods" when it refers to the gods of other nations, but do capitalize the proper names of foreign gods (e.g., Baal).
 
 When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name, Asherah?) and always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
 
-##Specific renderings
+## Specific renderings
 Use the following rules when rendering non-idiomatic Hebrew:
 - children of Israel (instead of sons of Israel, unless only men are being referred to)
 
-##The Tetragrammaton
+## The Tetragrammaton
 When translating the ineffable name of God, always render it in small caps. However, when referring to the Lord in an English explanation (e.g., in a heading or footnote), always spell it as "Lord" (or "God" or whatever the situation warrants) but reserve small caps to signify the Tetragrammaton.
 
-##TODO work
+## TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
 
 Any inconsistencies found should be cataloged in [issue 51](https://github.com/cgoettel/bible/issues/51).
 
-##Why is there a %% at the end of every line?
+## Why is there a %% at the end of every line?
 LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when revise the translation (starting around 2030 (the year)), I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
 
 Be sure to include %% even after footnotes in poetry verses.
 
-##Words in translation
+## Words in translation
 Sometimes there is no suitable translation for a word. In such cases, simply give the word in-line in Hebrew.
 
 Some words, like הַשְּׂרָפִים, are classically rendered in English while retaining the Hebrew plural ending (seraphim). Strip the Hebrew plural and add the English plural (seraphs in this case).
