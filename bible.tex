@@ -430,10 +430,10 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     TABLE OF CONTENTS
 % %%%%%%%%%%%%%%%%%%%%%%%%%
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from TOC.
-\renewcommand\contentsname{CONTENTS}
-\setcounter{tocdepth}{0} % So TOC only displays chapters (books).
-\def\numberline#1{} % Removes numbering from TOC but not from sections (chapters).
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} % Removes page numbering from ToC.
+\renewcommand\contentsname{CONTENTS} % Changes title of page.
+\setcounter{tocdepth}{0} % Forces ToC to only displays books.
+\def\numberline#1{} % Removes numbering from ToC but not from chapters.
 
 % %%%%%%%%%%%%
 %     YEAR
@@ -525,7 +525,9 @@
     \input{Genesis/26}
     
     % \input{Genesis/31}
-    % Whenever you get to the coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as ``coat of many colors.'' Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \textit{hapax legomenon}.
+    
+    % \input{Genesis/37}
+    % The coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as ``coat of many colors.'' Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \textit{hapax legomenon}.
     
     \input{Genesis/39}
     
@@ -548,6 +550,11 @@
     \input{Exodus/31}
     
     \input{Exodus/33}
+    
+    % \book{Leviticus}{\Hebrew{ויקרא}}
+    % \input{Leviticus/26}
+    % 26:11: set footnote next to "I will establish my (presence) in your midst": See further in Welch's \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus}
+    % 26:11-12: ``The term for the presence of the Lord (walking, \textit{mithalekh}) used in \vref{Leviticus}{26}{11--12} is the same used in the Eden story in \vref{Gen}{3}{8}'' (Welch, \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus})
     
     \book{Numbers}{\Hebrew{במדבר}}
     \input{Numbers/5}
