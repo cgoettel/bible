@@ -1,5 +1,5 @@
 # bible
-Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://dl.dropboxusercontent.com/u/1289422/bible.pdf).
+Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://www.dropbox.com/s/zo50zdz2rh3xa5y/bible.pdf).
 
 More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
 
@@ -192,7 +192,7 @@ Sometimes quotations or partial quotations will be typeset as poetry. In this in
 When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah&nbsp;6:3:
 
 > <sup style="color:red">3</sup>They proclaimed to each other, and said,<b>`\smallskip`</b>
-> 
+>
 > "Holy, holy, holy is the Lord of Hosts. The whole earth is full of His glory." (emphasis added)
 
 When poetry switches back to prose without a section separator, `\noindent` the following verse.
