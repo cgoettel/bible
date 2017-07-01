@@ -5,5 +5,5 @@ bible.out
 bible.pdf
 bible.toc
 example-images/
-Sandbox/
-sandbox/
+Sandbox/*
+sandbox/*
