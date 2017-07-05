@@ -55,10 +55,28 @@
 %     CHAPTER HEADINGS
 % %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[2]{%
-    \medskip%
-    \markboth{#1:1}{#1:1}%
-    {\noindent\small\emph{\marginpar{\vspace{-2.5em}\color{Gray}{{\Huge\textbf{\hspace*{0.1em}\begin{center}#1\end{center}}}}}#2.}}%
-    \smallskip%
+  \medskip%
+  \markboth{#1:1}{#1:1}%
+  \marginpar{%
+    \vspace{-1em}%
+    \color{Gray}%
+    {%
+      \Huge%
+      \textbf{%
+        \hspace*{0.1em}%
+        \begin{center}%
+          #1%
+        \end{center}%
+      }%
+    }%
+  }%
+  \noindent%
+  \small%
+  \emph{%
+    \newline%
+    #2.%
+  }%
+  \smallskip%
 }
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -445,364 +463,258 @@
 %     DOCUMENT
 % %%%%%%%%%%%%%%%%
 \begin{document}
-    \frontmatter
-    \pagestyle{empty}
-    \titleformat{\chapter}{\large}{}{0em}{\uppercase{#1}}
-    \titlespacing*{\chapter}{0pt}{0pt}{12pt}
-    \titleformat{\section}{\scshape}{}{0em}{#1}
-    \titleformat{\subsection}{}{}{0em}{\textit{#1}}
-    \input{half-title}
-    \clearpage
-    \input{title-page}
-    \clearpage
-    \input{license}
-    \clearpage
-    \input{dedication}
-    \clearpage
-    \input{preface}
-    {\cleardoublepage}
-    \tableofcontents
-    \clearpage
-    \mainmatter
-    
-    % openrightfalse forces TeX to not generate a blank page between chapters.
-    \makeatletter
-    \@openrightfalse
-    \makeatother
-    
-    \pagestyle{fancy}
-    \book{Genesis}{\Hebrew{בראשית}}
-    \input{Genesis/1}
-    
-    \input{Genesis/2}
-    
-    \input{Genesis/3}
-    
-    \input{Genesis/4}
-    
-    \input{Genesis/5}
-    
-    \input{Genesis/6}
-    
-    \input{Genesis/7}
-    
-    \input{Genesis/8}
-    
-    \input{Genesis/9}
-    
-    \input{Genesis/10}
-    
-    \input{Genesis/11}
-    
-    \input{Genesis/12}
-    
-    \input{Genesis/13}
-    
-    \input{Genesis/14}
-    
-    \input{Genesis/15}
-    
-    \input{Genesis/16}
-    
-    \input{Genesis/17}
-    
-    \input{Genesis/18}
-    
-    \input{Genesis/19}
-    
-    \input{Genesis/20}
-    
-    \input{Genesis/21}
-    
-    \input{Genesis/22}
-    
-    \input{Genesis/23}
-    
-    \input{Genesis/24}
-    
-    \input{Genesis/25}
-    
-    \input{Genesis/26}
-    
-    \input{Genesis/27}
-    
-    % \input{Genesis/31}
-    
-    % \input{Genesis/37}
-    % The coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as ``coat of many colors.'' Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \textit{hapax legomenon}.
-    
-    \input{Genesis/39}
-    
-    % Genesis 48:7 - Ephrath = Bethlehem of Judaea
-    % \input{Genesis/49}
-    
-    \book{Exodus}{\Hebrew{שמות}}
-    \input{Exodus/15}
-    
-    \input{Exodus/19}
-    
-    \input{Exodus/20}
-    
-    \input{Exodus/21}
-    
-    \input{Exodus/23}
-    
-    \input{Exodus/24}
-    
-    \input{Exodus/31}
-    
-    \input{Exodus/33}
-    
-    % \book{Leviticus}{\Hebrew{ויקרא}}
-    % \input{Leviticus/26}
-    % 26:11: set footnote next to "I will establish my (presence) in your midst": See further in Welch's \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus}
-    % 26:11-12: ``The term for the presence of the Lord (walking, \textit{mithalekh}) used in \vref{Leviticus}{26}{11--12} is the same used in the Eden story in \vref{Gen}{3}{8}'' (Welch, \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus})
-    
-    \book{Numbers}{\Hebrew{במדבר}}
-    \input{Numbers/5}
-    
-    \input{Numbers/6}
-    
-    \input{Numbers/10}
-    
-    \input{Numbers/11}
-    
-    \input{Numbers/12}
-    
-    \input{Numbers/13}
-    
-    \input{Numbers/14}
-    
-    \input{Numbers/16}
-    
-    \input{Numbers/17}
-    
-    \input{Numbers/20}
-    
-    \input{Numbers/21}
-    
-    \input{Numbers/24}
-    
-    \input{Numbers/27}
-    
-    \input{Numbers/36}
-    
-    \book{Deuteronomy}{\Hebrew{דברים}}
-    \input{Deuteronomy/5}
-    
-    \input{Deuteronomy/6}
-    
-    \input{Deuteronomy/25}
-    
-    \book{Joshua}{\Hebrew{יהושע}}
-    \input{Joshua/3}
-    
-    \input{Joshua/24}
-    
-    \book{Judges}{\Hebrew{שופטים}}
-    \input{Judges/7}
-    
-    \book{Ruth}{\Hebrew{רות}}
-    \input{Ruth/1}
-    
-    \input{Ruth/2}
-    
-    \input{Ruth/3}
-    
-    \input{Ruth/4}
-    
-    \book{1 Samuel}{\Hebrew{א שמואל}}
-    \input{1Samuel/15}
-    
-    \input{1Samuel/16}
-    
-    \input{1Samuel/17}
-    
-    \book{2 Samuel}{\Hebrew{ב שמואל}}
-    \input{2Samuel/6}
-    
-    \book{1 Kings}{\Hebrew{א מלכים}}
-    \input{1Kings/17}
-    
-    \input{1Kings/18}
-    
-    \input{1Kings/22}
-    
-    \book{2 Kings}{\Hebrew{ב מלכים}}
-    \input{2Kings/2}
-    
-    \input{2Kings/5}
-    
-    \input{2Kings/6}
-    
-    \input{2Kings/7}
-    
-    \input{2Kings/20}
-    
-    \book{2 Chronicles}{\Hebrew{ב הימים דברי}}
-    \input{2Chronicles/26}
-    
-    \input{2Chronicles/31}
-    
-    \input{2Chronicles/32}
-    
-    \book{Ezra}{\Hebrew{עזרא}}
-    \input{Ezra/4}
-    
-    \input{Ezra/5}
-    
-    \input{Ezra/6}
-    
-    \input{Ezra/7}
-    
-    \book{Nehemiah}{\Hebrew{נחמיה}}
-    \input{Nehemiah/6}
-    
-    \book{Job}{\Hebrew{איוב}}
-    {\noindent{\small \textsc{ca} $\nicefrac{1}{5}$ fere huius libri deest in \septuagint\ (nearly one fifth of this book is missing in the Septuagint)}}
-    
-    \input{Job/1}
-    
-    \input{Job/19}
-    
-    \input{Job/38}
-    
-    \input{Job/42}
-    
-    \book{Psalms}{\Hebrew{תהילים}}
-    \input{Psalms/1}
-    
-    \input{Psalms/2}
-    
-    \input{Psalms/15}
-    
-    \input{Psalms/23}
-    
-    \input{Psalms/24}
-    
-    \input{Psalms/45}
-    
-    \input{Psalms/46}
-    
-    \input{Psalms/47}
-    % ps66:5, compare 46:9 (already referenced the other way)
-    
-    \input{Psalms/82}
-    
-    \input{Psalms/93}
-    
-    \input{Psalms/97}
-    
-    \input{Psalms/110}
-    
-    \book{Isaiah}{\Hebrew{ישעה}}
-    {\noindent\textit{\small See Appendix~\ref{app:isaiah} for more information on the book of Isaiah.}}
-    
-    \input{Isaiah/1}
-    
-    \input{Isaiah/2}
-    
-    \input{Isaiah/6}
-    
-    \input{Isaiah/7}
-    
-    \input{Isaiah/8}
-    
-    \input{Isaiah/22}
-    
-    \input{Isaiah/33}
-    
-    \input{Isaiah/36}
-    
-    \book{Jeremiah}{\Hebrew{ירמיה}}
-    \input{Jeremiah/1}
-    
-    \input{Jeremiah/3}
-    
-    \input{Jeremiah/31}
-    
-    \input{Jeremiah/32}
-    
-    \input{Jeremiah/33}
-    
-    \book{Ezekiel}{\Hebrew{יחזקאל}}
-    \input{Ezekiel/16}
-    
-    \input{Ezekiel/37}
-    
-    \input{Ezekiel/38}
-    
-    \book{Daniel}{\Hebrew{דניאל}}
-    \input{Daniel/2}
-    
-    \input{Daniel/3}
-    
-    \book{Obadiah}{\Hebrew{עבדיה}}
-    \input{Obadiah/1}
-    
-    \book{Jonah}{\Hebrew{יונה}}
-    \input{Jonah/1}
-    
-    \input{Jonah/2}
-    
-    \input{Jonah/3}
-    
-    \input{Jonah/4}
-    
-    \book{Zephaniah}{\Hebrew{צפניה}}
-    \input{Zephaniah/1}
-    
-    \book{Haggai}{\Hebrew{חגי}}
-    \input{Haggai/1}
-    
-    \input{Haggai/2}
-    
-    % xxxx In Malachi, add a reference to Appendix on yada for whatever verse talks about marriage
-    \book{Malachi}{\Hebrew{מלאכי}}
-    \input{Malachi/1}
-    
-    \input{Malachi/2}
-    
-    \input{Malachi/3}
-    
-    ~\clearpage\thispagestyle{empty}
-    
-    \appendix
-    % Rework header and section title formatting.
-    \fancyhead[LE,RO]{APPENDIX}
-    \fancyhead[LO,RE]{\thepage}
-    \fancyhead[CH]{} % Removes book name from center head.
-    \titleformat{\chapter}{\large}{}{0em}{\uppercase{Appendix \thechapter~--- #1}}
-    % \titlespacing*{\chapter}{0pt}{0pt}{12pt}
-    \renewcommand*\thesection{\arabic{section}}
-    \titleformat{\section}{\scshape}{}{0em}{Excursus \thesection~--- #1}
-    \titleformat{\subsection}{}{}{0em}{\textsc{#1}}
-    \titleformat{\subsubsection}{}{}{0em}{\textsc{#1}}
-    
-    \chapter{Additional notes}\thispagestyle{fancy}
-    \input{Appendix/psalm-110}
-    \clearpage
-    \input{Appendix/isaiah}
-    \clearpage
-    \input{Appendix/aramaic-in-the-ot}
-    \clearpage
-    \input{Appendix/covenants-in-antiquity}
-    \clearpage
-    \input{Appendix/misc-hebrew}
-    \clearpage
-    \input{Appendix/tabernacle}
-    \clearpage
-    \input{Appendix/tetragrammaton}
-    \clearpage
-    \input{Appendix/idioms}
-    
-    % Rework section formatting so "Excursus #" is not present.
-    \titleformat{\section}{\scshape}{}{0em}{#1}
-    \chapter{Dead Sea Scrolls}\thispagestyle{fancy}
-    \input{Dead-sea-scrolls/4Q521}
-    % \clearpage
-    
-    % Let the book breath.
-    ~\clearpage\thispagestyle{empty}
-    ~\clearpage\thispagestyle{empty}
+  \frontmatter
+  \pagestyle{empty}
+  \titleformat{\chapter}{\large}{}{0em}{\uppercase{#1}}
+  \titlespacing*{\chapter}{0pt}{0pt}{12pt}
+  \titleformat{\section}{\scshape}{}{0em}{#1}
+  \titleformat{\subsection}{}{}{0em}{\textit{#1}}
+  \input{half-title}
+  \clearpage
+  \input{title-page}
+  \clearpage
+  \input{license}
+  \clearpage
+  \input{dedication}
+  \clearpage
+  \input{preface}
+  {\cleardoublepage}
+  \tableofcontents
+  \clearpage
+  \mainmatter
+  
+  % openrightfalse forces TeX to not generate a blank page between chapters.
+  \makeatletter
+  \@openrightfalse
+  \makeatother
+  
+  \pagestyle{fancy}
+  \book{Genesis}{\Hebrew{בראשית}}
+  \input{Genesis/1}
+  \input{Genesis/2}
+  \input{Genesis/3}
+  \input{Genesis/4}
+  \input{Genesis/5}
+  \input{Genesis/6}
+  \input{Genesis/7}
+  \input{Genesis/8}
+  \input{Genesis/9}
+  \input{Genesis/10}
+  \input{Genesis/11}
+  \input{Genesis/12}
+  \input{Genesis/13}
+  \input{Genesis/14}
+  \input{Genesis/15}
+  \input{Genesis/16}
+  \input{Genesis/17}
+  \input{Genesis/18}
+  \input{Genesis/19}
+  \input{Genesis/20}
+  \input{Genesis/21}
+  \input{Genesis/22}
+  \input{Genesis/23}
+  \input{Genesis/24}
+  \input{Genesis/25}
+  \input{Genesis/26}
+  \input{Genesis/27}
+  % \input{Genesis/31}
+  % \input{Genesis/37}
+  % The coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as ``coat of many colors.'' Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \textit{hapax legomenon}.
+  \input{Genesis/39}
+  % Genesis 48:7 - Ephrath = Bethlehem of Judaea
+  % \input{Genesis/49}
+  
+  \book{Exodus}{\Hebrew{שמות}}
+  \input{Exodus/15}
+  \input{Exodus/19}
+  \input{Exodus/20}
+  \input{Exodus/21}
+  \input{Exodus/23}
+  \input{Exodus/24}
+  \input{Exodus/31}
+  \input{Exodus/33}
+  
+  % \book{Leviticus}{\Hebrew{ויקרא}}
+  % \input{Leviticus/26}
+  % 26:11: set footnote next to "I will establish my (presence) in your midst": See further in Welch's \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus}
+  % 26:11-12: ``The term for the presence of the Lord (walking, \textit{mithalekh}) used in \vref{Leviticus}{26}{11--12} is the same used in the Eden story in \vref{Gen}{3}{8}'' (Welch, \textit{Experiencing the Presence of the Lord: The Temple Program of Leviticus})
+  
+  \book{Numbers}{\Hebrew{במדבר}}
+  \input{Numbers/5}
+  \input{Numbers/6}
+  \input{Numbers/10}
+  \input{Numbers/11}
+  \input{Numbers/12}
+  \input{Numbers/13}
+  \input{Numbers/14}
+  \input{Numbers/16}
+  \input{Numbers/17}
+  \input{Numbers/20}
+  \input{Numbers/21}
+  \input{Numbers/24}
+  \input{Numbers/27}
+  \input{Numbers/36}
+  
+  \book{Deuteronomy}{\Hebrew{דברים}}
+  \input{Deuteronomy/5}
+  \input{Deuteronomy/6}
+  \input{Deuteronomy/25}
+  
+  \book{Joshua}{\Hebrew{יהושע}}
+  \input{Joshua/3}
+  \input{Joshua/24}
+  
+  \book{Judges}{\Hebrew{שופטים}}
+  \input{Judges/7}
+  
+  \book{Ruth}{\Hebrew{רות}}
+  \input{Ruth/1}
+  \input{Ruth/2}
+  \input{Ruth/3}
+  \input{Ruth/4}
+  
+  \book{1 Samuel}{\Hebrew{א שמואל}}
+  \input{1Samuel/15}
+  \input{1Samuel/16}
+  \input{1Samuel/17}
+  
+  \book{2 Samuel}{\Hebrew{ב שמואל}}
+  \input{2Samuel/6}
+  
+  \book{1 Kings}{\Hebrew{א מלכים}}
+  \input{1Kings/17}
+  \input{1Kings/18}
+  \input{1Kings/22}
+  
+  \book{2 Kings}{\Hebrew{ב מלכים}}
+  \input{2Kings/2}
+  \input{2Kings/5}
+  \input{2Kings/6}
+  \input{2Kings/7}
+  \input{2Kings/20}
+  
+  \book{2 Chronicles}{\Hebrew{ב הימים דברי}}
+  \input{2Chronicles/26}
+  \input{2Chronicles/31}
+  \input{2Chronicles/32}
+  
+  \book{Ezra}{\Hebrew{עזרא}}
+  \input{Ezra/4}
+  \input{Ezra/5}
+  \input{Ezra/6}
+  \input{Ezra/7}
+  
+  \book{Nehemiah}{\Hebrew{נחמיה}}
+  \input{Nehemiah/6}
+  
+  \book{Job}{\Hebrew{איוב}}
+  {\noindent{\small \textsc{ca} $\nicefrac{1}{5}$ fere huius libri deest in \septuagint\ (nearly one fifth of this book is missing in the Septuagint)}}
+  \input{Job/1}
+  \input{Job/19}
+  \input{Job/38}
+  \input{Job/42}
+  
+  \book{Psalms}{\Hebrew{תהילים}}
+  \input{Psalms/1}
+  \input{Psalms/2}
+  \input{Psalms/15}
+  \input{Psalms/23}
+  \input{Psalms/24}
+  \input{Psalms/45}
+  \input{Psalms/46}
+  \input{Psalms/47}
+  % ps66:5, compare 46:9 (already referenced the other way)
+  \input{Psalms/82}
+  \input{Psalms/93}
+  \input{Psalms/97}
+  \input{Psalms/110}
+  
+  \book{Isaiah}{\Hebrew{ישעה}}
+  {\noindent\textit{\small See Appendix~\ref{app:isaiah} for more information on the book of Isaiah.}}
+  \input{Isaiah/1}
+  \input{Isaiah/2}
+  \input{Isaiah/6}
+  \input{Isaiah/7}
+  \input{Isaiah/8}
+  \input{Isaiah/22}
+  \input{Isaiah/33}
+  \input{Isaiah/36}
+  
+  \book{Jeremiah}{\Hebrew{ירמיה}}
+  \input{Jeremiah/1}
+  \input{Jeremiah/3}
+  \input{Jeremiah/31}
+  \input{Jeremiah/32}
+  \input{Jeremiah/33}
+  
+  \book{Ezekiel}{\Hebrew{יחזקאל}}
+  \input{Ezekiel/16}
+  \input{Ezekiel/37}
+  \input{Ezekiel/38}
+  
+  \book{Daniel}{\Hebrew{דניאל}}
+  \input{Daniel/2}
+  \input{Daniel/3}
+  
+  \book{Obadiah}{\Hebrew{עבדיה}}
+  \input{Obadiah/1}
+  
+  \book{Jonah}{\Hebrew{יונה}}
+  \input{Jonah/1}
+  \input{Jonah/2}
+  \input{Jonah/3}
+  \input{Jonah/4}
+  
+  \book{Zephaniah}{\Hebrew{צפניה}}
+  \input{Zephaniah/1}
+  
+  \book{Haggai}{\Hebrew{חגי}}
+  \input{Haggai/1}
+  \input{Haggai/2}
+  
+  % xxxx In Malachi, add a reference to Appendix on yada for whatever verse talks about marriage
+  \book{Malachi}{\Hebrew{מלאכי}}
+  \input{Malachi/1}
+  \input{Malachi/2}
+  \input{Malachi/3}
+  
+  ~\clearpage\thispagestyle{empty}
+  
+  \appendix
+  % Rework header and section title formatting.
+  \fancyhead[LE,RO]{APPENDIX}
+  \fancyhead[LO,RE]{\thepage}
+  \fancyhead[CH]{} % Removes book name from center head.
+  \titleformat{\chapter}{\large}{}{0em}{\uppercase{Appendix \thechapter~--- #1}}
+  % \titlespacing*{\chapter}{0pt}{0pt}{12pt}
+  \renewcommand*\thesection{\arabic{section}}
+  \titleformat{\section}{\scshape}{}{0em}{Excursus \thesection~--- #1}
+  \titleformat{\subsection}{}{}{0em}{\textsc{#1}}
+  \titleformat{\subsubsection}{}{}{0em}{\textsc{#1}}
+  \chapter{Additional notes}\thispagestyle{fancy}
+  \input{Appendix/psalm-110}
+  \clearpage
+  \input{Appendix/isaiah}
+  \clearpage
+  \input{Appendix/aramaic-in-the-ot}
+  \clearpage
+  \input{Appendix/covenants-in-antiquity}
+  \clearpage
+  \input{Appendix/misc-hebrew}
+  \clearpage
+  \input{Appendix/tabernacle}
+  \clearpage
+  \input{Appendix/tetragrammaton}
+  \clearpage
+  \input{Appendix/idioms}
+  
+  % Rework section formatting so "Excursus #" is not present.
+  \titleformat{\section}{\scshape}{}{0em}{#1}
+  \chapter{Dead Sea Scrolls}\thispagestyle{fancy}
+  \input{Dead-sea-scrolls/4Q521}
+  % \clearpage
+  
+  % Let the book breath.
+  ~\clearpage\thispagestyle{empty}
+  ~\clearpage\thispagestyle{empty}
 \end{document}
