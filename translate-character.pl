@@ -60,7 +60,7 @@ sub translate
     while ( <IN> )
     {
       chomp(my $current_line = $_);
-      $current_line =~ s/urnt-offering/urnt offering/g;
+      $current_line =~ s/\\fnt/\\/g;
       print TMP $current_line . "\n";
     }
     
