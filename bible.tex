@@ -130,12 +130,14 @@
 \newcommand\Syriac[1]{{\large\sbls #1}}
 
 % ABBREVIATIONS
-\newfontfamily\abbrev[Scale=MatchUppercase]{Apparatus SIL}
+\newcommand\lord{\textsc{Lord}}
+\newcommand\god{\textsc{God}}
 
 \newcommand\caref[3]{#1~#2,#3}
 \newcommand\haref[3]{#1~#2$_\text{#3}$}
 \newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
 
+\newfontfamily\abbrev[Scale=MatchUppercase]{Apparatus SIL}
 \newcommand\aquila{\Greek{α´}}
 \newcommand\arabica{{\abbrev Å}}
 \newcommand\bomberg{{\abbrev 𝔅}}
@@ -225,11 +227,11 @@
 % %%%%%%%%%%%%%%
 % Use `\p[a-e]` for beginning of line spacing.
 % Use `\pa` for interline separations.
-\newcommand\pa{\noindent\hspace{1.5em}}
-\newcommand\pb{\noindent\hspace{2em}}
-\newcommand\pc{\noindent\hspace{2.5em}}
-\newcommand\pd{\noindent\hspace{3em}}
-\newcommand\pe{\noindent\hspace{3.5em}}
+\newcommand\pa{\noindent\hangindent=2em\hspace{2em}}
+\newcommand\pb{\noindent\hangindent=2.5em\hspace{2.5em}}
+\newcommand\pc{\noindent\hangindent=3em\hspace{3em}}
+\newcommand\pd{\noindent\hangindent=3.5em\hspace{3.5em}}
+\newcommand\pe{\noindent\hangindent=4em\hspace{4em}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     TABLE OF CONTENTS
@@ -308,7 +310,7 @@
   % The coat of many colors: \Hebrew{כְּתֹבֶת פּסִּים} \Greek{χιτῶνα ποικίλον} is rendered as ``coat of many colors.'' Rabbis tell us that this is more probably a long sleeve garment with markings. Additionally, this is a \textit{hapax legomenon}.
   \input{Genesis/39}
   % Genesis 48:7 - Ephrath = Bethlehem of Judaea
-  % \input{Genesis/49}
+  \input{Genesis/49}
   
   \book{Exodus}{\Hebrew{שמות}}
   \input{Exodus/15}
@@ -404,6 +406,7 @@
   \input{Psalms/1}
   \input{Psalms/2}
   \input{Psalms/15}
+  \input{Psalms/21}
   \input{Psalms/23}
   \input{Psalms/24}
   \input{Psalms/45}
