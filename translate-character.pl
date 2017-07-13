@@ -60,7 +60,7 @@ sub translate
     while ( <IN> )
     {
       chomp(my $current_line = $_);
-      $current_line =~ s/\\fnt/\\/g;
+      $current_line =~ s/\\lord[^.,;:!~?'%\})]/\\lord\\ /g;
       print TMP $current_line . "\n";
     }
     

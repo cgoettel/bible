@@ -56,6 +56,7 @@ The following words should be spelled and capitalized as follows:
 - Ramah, Ramoth-Gilead (not the same places, differentiate)
 - Rebecca
 - Sabbath (depending on context)
+- Selah! (always with the exclamation mark)
 - _sof pasuq_
 - Shur desert (see _Paran desert_)
 - Sin Desert
