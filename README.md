@@ -116,9 +116,9 @@ When adding an editorial note to a LIT or ALT, begin with the LIT or ALT, then a
 
 > from afar.; but this is written from his perspective (Gen&nbsp;22:4)
 
-References to a person after a quote should be given with an m-dash and the date in ISO standard, as follows:
+References to a person after a quote should be given with an m-dash, non-breaking space, and the date in long format (DD MMMM YYYY), as follows:
 
-> "Malachi&nbsp;2 is difficult because it doesn't make much sense." ---Professor Ricks, 2015-02-11 (Mal&nbsp;2)
+> "Malachi&nbsp;2 is difficult because it doesn't make much sense." ---~Steven D.\ Ricks, 11 February 2015
 
 ### Critical apparatus
 Always quote the critical apparatus in whole. The explanation should always begin in lowercase (unless a proper noun). It is not necessary to match the punctuation of the critical apparatus when providing a translation, simply write idiomatically.
