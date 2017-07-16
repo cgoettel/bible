@@ -128,8 +128,8 @@
 \renewcommand\schwa{e}
 
 % Syriac
-\newfontfamily\sbls[Script=Syriac]{Estrangelo (V1.1)}
-\newcommand\Syriac[1]{{\large\sbls #1}}
+\newfontfamily\sbls[Script=Syriac,Scale=MatchUppercase]{Estrangelo (V1.1)}
+\newcommand\Syriac[1]{{\sbls #1}}
 
 % ABBREVIATIONS
 \newcommand\lord{\textsc{Lord}}
@@ -143,6 +143,7 @@
 \newcommand\aquila{\Greek{α´}}
 \newcommand\arabica{{\abbrev Å}}
 \newcommand\bomberg{{\abbrev 𝔅}}
+\newcommand\hadagger{{$\dagger$}}
 \newcommand\fragheb{{\abbrev ℭ}}
 \newcommand\latina{{\abbrev 𝔏}}
 \newcommand\masoretic{{\abbrev 𝔐}}
@@ -193,17 +194,6 @@
 \newcommand\ie[1]{\footnote{\textsc{ie} #1}}
 \newcommand\lit[1]{\footnote{\textsc{lit} #1}}
 \newcommand\ylt[1]{\footnote{\textsc{ylt} #1}}
-
-% Abbreviated footnote commands for \footnotetext command
-\newcommand\fntalt[1]{\footnotetext{\textsc{alt} #1}}
-\newcommand\fntca[2]{\footnotetext{\textsc{ca} #1 (#2)}}
-\newcommand\fntcf[1]{\footnote{cf.\ #1}}
-\newcommand\fnted[1]{\footnotetext{\textsc{ed} #1}}
-\newcommand\fnthalot[2]{\footnotetext{\textsc{halot} \Hebrew{#1}: #2}}
-\newcommand\fnthalotu[2]{\footnotetext{\textsc{halotu} \Hebrew{#1}: #2}}
-\newcommand\fntie[1]{\footnotetext{\textsc{ie} #1}}
-\newcommand\fntlit[1]{\footnotetext{\textsc{lit} #1}}
-\newcommand\fntylt[1]{\footnotetext{\textsc{ylt} #1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
 %     HEADER and FOOTER
@@ -417,6 +407,7 @@
   \input{Psalms/45}
   \input{Psalms/46}
   \input{Psalms/47}
+  % \input{Psalms/52}
   % ps66:5, compare 46:9 (already referenced the other way)
   \input{Psalms/82}
   \input{Psalms/93}
@@ -433,6 +424,8 @@
   \input{Isaiah/22}
   \input{Isaiah/33}
   \input{Isaiah/36}
+  \input{Isaiah/52}
+  \input{Isaiah/53}
   
   \book{Jeremiah}{\Hebrew{ירמיה}}
   \input{Jeremiah/1}
