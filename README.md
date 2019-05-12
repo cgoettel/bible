@@ -45,6 +45,7 @@ The following words should be spelled and capitalized as follows:
 - `\latina` -> old Latin version
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
+- lovingkindness (no hyphen)
 - _maqaf_
 - Meribah
 - Mount Ephraim
