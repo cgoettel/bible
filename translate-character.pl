@@ -53,29 +53,29 @@ sub translate
   {
     next if $current_file =~ /^\./;
     print "$directory/$current_file\n" if $DEBUG;
-    
+
     open IN, "<$directory/$current_file" or die "Failed to open IN: $!\n";
     open TMP, ">/tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
-    
+
     while ( <IN> )
     {
       chomp(my $current_line = $_);
-      $current_line =~ s/Hebrew manuscripts/Hebrew manuscript codices/g;
+      $current_line =~ s/oving-kindness/ovingkindness/g;
       print TMP $current_line . "\n";
     }
-    
+
     close IN;
     close TMP;
-    
+
     # Read from TMP file, print to original IN file.
     open TMP_IN, "</tmp/translate-character.tmp" or die "Failed to open TMP: $!\n";
     open OUT, ">$directory/$current_file" or die "Failed to open OUT: $!\n";
-    
+
     while ( <TMP_IN> )
     {
       print OUT $_;
     }
-    
+
     close TMP_IN;
     close OUT;
   }
