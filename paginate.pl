@@ -38,4 +38,4 @@ print "done.\n";
 
 print "\nADD FILE TO bible.tex\n";
 
-`xdg-open $book/$chapter.tex`;
+# `xdg-open $book/$chapter.tex`;
