@@ -1,10 +1,30 @@
 # bible
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent version can be downloaded [here](https://www.dropbox.com/s/zo50zdz2rh3xa5y/bible.pdf).
 
-More information about the translation can be found in the [preface](https://github.com/cgoettel/bible/blob/master/preface.tex).
+More information about the translation can be found in the [preface](https://gitlab.com/colby.goettel/bible/blob/master/preface.tex).
 
 # Style guide
 This style guide is a work in progress. It's an effort to make sure there is consistency throughout this growing work.
+
+# Table of contents
+1. [Appendices](#appendices)
+1. [Consistent spelling](#consistent-spelling)
+1. [Footnote formatting](#footnote-formatting)
+  1. [Alternate and literal readings, explanations, and editorial notes](#alternate-and-literal-readings-explanations-and-editorial-notes)
+  1. [Critical apparatus](#critical-apparatus)
+  1. [Quotations from HALOT](#quotations-from-halot)
+1. [Non-breaking spaces](#non-breaking-spaces)
+1. [Numbers and units](#numbers-and-units)
+  1. [Years](#years)
+1. [Poetry](#poetry)
+1. [Punctuation](#punctuation)
+1. [README.md formatting](#readme-md-formatting)
+1. [References to deity](#references-to-deity)
+1. [Specific renderings](#specific-renderings)
+1. [The Tetragrammaton](#the-tetragrammaton)
+1. [TODO work](#todo-work)
+1. [Why is there a %% at the end of every line?](#why-is-there-a-at-the-end-of-every-line)
+1. [Words in translation](#words-in-translation)
 
 ## Appendices
 Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
@@ -102,8 +122,8 @@ However, if the footnote is a fragment sentence, do not capitalize the first wor
 
 Additionally, if the footnote merely explains, do not capitalize:
 
-> He* said
-> *the Lord
+> He&#42; said
+> &#42;the Lord
 
 In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given. A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
 
@@ -176,7 +196,7 @@ If there are multiple verses or chapters being referenced in longhand, follow th
 
 Use the above rules for formatting units (e.g., ft, m, years) as well.
 
-##Numbers and units
+## Numbers and units
 Numbers smaller than one hundred should generally be written out in longhand. Larger numbers should be written in Arabic numerals with a `\thinspace` delimiting thousands. However, if a sentence has both large and small values, be consistent, as in:
 
 > The king of Aram said, "Go! I will send a letter to the king of Israel." So he went and took 10&nbsp;talents of silver, 6000&nbsp;gold pieces, and 10&nbsp;changes of clothes with him. (2&nbsp;Kings&nbsp;5:5)
@@ -189,7 +209,7 @@ Units should be attached to their respective numbers with non-breaking spaces. S
 National Geographic's style manual says it best: "Small caps, periods, no space." For specifics, see their [style guide](http://stylemanual.natgeo.com/home/D/dates). The only exception is that numbers greater than 999 should be formatted as above stated. And that AD should precede the year.
 
 ## Poetry
-Sometimes quotations or partial quotations will be typeset as poetry. In this instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
+Sometimes quotations or partial quotations will be typeset as poetry. In these instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
 When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah&nbsp;6:3:
 
@@ -222,7 +242,7 @@ When translating the ineffable name of God, always render it in small caps. Howe
 ## TODO work
 Mark all TODO work with `xxxx`, always in lowercase.
 
-Any inconsistencies found should be cataloged in [issue 51](https://github.com/cgoettel/bible/issues/51).
+Any inconsistencies found should be cataloged in [issue 51](https://gitlab.com/colby.goettel/bible/issues/51).
 
 ## Why is there a %% at the end of every line?
 LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when revise the translation (starting around 2030 (the year)), I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
