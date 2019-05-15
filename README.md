@@ -8,23 +8,24 @@ This style guide is a work in progress. It's an effort to make sure there is con
 
 # Table of contents
 1. [Appendices](#appendices)
-1. [Consistent spelling](#consistent-spelling)
-1. [Footnote formatting](#footnote-formatting)
+2. [Consistent spelling](#consistent-spelling)
+3. [Footnote formatting](#footnote-formatting)
   1. [Alternate and literal readings, explanations, and editorial notes](#alternate-and-literal-readings-explanations-and-editorial-notes)
-  1. [Critical apparatus](#critical-apparatus)
-  1. [Quotations from HALOT](#quotations-from-halot)
-1. [Non-breaking spaces](#non-breaking-spaces)
-1. [Numbers and units](#numbers-and-units)
+  2. [Critical apparatus](#critical-apparatus)
+  3. [Quotations from HALOT](#quotations-from-halot)
+4. [Non-breaking spaces](#non-breaking-spaces)
+5. [Numbers and units](#numbers-and-units)
   1. [Years](#years)
-1. [Poetry](#poetry)
-1. [Punctuation](#punctuation)
-1. [README.md formatting](#readme-md-formatting)
-1. [References to deity](#references-to-deity)
-1. [Specific renderings](#specific-renderings)
-1. [The Tetragrammaton](#the-tetragrammaton)
-1. [TODO work](#todo-work)
-1. [Why is there a %% at the end of every line?](#why-is-there-a-at-the-end-of-every-line)
-1. [Words in translation](#words-in-translation)
+6. [Poetry](#poetry)
+7. [Punctuation](#punctuation)
+8. [README formatting](#readme-formatting)
+9. [References to deity](#references-to-deity)
+10. [Spacing](#spacing)
+11. [Specific renderings](#specific-renderings)
+12. [The Tetragrammaton](#the-tetragrammaton)
+13. [TODO work](#todo-work)
+14. [Why is there a %% at the end of every line?](#why-is-there-a-at-the-end-of-every-line)
+15. [Words in translation](#words-in-translation)
 
 ## Appendices
 Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
@@ -222,7 +223,7 @@ When poetry switches back to prose without a section separator, `\noindent` the 
 ## Punctuation
 When a single quote and double quote are nested, separate them with a `\thinspace`.
 
-## README.md formatting
+## README formatting
 > Use this style for quotations. Either put the reference before the quote or after (in parentheses).
 
 Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note that no period follows the abbreviated book name.
@@ -231,6 +232,9 @@ Use a `&nbsp;` when referencing Biblical books (e.g., `Ps&nbsp;45:18`). Note tha
 Always capitalize the proper names of deity. Additionally, always capitalize pronouns referring to God, except for relative pronouns referring to God (e.g., "who"). However, do not capitalize "god" or "gods" when it refers to the gods of other nations, but do capitalize the proper names of foreign gods (e.g., Baal).
 
 When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name, Asherah?) and always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
+
+## Spacing
+Sometimes there will be horizontal or vertical spacing present in the BHS text. For horizontal spacing, use the command `\ilsp` to generate a clean horizontal break. The `\pa` command forces no indentation and adds a hanging indent to the paragraph which doesn't work for prose.
 
 ## Specific renderings
 Use the following rules when rendering non-idiomatic Hebrew:
