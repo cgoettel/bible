@@ -63,6 +63,7 @@ The following words should be spelled and capitalized as follows:
 - Holy Place
 - Kadesh-Barne'a; but always differentiate when the text says "Kadesh" instead of "Kadesh-Barne'a".
 - Kiryat Arba
+- Kittim
 - `\latina` -> old Latin version
 - Law (when referring to the Mosaic Law)
 - Lord of Hosts
