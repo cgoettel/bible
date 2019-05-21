@@ -183,7 +183,8 @@
 \newcommand\halotu[2]{\footnote{\textsc{halotu} \Hebrew{#1}: #2}}
 \newcommand\ie[1]{\footnote{\textsc{ie} #1}}
 \newcommand\lit[1]{\footnote{\textsc{lit} #1}}
-\newcommand\understood{\footnote{\textsc{und}}}
+% \newcommand\understood{\footnote{\textsc{und}}}
+\newcommand\understood[1]{\footnotemark#1\addtocounter{footnote}{-1}\footnote{\textsc{und}}}
 \newcommand\ylt[1]{\footnote{\textsc{ylt} #1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%
