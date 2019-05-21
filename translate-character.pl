@@ -7,33 +7,7 @@ my $DEBUG = 1;
 
 # Open directory.
 # my @directories = ("sandbox");
-my @directories = ("1Kings",
-                   "1Samuel",
-                   "2Chronicles",
-                   "2Kings",
-                   "2Samuel",
-                   "Appendix",
-                   "Daniel",
-                   "Dead-sea-scrolls",
-                   "Deuteronomy",
-                   "Exodus",
-                   "Ezekiel",
-                   "Ezra",
-                   "Genesis",
-                   "Haggai",
-                   "Isaiah",
-                   "Jeremiah",
-                   "Job",
-                   "Jonah",
-                   "Joshua",
-                   "Judges",
-                   "Malachi",
-                   "Nehemiah",
-                   "Numbers",
-                   "Obadiah",
-                   "Psalms",
-                   "Ruth",
-                   "Zephaniah");
+my @directories = ("1Chronicles", "1Kings", "1Samuel", "2Chronicles", "2Kings", "2Samuel", "Amos", "Appendix", "Daniel", "Dead-sea-scrolls", "Deuteronomy", "Ecclesiastes", "Esther", "Exodus", "Ezekiel", "Ezra", "Genesis", "Habbakkuk", "Haggai", "Hosea", "Isaiah", "Jeremiah", "Job", "Joel", "Jonah", "Joshua", "Judges", "Lamentations", "Leviticus", "Malachi", "Micah", "Nahum", "Nehemiah", "Numbers", "Obadiah", "Proverbs", "Psalms", "Ruth", "Zechariah", "Zephaniah");
 
 foreach ( @directories )
 {
@@ -60,7 +34,7 @@ sub translate
     while ( <IN> )
     {
       chomp(my $current_line = $_);
-      $current_line =~ s/oving-kindness/ovingkindness/g;
+      $current_line =~ s/\\understood/\\understood{}/g;
       print TMP $current_line . "\n";
     }
 
