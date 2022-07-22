@@ -1,0 +1,10 @@
+# Docs: https://www.gitpod.io/docs/config-gitpod-file
+
+tasks:
+  - name: Install fonts
+    before: make install
+  - name: Generate PDF
+    init: make
+
+image:
+  file: .gitpod.Dockerfile
