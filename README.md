@@ -1,31 +1,8 @@
-<!-- Contribute with Gitpod badge -->
-<a href="https://gitpod.io/#https://gitlab.com/colby.goettel/bible">
-  <img
-    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
-    alt="Contribute with Gitpod"
-  />
-</a>
-
-# bible
+# Bible
 
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent PDF version can be viewed [here](bible.pdf).
 
 More information about the translation can be found in the [preface](preface.tex).
-
-## Contributing and getting started
-
-There are so many dependencies in this work that I have migrated to doing remote development with GitPod. More information can be found in [.gitpod.Dockerfile](.gitpod.Dockerfile). The minimum packages you need are:
-- `texlive`
-- `texlive-fonts-extra` (for Phoenician)
-- `texlive-xetex`
-
-I have also included each of the needed fonts in `fonts/`:
-- [Apparatus SIL](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ApparatusSIL) (for textual apparatus symbols)
-- Estrangelo V1.1 (for Syriac)
-- [SBL Greek](https://www.sbl-site.org/educational/BiblicalFonts_SBLGreek.aspx)
-- [SBL Hebrew](https://www.sbl-site.org/educational/BiblicalFonts_SBLHebrew.aspx)
-
-These are installed with `make install` which must be run before you can `make`. All of that is taken care of in [.gitpod.yml](.gitpod.yml).
 
 ## Style guide
 
