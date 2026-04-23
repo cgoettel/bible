@@ -1,17 +1,3 @@
-include:
-  - template: Docker.gitlab-ci.yml
-
-variables:
-  DOCKER_TLS_CERTDIR: "/certs"
-
-docker-build:
-  extends: .docker:build
-  variables:
-    DOCKER_IMAGE: $CI_REGISTRY_IMAGE:latest
-  rules:
-    - changes:
-      - Dockerfile
-
 # Mirror main to github.com/cgoettel/bible on every push to main
 mirror_to_github:
   image:
