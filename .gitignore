@@ -1,8 +1,37 @@
-bible.apc
-bible.aux
-bible.log
-bible.out
-bible.toc
+# LaTeX / XeTeX generated files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.synctex
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.run.xml
+*.pdfsync
+*.tdo
+*.backup
+*~
+
+# latexmk artifacts
+.fls
+.fdb_latexmk
+
+# Project-specific generated files
 example-images/
 Sandbox/*
 sandbox/*
+bible.synctex(busy)
