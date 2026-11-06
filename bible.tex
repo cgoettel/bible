@@ -114,18 +114,19 @@
 \usepackage{graphicx}
 
 % Greek
-\newfontfamily\sblg[Script=Greek,Scale=MatchUppercase]{SBL Greek}
+% Project fonts load straight from fonts/, so nothing needs installing system-wide.
+\newfontfamily\sblg[Path=fonts/,Script=Greek,Scale=MatchUppercase]{SBL_grk.ttf}
 \newcommand\Greek[1]{{\sblg #1}}
 
 % Hebrew
-\newfontfamily\sblh[Script=Hebrew,Scale=MatchUppercase]{SBL Hebrew}
+\newfontfamily\sblh[Path=fonts/,Script=Hebrew,Scale=MatchUppercase]{SBL_Hbrw.ttf}
 \newcommand\Hebrew[1]{{\sblh #1}}
 
 % Phoenician
 \usepackage{phoenician}
 
 % Syriac
-\newfontfamily\sbls[Path=/usr/share/fonts/truetype/,Script=Syriac,Scale=MatchUppercase]{Estrangelo}
+\newfontfamily\sbls[Path=fonts/,Script=Syriac,Scale=MatchUppercase]{Estrangelo.ttf}
 \newcommand\Syriac[1]{{\sbls{}#1}}
 
 % ABBREVIATIONS
@@ -136,7 +137,7 @@
 \newcommand\haref[3]{#1~#2$_\text{#3}$}
 \newcommand\vref[3]{#1~#2\thinspace:\thinspace#3}
 
-\newfontfamily\abbrev[Scale=MatchUppercase]{Apparatus SIL}
+\newfontfamily\abbrev[Path=fonts/,Scale=MatchUppercase,BoldFont=AppSILB.TTF,ItalicFont=AppSILI.TTF,BoldItalicFont=AppSILBI.TTF]{AppSILR.ttf}
 \newcommand\aquila{\Greek{α´}}
 \newcommand\arabica{{\abbrev{}Å}}
 \newcommand\bomberg{{\abbrev{}𝔅}}
