@@ -3,7 +3,7 @@
 #                     does, and fails on a LaTeX error.
 #   pages:            main only. Publishes the freshly built bible.pdf (and the
 #                     README's page-count badge data) to GitLab Pages, at
-#                     https://colby.goettel.gitlab.io/bible/bible.pdf. The PDF is
+#                     https://bible-3d205d.gitlab.io/bible.pdf. The PDF is
 #                     not committed to the repository.
 #   mirror_to_github: the shared GitLab → GitHub mirror job from smart-home's
 #                     ci/templates/mirror-to-github.yml (smart-home #299). Runs on
