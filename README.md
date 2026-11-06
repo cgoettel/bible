@@ -38,7 +38,7 @@ This style guide is a work in progress. It's an effort to make sure there is con
 
 ## Adding a chapter
 
-`paginate.pl` creates a chapter file with an empty `\verse{c:v} %%` line for each verse. Then add an `\input` line for it in `bible.tex`, in canonical order. Verse numbers follow the Hebrew Bible (BHS), not the KJV, so Joel 3 here is Joel 2:28–32 in the KJV.
+`paginate.pl` creates a chapter file with an empty `\vrs{c:v} %%` line for each verse. Then add an `\input` line for it in `bible.tex`, in canonical order. Verse numbers follow the Hebrew Bible (BHS), not the KJV, so Joel 3 here is Joel 2:28–32 in the KJV.
 
 A commented-out `\input` means the file has nothing translated yet (Genesis 31, for example, has a single note and no translation). Nothing warns about a chapter file that isn't included, so check `bible.tex` when a chapter seems to be missing from the PDF.
 
@@ -240,9 +240,11 @@ National Geographic's style manual says it best: "Small caps, periods, no space.
 
 ## Poetry
 
+Poetry lines start with `\pa{}` through `\pe{}` (shallowest to deepest indent), and `\pa{}` in the middle of a line marks the hemistich break. Always write the empty braces and no space after them: `\pa{}\vrs{53:1} Who has believed…\pa{}Unto whom…`. A space after `{}` prints, so a line that ends in one of these commands needs a trailing `%`.
+
 Sometimes quotations or partial quotations will be typeset as poetry. In these instances, always start as unindented as possible. For instance, see 1 Sam~15:22–23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
-When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah 6:3:
+When poetry starts following a `\vrs` (verse) command, put a `\smallskip` at the end of the preceding line, as in Isaiah 6:3:
 
 > <sup style="color:red">3</sup>They proclaimed to each other, and said,<b>`\smallskip`</b>
 >

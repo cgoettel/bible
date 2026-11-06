@@ -25,7 +25,7 @@ print OUT "\\begin{inparaenum}\n";
 
 for ( my $i = 1; $i <= $total_verses; $i++ )
 {
-  print OUT "  \\verse{$chapter:$i} %%\n";
+  print OUT "  \\vrs{$chapter:$i} %%\n";
 }
 
 print OUT "\\end{inparaenum}\n";
