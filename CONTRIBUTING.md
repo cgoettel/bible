@@ -18,6 +18,12 @@ From the repo root:
 latexmk bible.tex
 ```
 
+To keep `git blame` from stopping at large mechanical commits (such as the `\verse` to `\vrs` rename), run this once:
+
+```sh
+git config blame.ignoreRevsFile .git-blame-ignore-revs
+```
+
 `latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `latexmk -c bible.tex` removes the build files.
 
 `bible.pdf` is not committed (it's in `.gitignore`). CI builds it from every push to `main` and publishes it to [bible-3d205d.gitlab.io/bible.pdf](https://bible-3d205d.gitlab.io/bible.pdf), the link in the README.

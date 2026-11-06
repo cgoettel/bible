@@ -1,0 +1,5 @@
+# Commits that git blame should skip. Use with:
+#   git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# refactor: rename \verse to \vrs and write \pa{} through \pe{} (!117)
+1febbb81a5d6f6e659adf9130f44d6857267951b
