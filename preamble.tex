@@ -45,6 +45,7 @@
 %% Shorter way of declaring a chapter with both a Hebrew and an English name.
 \newcommand\book[2]{%
   \chapter[#1\hfill#2~~~]{#1}% ~ added for spacing in ToC.
+  \pdfbookmark[0]{#1}{book.#1}% Top-level PDF bookmark for the book.
   \renewcommand\englishchaptertitle{#1}%
   \renewcommand\hebrewchaptertitle{#2}%
   \thispagestyle{fancy}% Forces no page number in cfoot.
@@ -56,6 +57,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\heading[2]{%
   \medskip%
+  \pdfbookmark[1]{\englishchaptertitle\ #1}{\englishchaptertitle.#1}% Chapter bookmark under its book.
   \markboth{#1:1}{#1:1}%
   \marginpar{%
     \vspace{-2em}%
@@ -235,3 +237,20 @@
 % %%%%%%%%%%%%
 \usepackage{datetime}
 \newdateformat{justtheyear}{\THEYEAR}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PDF BOOKMARKS AND LINKS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Loaded last, as hyperref expects. Bookmarks list each book and its chapters;
+% the table of contents and \ref links are clickable. hidelinks keeps the page
+% free of colored boxes, so the PDF prints exactly as before. hyperfootnotes is
+% off because per-page footnote numbering and \understood's manual \footnotemark
+% would otherwise create duplicate link targets.
+\usepackage[implicit=false, hidelinks, hyperfootnotes=false, bookmarksopen=false, unicode]{hyperref}
+\usepackage{bookmark}
+\hypersetup{
+  pdftitle={The Holy Bible},
+  pdfsubject={Translated from the Biblia Hebraica Stuttgartensia},
+  pdfauthor={Colby Goettel},
+  pdflang={en-US},
+}
