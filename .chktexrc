@@ -1,0 +1,56 @@
+# ChkTeX settings for this repo. ChkTeX reads this file on top of the default
+# and the global ~/.chktexrc: LaTeX Workshop passes it with -l on its own, and
+# on the command line run `chktex -l .chktexrc <file>` (or run chktex from the
+# repo root, where it finds ./.chktexrc by itself).
+#
+# Each block below adds to ChkTeX's built-in list unless it says otherwise.
+
+# Warning 38 ("You should not use punctuation in front of quotes") wants
+# British placement. This text is US English, which puts periods and commas
+# inside the quotes. The global ~/.chktexrc says the same; it is repeated here
+# so the repo lints the same way on a machine without it.
+CmdLine
+{
+    -n38
+}
+
+# Arguments that hold no English prose, so ChkTeX should not lint them:
+# Hebrew, Greek, and Syriac text; the headword and the quoted entry of a HALOT
+# note; the references (book, chapter, verse); and the Latin abbreviations of
+# the BHS critical apparatus, which is the first argument of \ca. The second
+# argument of \ca is the English gloss, so it is still checked.
+#
+# The leading [] is not a real optional argument. It lets ChkTeX skip the
+# argument count in each \newcommand line of bible.tex, such as
+# \newcommand\Hebrew[1]{...}, which it would otherwise flag as a solo `]'.
+WipeArg
+{
+    \Hebrew:[]{} \Greek:[]{} \Syriac:[]{}
+    \halot:[]{}{} \halotu:[]{}{}
+    \haref:[]{}{}{} \vref:[]{}{}{} \caref:[]{}{}{}
+    \ca:[]{}
+}
+
+# Commands that want a `~' in front of them. This replaces the built-in list
+# to drop \vref: here it is a scripture reference (Gen 1:1), not the varioref
+# page reference, so a normal space before it is fine.
+Linker =
+{
+    \ref \pageref \eqref \cite
+}
+
+# Commands that print no word of their own, so the space after them is
+# meant to be swallowed: the poetry indents, the inline poetry space, the
+# thin space, and the Hebrew, Greek, and Syriac font switches. \ae sits in
+# the middle of a word (Aram\ae an), where the space only ends the command.
+#
+# Word-like macros such as \lord and the sigla (\septuagint, \peshitta, and
+# the rest) are left out on purpose: a space after them is swallowed too, so
+# a warning there is a real missing `\ '.
+Silent
+{
+    \pa \pb \pc \pd \pe \ilsp
+    \thinspace
+    \sblh \sblg \sbls \abbrev
+    \ae
+}
