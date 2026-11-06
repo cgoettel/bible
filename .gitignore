@@ -35,3 +35,6 @@ example-images/
 Sandbox/*
 sandbox/*
 bible.synctex(busy)
+
+# The PDF is built by CI and published to GitLab Pages, not committed.
+bible.pdf

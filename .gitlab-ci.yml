@@ -1,9 +1,10 @@
 # Pipelines run for merge requests and for pushes to main.
 #   build_pdf:        builds bible.pdf with latexmk, the same way the local build
 #                     does, and fails on a LaTeX error.
-#   pdf_committed:    merge requests only. Fails when a .tex file changed but the
-#                     committed bible.pdf didn't, since the README links to it as
-#                     the most recent version.
+#   pages:            main only. Publishes the freshly built bible.pdf (and the
+#                     README's page-count badge data) to GitLab Pages, at
+#                     https://colby.goettel.gitlab.io/bible/bible.pdf. The PDF is
+#                     not committed to the repository.
 #   mirror_to_github: the shared GitLab → GitHub mirror job from smart-home's
 #                     ci/templates/mirror-to-github.yml (smart-home #299). Runs on
 #                     main only. This repo keeps its own GITHUB_DEPLOY_KEY CI variable.
@@ -28,18 +29,18 @@ include:
 
 stages:
   - build
+  - publish
 
 build_pdf:
   stage: build
   # TeX Live 2026, full scheme, pinned by digest so the build doesn't shift under
-  # the committed PDF. Bump it on purpose, alongside the local TeX Live.
+  # the published PDF. Bump it on purpose, alongside the local TeX Live.
   image: texlive/texlive:latest@sha256:07e8062637249c4f780ca59f42cc2ed592bc2dc1db4320769406aee3f98aa70e
   script:
     # latexmk exits non-zero even when it writes the PDF, because per-page
     # footnote numbering never settles (see .latexmkrc). So judge the build by
     # its log and output instead: xelatex runs with -halt-on-error, so a real
-    # LaTeX error leaves a "!" line in bible.log and no fresh bible.pdf.
-    - rm -f bible.pdf
+    # LaTeX error leaves a "!" line in bible.log and no bible.pdf.
     - latexmk bible.tex || true
     - if grep -n -A5 '^!' bible.log; then exit 1; fi
     - test -s bible.pdf
@@ -56,20 +57,18 @@ build_pdf:
       - pages-badge.json
     expire_in: 1 week
 
-pdf_committed:
-  stage: build
-  image:
-    name: alpine/git:2.54.0
-    entrypoint: [""]
-  variables:
-    GIT_DEPTH: 0
+pages:
+  stage: publish
+  image: alpine:3.22
+  needs: [build_pdf]
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push"
   script:
-    - changed=$(git diff --name-only "$CI_MERGE_REQUEST_DIFF_BASE_SHA" HEAD)
-    - echo "$changed"
-    - |
-      if echo "$changed" | grep -q '\.tex$' && ! echo "$changed" | grep -qx 'bible.pdf'; then
-        echo "A .tex file changed but bible.pdf didn't. Rebuild with latexmk and commit bible.pdf."
-        exit 1
-      fi
+    - mkdir -p public
+    - cp bible.pdf pages-badge.json public/
+    # The site root forwards to the PDF.
+    - >-
+      printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=bible.pdf"><title>The Holy Bible</title><a href="bible.pdf">The Holy Bible (PDF)</a>\n' > public/index.html
+  artifacts:
+    paths:
+      - public
