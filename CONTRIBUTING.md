@@ -20,7 +20,7 @@ latexmk bible.tex
 
 `latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `latexmk -c bible.tex` removes the build files.
 
-Commit the rebuilt `bible.pdf` with every change to the text: the README links to it as the most recent version, and CI fails a merge request that changes a `.tex` file without it.
+`bible.pdf` is not committed (it's in `.gitignore`). CI builds it from every push to `main` and publishes it to [colby.goettel.gitlab.io/bible/bible.pdf](https://colby.goettel.gitlab.io/bible/bible.pdf), the link in the README.
 
 Expect `latexmk` to report "Maximum runs of xelatex reached without getting stable files." Per-page footnote numbering flips footnotes near a page break between two pages on alternate passes, so the build never fully settles. `.latexmkrc` turns on force mode, so `bible.pdf` is still written. If the PDF looks wrong, check `bible.log` for a real error.
 
@@ -31,6 +31,7 @@ If `bible.pdf` builds, your setup is fine.
 Every merge request and every push to `main` runs [`.gitlab-ci.yml`](.gitlab-ci.yml) on bible's own runner (`bible-runner` in smart-home, on deskf02; GitLab's shared runners are off):
 
 - `build_pdf` builds the book in a digest-pinned TeX Live 2026 image and fails on a LaTeX error. Because `latexmk` exits non-zero even on success (see above), the job judges the build by `bible.log` instead. It also writes the README's page-count badge.
+- `pages` (on `main` only) publishes that PDF and the badge data to GitLab Pages.
 - `mirror_to_github` pushes `main` to [github.com/cgoettel/bible](https://github.com/cgoettel/bible).
 
 ### Linting

@@ -13,8 +13,8 @@ The knowledge-transfer survey from [#103 "Staff-engineer handover: knowledge tra
 ## How it runs and fails
 
 - **Build:** `latexmk bible.tex` (`CONTRIBUTING.md`). It never converges because per-page footnote numbering flips between passes, so `.latexmkrc` runs in force mode; see [#70 "Footnote issues"](https://gitlab.com/colby.goettel/bible/-/work_items/70).
-- **CI:** `build_pdf` and `pdf_committed` on merge requests, `build_pdf` and the GitHub mirror on `main`, all on `bible-runner` in smart-home (!106, !110, smart-home !912). From about 2026-10-27 to 2026-11-05 no pipeline ran at all: shared runners were off and bible had no runner.
-- **Release:** the committed `bible.pdf`, which the README links to. No deploy.
+- **CI:** `build_pdf` on merge requests; `build_pdf`, `pages`, and the GitHub mirror on `main`, all on `bible-runner` in smart-home (!106, !110, smart-home !912). From about 2026-10-27 to 2026-11-05 no pipeline ran at all: shared runners were off and bible had no runner.
+- **Release:** CI publishes `bible.pdf` to GitLab Pages on every push to `main`; the README links there. The PDF is no longer committed (decided after question 30; see proposal P6).
 - **Backups:** GitLab, the GitHub mirror, and smart-home's nightly `gitlab-backup`. The handwritten pages themselves are the one thing with no copy beyond the photos.
 - **Silent failures:** a chapter file that isn't `\input` never appears and nothing warns; a font missing a glyph prints nothing except a `Missing character` line in the log (this is how Syriac and versio Arabica went unnoticed until !105).
 
