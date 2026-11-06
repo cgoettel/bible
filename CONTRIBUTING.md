@@ -18,7 +18,9 @@ From the repo root:
 latexmk bible.tex
 ```
 
-`latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `make` does the same thing, and `make clean` removes the build files.
+`latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `latexmk -c bible.tex` removes the build files.
+
+Commit the rebuilt `bible.pdf` with every change to the text: the README links to it as the most recent version, and CI fails a merge request that changes a `.tex` file without it.
 
 Expect `latexmk` to report "Maximum runs of xelatex reached without getting stable files." Per-page footnote numbering flips footnotes near a page break between two pages on alternate passes, so the build never fully settles. `.latexmkrc` turns on force mode, so `bible.pdf` is still written. If the PDF looks wrong, check `bible.log` for a real error.
 
