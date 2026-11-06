@@ -98,7 +98,7 @@
 \newcounter{myc}[enumi]
 \patchcmd{\enumi}{}{\setcounter{myc}{1}}{}{}
 
-\renewcommand\verse[1]{%
+\newcommand\vrs[1]{%
   \markboth{#1}{#1}% Sets up header. Stores #1 as both \leftmark and \rightmark.
   \item% Print verse number.
 }
@@ -214,7 +214,7 @@
 %     POETRY
 % %%%%%%%%%%%%%%
 % Use `\p[a-e]` for beginning of line spacing.
-% Use `\pa` for interline separations.
+% Use `\pa{}` for interline separations.
 \newcommand\pa{\noindent\hangindent=2em\hspace{2em}}
 \newcommand\pb{\noindent\hangindent=2.5em\hspace{2.5em}}
 \newcommand\pc{\noindent\hangindent=3em\hspace{3em}}
