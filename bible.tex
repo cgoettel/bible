@@ -126,7 +126,8 @@
 \usepackage{phoenician}
 
 % Syriac
-\newfontfamily\sbls[Path=fonts/,Script=Syriac,Scale=MatchUppercase]{Estrangelo.ttf}
+% Noto Sans Syriac's default style is Estrangela.
+\newfontfamily\sbls[Path=fonts/,Script=Syriac,Scale=MatchUppercase]{NotoSansSyriac-Regular.ttf}
 \newcommand\Syriac[1]{{\sbls{}#1}}
 
 % ABBREVIATIONS
@@ -139,7 +140,7 @@
 
 \newfontfamily\abbrev[Path=fonts/,Scale=MatchUppercase,BoldFont=AppSILB.TTF,ItalicFont=AppSILI.TTF,BoldItalicFont=AppSILBI.TTF]{AppSILR.ttf}
 \newcommand\aquila{\Greek{α´}}
-\newcommand\arabica{{\abbrev{}Å}}
+\newcommand\arabica{{\abbrev{}𝔄}}
 \newcommand\bomberg{{\abbrev{}𝔅}}
 \newcommand\hadagger{{$\dagger$}}
 \newcommand\fragheb{{\abbrev{}ℭ}}

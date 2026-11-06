@@ -33,6 +33,6 @@ If `bible.pdf` builds, your setup is fine.
 The fonts in `fonts/` are:
 
 - [Apparatus SIL](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ApparatusSIL), for textual apparatus symbols
-- Estrangelo V1.1, for Syriac
+- [Noto Sans Syriac](https://github.com/notofonts/syriac), in its default Estrangela style, for Syriac (SIL Open Font License, in `fonts/OFL-NotoSansSyriac.txt`)
 - [SBL Greek](https://www.sbl-site.org/educational/BiblicalFonts_SBLGreek.aspx)
 - [SBL Hebrew](https://www.sbl-site.org/educational/BiblicalFonts_SBLHebrew.aspx)
