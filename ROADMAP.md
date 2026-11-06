@@ -4,7 +4,7 @@ Open items only. The live list is the GitLab issue tracker.
 
 ## Agent-ready
 
-- [README badges](https://gitlab.com/colby.goettel/bible/-/work_items/105) (#105): a CI job that builds the PDF on merge requests and `main`, so a "PDF build" pipeline badge means something, plus an MIT license badge and a page-count badge. In review as !106, waiting on bible's runner in smart-home.
+None right now.
 
 ## Owner present
 
