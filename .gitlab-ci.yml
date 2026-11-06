@@ -1,6 +1,9 @@
 # Pipelines run for merge requests and for pushes to main.
 #   build_pdf:        builds bible.pdf with latexmk, the same way the local build
 #                     does, and fails on a LaTeX error.
+#   pdf_committed:    merge requests only. Fails when a .tex file changed but the
+#                     committed bible.pdf didn't, since the README links to it as
+#                     the most recent version.
 #   mirror_to_github: the shared GitLab → GitHub mirror job from smart-home's
 #                     ci/templates/mirror-to-github.yml (smart-home #299). Runs on
 #                     main only. This repo keeps its own GITHUB_DEPLOY_KEY CI variable.
@@ -52,3 +55,21 @@ build_pdf:
       - bible.log
       - pages-badge.json
     expire_in: 1 week
+
+pdf_committed:
+  stage: build
+  image:
+    name: alpine/git:2.54.0
+    entrypoint: [""]
+  variables:
+    GIT_DEPTH: 0
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - changed=$(git diff --name-only "$CI_MERGE_REQUEST_DIFF_BASE_SHA" HEAD)
+    - echo "$changed"
+    - |
+      if echo "$changed" | grep -q '\.tex$' && ! echo "$changed" | grep -qx 'bible.pdf'; then
+        echo "A .tex file changed but bible.pdf didn't. Rebuild with latexmk and commit bible.pdf."
+        exit 1
+      fi
