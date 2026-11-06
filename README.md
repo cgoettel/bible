@@ -1,5 +1,9 @@
 # Bible
 
+[![PDF build](https://gitlab.com/colby.goettel/bible/badges/main/pipeline.svg?key_text=PDF%20build&key_width=70)](https://gitlab.com/colby.goettel/bible/-/pipelines?ref=main)
+[![Pages](https://img.shields.io/endpoint?url=https%3A%2F%2Fgitlab.com%2Fcolby.goettel%2Fbible%2F-%2Fjobs%2Fartifacts%2Fmain%2Fraw%2Fpages-badge.json%3Fjob%3Dbuild_pdf)](bible.pdf)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE.md)
+
 Colby Goettel's translation of the _Biblia Hebraica Stuttgartensia_, typeset in XeTeX. The most recent PDF version can be viewed [here](bible.pdf).
 
 More information about the translation can be found in the [preface](preface.tex).
