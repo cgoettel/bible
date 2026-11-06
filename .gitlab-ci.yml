@@ -1,12 +1,54 @@
-# GitLab → GitHub mirror: the shared job in smart-home's
-# ci/templates/mirror-to-github.yml (smart-home #299). This repo keeps its own
-# GITHUB_DEPLOY_KEY CI variable.
+# Pipelines run for merge requests and for pushes to main.
+#   build_pdf:        builds bible.pdf with latexmk, the same way the local build
+#                     does, and fails on a LaTeX error.
+#   mirror_to_github: the shared GitLab → GitHub mirror job from smart-home's
+#                     ci/templates/mirror-to-github.yml (smart-home #299). Runs on
+#                     main only. This repo keeps its own GITHUB_DEPLOY_KEY CI variable.
+#
+# Every job runs on this repo's own in-cluster runner (smart-home
+# kubernetes/bible-runner on deskf02). Shared GitLab-hosted runners are disabled
+# on the project.
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push"
+
+default:
+  tags:
+    - self-hosted
+
 include:
   - project: colby.goettel/smart-home
     ref: main
     file: ci/templates/mirror-to-github.yml
 
-# The shared job runs in .post, but a pipeline whose only job is in .post never
-# runs, and this is bible's only job.
-mirror_to_github:
-  stage: test
+stages:
+  - build
+
+build_pdf:
+  stage: build
+  # TeX Live 2026, full scheme, pinned by digest so the build doesn't shift under
+  # the committed PDF. Bump it on purpose, alongside the local TeX Live.
+  image: texlive/texlive:latest@sha256:07e8062637249c4f780ca59f42cc2ed592bc2dc1db4320769406aee3f98aa70e
+  script:
+    # latexmk exits non-zero even when it writes the PDF, because per-page
+    # footnote numbering never settles (see .latexmkrc). So judge the build by
+    # its log and output instead: xelatex runs with -halt-on-error, so a real
+    # LaTeX error leaves a "!" line in bible.log and no fresh bible.pdf.
+    - rm -f bible.pdf
+    - latexmk bible.tex || true
+    - if grep -n -A5 '^!' bible.log; then exit 1; fi
+    - test -s bible.pdf
+    # The README's page-count badge reads this through a shields.io endpoint.
+    - pages=$(sed -n 's/^Output written on bible.xdv (\([0-9]*\) pages.*/\1/p' bible.log)
+    - >-
+      printf '{"schemaVersion": 1, "label": "pages", "message": "%s", "color": "blue"}\n' "$pages" > pages-badge.json
+    - cat pages-badge.json
+  artifacts:
+    when: always
+    paths:
+      - bible.pdf
+      - bible.log
+      - pages-badge.json
+    expire_in: 1 week
