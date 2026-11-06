@@ -20,7 +20,7 @@ latexmk bible.tex
 
 `latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `latexmk -c bible.tex` removes the build files.
 
-`bible.pdf` is not committed (it's in `.gitignore`). CI builds it from every push to `main` and publishes it to [colby.goettel.gitlab.io/bible/bible.pdf](https://colby.goettel.gitlab.io/bible/bible.pdf), the link in the README.
+`bible.pdf` is not committed (it's in `.gitignore`). CI builds it from every push to `main` and publishes it to [bible-3d205d.gitlab.io/bible.pdf](https://bible-3d205d.gitlab.io/bible.pdf), the link in the README.
 
 Expect `latexmk` to report "Maximum runs of xelatex reached without getting stable files." Per-page footnote numbering flips footnotes near a page break between two pages on alternate passes, so the build never fully settles. `.latexmkrc` turns on force mode, so `bible.pdf` is still written. If the PDF looks wrong, check `bible.log` for a real error.
 
