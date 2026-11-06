@@ -1,10 +1,7 @@
-# Building is handled by latexmk, which is configured in .latexmkrc. This Makefile is just for cleaning and installing fonts.
-clean:
-	/usr/bin/rm -f *.aux *.log *.toc
+# latexmk reruns xelatex until cross-references and the table of contents settle.
+# Its settings live in .latexmkrc.
+bible.pdf: *.tex */*.tex Makefile images/*
+	latexmk bible.tex
 
-install:
-	mkdir -p /usr/share/fonts/truetype/
-	install -m644 fonts/SBL_grk.ttf /usr/share/fonts/truetype/
-	install -m644 fonts/SBL_Hbrw.ttf /usr/share/fonts/truetype/
-	install -m644 fonts/Estrangelo.ttf /usr/share/fonts/truetype/
-	install -m644 fonts/AppSILR.ttf /usr/share/fonts/truetype/
+clean:
+	latexmk -c bible.tex

@@ -2,58 +2,35 @@
 
 ## Getting started
 
-There are enough font and LaTeX dependencies in this project that the easiest way to work on it is in a container.
+You need a TeX distribution that includes XeTeX and `latexmk`. The project's custom fonts load straight from `fonts/`, so there's nothing to install system-wide.
 
-### Prerequisites
+### Install TeX
 
-- [VS Code](https://code.visualstudio.com/)
-- The [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) is also nice-to-have: it rebuilds `bible.pdf` automatically on save and wires up PDF ↔ source navigation.
-- A container runtime that VS Code can talk to — [Docker Desktop](https://www.docker.com/products/docker-desktop/) is the most common, but [OrbStack](https://orbstack.dev/), [Podman Desktop](https://podman-desktop.io/), or Colima all work.
+- **macOS**: `brew install texlive`, or [MacTeX](https://www.tug.org/mactex/).
+- **Debian or Ubuntu**: `sudo apt install texlive texlive-xetex texlive-fonts-extra latexmk`. The `texlive-fonts-extra` package supplies the Hebrew (not Aramaic) alphabet.
+- **Anything else**: [TeX Live](https://www.tug.org/texlive/).
 
-### With VS Code and Dev Containers
+### Build
 
-Open the repo in VS Code and pick "Reopen in Container." The [Dockerfile](Dockerfile) stacks this project's four custom fonts on top of the [`texlive/texlive`](https://hub.docker.com/r/texlive/texlive) image, so `xelatex`, `latexmk`, `make`, `git`, and `ssh` are all ready to go inside.
+From the repo root:
 
-Once the container is up:
+```sh
+latexmk bible.tex
+```
 
-- If you have LaTeX Workshop installed, it'll build `bible.pdf` automatically on save using the `.latexmkrc` in the repo root.
-- Otherwise, run `latexmk bible.tex` from the repo root. It runs `xelatex` as many times as it needs to settle cross-references and the TOC.
+`latexmk` reads its settings from [`.latexmkrc`](.latexmkrc) and reruns `xelatex` until cross-references and the table of contents settle. `make` does the same thing, and `make clean` removes the build files.
+
+Expect `latexmk` to report "Maximum runs of xelatex reached without getting stable files." Per-page footnote numbering flips footnotes near a page break between two pages on alternate passes, so the build never fully settles. `.latexmkrc` turns on force mode, so `bible.pdf` is still written. If the PDF looks wrong, check `bible.log` for a real error.
 
 If `bible.pdf` builds, your setup is fine.
 
-### SSH inside the container
+### Editor
 
-VS Code auto-forwards your host's SSH agent socket into the container, so `git push` inside the container uses the same keys you use on your host — but only if those keys are actually loaded into the agent. If you see `Permission denied (publickey)`, your agent is empty.
+[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for VS Code is nice to have: it rebuilds `bible.pdf` on save using `.latexmkrc` and wires up PDF ↔ source navigation.
 
-One-time setup:
+### Fonts
 
-1. Add a block to `~/.ssh/config`:
-
-   ```
-   Host gitlab.com
-       AddKeysToAgent yes
-       IdentityFile ~/.ssh/id_ed25519
-   ```
-
-   Adjust `IdentityFile` to match your key. On macOS, also add `UseKeychain yes` under that block so the key persists in Keychain across reboots (this option is macOS-only — don't add it on Linux).
-
-2. Load the key into the agent:
-
-   - **macOS**: `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`. Stores it in Keychain; auto-loads on reboot.
-   - **Linux**: `ssh-add ~/.ssh/id_ed25519`. If you get "Could not open a connection to your authentication agent," run `eval "$(ssh-agent -s)"` first. Most desktop environments (GNOME Keyring, KDE Wallet) run an agent for you at login.
-
-To sanity-check: `ssh-add -l` on your host and inside the container should list the same keys. If the container was already running when you added the key, rebuild it — the agent socket is set at container start.
-
-### On your host
-
-If you'd rather install a LaTeX toolchain directly, the minimum packages are:
-
-- `texlive`
-- `texlive-fonts-extra` (for the Hebrew — not Aramaic — alphabet)
-- `texlive-xetex`
-- `latexmk` (usually pulled in by `texlive`, but on some distros it's a separate package)
-
-Then `make install` to install the custom fonts, and `latexmk bible.tex` to build. The fonts in `fonts/` are:
+The fonts in `fonts/` are:
 
 - [Apparatus SIL](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ApparatusSIL), for textual apparatus symbols
 - Estrangelo V1.1, for Syriac
