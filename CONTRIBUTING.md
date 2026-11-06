@@ -24,6 +24,17 @@ Expect `latexmk` to report "Maximum runs of xelatex reached without getting stab
 
 If `bible.pdf` builds, your setup is fine.
 
+### Continuous integration
+
+Every merge request and every push to `main` runs [`.gitlab-ci.yml`](.gitlab-ci.yml) on bible's own runner (`bible-runner` in smart-home, on deskf02; GitLab's shared runners are off):
+
+- `build_pdf` builds the book in a digest-pinned TeX Live 2026 image and fails on a LaTeX error. Because `latexmk` exits non-zero even on success (see above), the job judges the build by `bible.log` instead. It also writes the README's page-count badge.
+- `mirror_to_github` pushes `main` to [github.com/cgoettel/bible](https://github.com/cgoettel/bible).
+
+### Linting
+
+[`.chktexrc`](.chktexrc) tunes ChkTeX for this project's macros. LaTeX Workshop picks it up on its own; on the command line, run `chktex` from the repo root (or pass `-l .chktexrc`).
+
 ### Editor
 
 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for VS Code is nice to have: it rebuilds `bible.pdf` on save using `.latexmkrc` and wires up PDF ↔ source navigation.
