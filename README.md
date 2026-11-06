@@ -14,29 +14,39 @@ This style guide is a work in progress. It's an effort to make sure there is con
 
 ## Table of contents
 
-1. [Appendices](#appendices)
-1. [Consistent spelling](#consistent-spelling)
-1. [Footnote formatting](#footnote-formatting)
+01. [Adding a chapter](#adding-a-chapter)
+02. [Appendices](#appendices)
+03. [Consistent spelling](#consistent-spelling)
+04. [Footnote formatting](#footnote-formatting)
     1. [Alternate and literal readings, explanations, and editorial notes](#alternate-and-literal-readings-explanations-and-editorial-notes)
-    1. [Critical apparatus](#critical-apparatus)
-    1. [Quotations from HALOT](#quotations-from-halot)
-1. [Non-breaking spaces](#non-breaking-spaces)
-1. [Numbers and units](#numbers-and-units)
+    2. [Critical apparatus](#critical-apparatus)
+    3. [Quotations from HALOT](#quotations-from-halot)
+05. [Non-breaking spaces](#non-breaking-spaces)
+06. [Numbers and units](#numbers-and-units)
     1. [Years](#years)
-1. [Poetry](#poetry)
-1. [Punctuation](#punctuation)
-1. [README formatting](#readme-formatting)
-1. [References to deity](#references-to-deity)
-1. [Spacing](#spacing)
-1. [Specific renderings](#specific-renderings)
-1. [The Tetragrammaton](#the-tetragrammaton)
-1. [TODO work](#todo-work)
-1. [Why is there a %% at the end of every line?](#why-is-there-a-at-the-end-of-every-line)
-1. [Words in translation](#words-in-translation)
+07. [Poetry](#poetry)
+08. [Punctuation](#punctuation)
+09. [README formatting](#readme-formatting)
+10. [References to deity](#references-to-deity)
+11. [Repeat translations](#repeat-translations)
+12. [Spacing](#spacing)
+13. [Specific renderings](#specific-renderings)
+14. [The Tetragrammaton](#the-tetragrammaton)
+15. [TODO work](#todo-work)
+16. [Why is there a %% at the end of every line?](#why-is-there-a-at-the-end-of-every-line)
+17. [Words in translation](#words-in-translation)
+
+## Adding a chapter
+
+`paginate.pl` creates a chapter file with an empty `\verse{c:v} %%` line for each verse. Then add an `\input` line for it in `bible.tex`, in canonical order. Verse numbers follow the Hebrew Bible (BHS), not the KJV, so Joel 3 here is Joel 2:28–32 in the KJV.
+
+A commented-out `\input` means the file has nothing translated yet (Genesis 31, for example, has a single note and no translation). Nothing warns about a chapter file that isn't included, so check `bible.tex` when a chapter seems to be missing from the PDF.
+
+Transcribing handwritten translations has its own notation; see [docs/digitizing.md](docs/digitizing.md).
 
 ## Appendices
 
-Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than &frac12;&ndash;&frac34;&nbsp;page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
+Because there should be more information readily accessible to the reader, include as much information as possible in footnotes. However, don't use more than ½–¾ page for a single footnote. A lengthy appendix is nice, but not really usable. Anything longer than that limit should be placed in an appendix and referenced.
 
 Additionally, if the information needs to be said in more than one place or would also be nice to have accessible, add it to an appendix. This is the same line of thinking as functions in code: if you have to write it more than once, consider putting it in the appendix. However, it's probably best to abbreviate the information and tell the reader that more can be found in an appendix.
 
@@ -64,7 +74,7 @@ The following words should be spelled and capitalized as follows:
 - Ephes Dammim
 - Ezion-Geber
 - gospel (should not be capitalized)
-- Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai&nbsp;2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
+- Heaven or the heaven. Treat this as you would "Earth": when you refer to the name of the planet, say "Earth," but otherwise say "the earth." For instance, in Haggai 2:21 either say "I am shaking the heavens and the earth" or "I am shaking Heaven and Earth."
 - Hebrew, Proto-Hebrew, Paleo-Hebrew, Biblical Hebrew, Rabbinic Hebrew, Medieval Hebrew, Modern Hebrew
 - (the) high priest
 - _hithpael_
@@ -113,46 +123,47 @@ Footnotes should always come after punctuation, including periods, commas, colon
 > a. CA: 𝔊 + θεὸν Ισραηλ (the Septuagint adds "the God of Israel")
 
 When placing multiple footnotes simultaneously, give them in the following order:
+
 - `\ca`
 - `\halot`
 - `\halotu`
 - `\ed`
-`alt` and `lit` are too big of wild cards to make a hard and fast rule on. However, if a better order can be inferred from context, place an in-line comment explaining why.
+  `alt` and `lit` are too big of wild cards to make a hard and fast rule on. However, if a better order can be inferred from context, place an in-line comment explaining why.
 
 ### Alternate and literal readings, explanations, and editorial notes
 
 Match the punctuation and capitalization of the verse to give context. For example:
 
-> LIT number (Gen&nbsp;13:16)
+> LIT number (Gen 13:16)
 
-> LIT not numbered from great. (Gen&nbsp;16:10)
+> LIT not numbered from great. (Gen 16:10)
 
-> ED Some translations give "stands at," but this verb is not present in L. (Ps&nbsp;45:10)
+> ED Some translations give "stands at," but this verb is not present in L. (Ps 45:10)
 
 However, if the footnote is a fragment sentence, do not capitalize the first word (unless a proper noun) and do not conclude with a period.
 
-> in reference to her beauty; easy on the eyes (Ps&nbsp;45:13)
+> in reference to her beauty; easy on the eyes (Ps 45:13)
 
 Additionally, if the footnote merely explains, do not capitalize:
 
-> He&#42; said
-> &#42;the Lord
+> He\* said
+> \*the Lord
 
-In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given. A notable exception to this rule is illustrated in the footnote to Ps&nbsp;1:3:
+In cases where a fragment sentence is followed by a complete sentence, reword so that only complete sentences are given. A notable exception to this rule is illustrated in the footnote to Ps 1:3:
 
 > IE so even in the heat it will grow.
 
 This is not capitalized at the beginning but concluded with a period because it is a complete thought and a continuation of the verse. Additionally, _id est_ is the beginning of the complete sentence. Finally, if there are multiple, comma-separated words in a LIT or ALT at the end of a sentence, separate the words with commas and end with a period, as follows:
 
-> case, lawsuit. (Ex&nbsp;23:3)
+> case, lawsuit. (Ex 23:3)
 
 When adding an editorial note to a LIT or ALT, begin with the LIT or ALT, then a semi-colon, then the editorial note. For instance,
 
-> from afar.; but this is written from his perspective (Gen&nbsp;22:4)
+> from afar.; but this is written from his perspective (Gen 22:4)
 
 References to a person after a quote should be given with an m-dash, non-breaking space, and the date in long format (DD MMMM YYYY), as follows:
 
-> "Malachi&nbsp;2 is difficult because it doesn't make much sense." ---~Steven D.\ Ricks, 11 February 2015
+> "Malachi 2 is difficult because it doesn't make much sense." ---~Steven D.\\ Ricks, 11 February 2015
 
 ### Critical apparatus
 
@@ -168,7 +179,7 @@ can well be translated and explained:
 
 The last item per page in the critical apparatus ends with a period. Do not include this.
 
-Do not conclude translations and explanations with a period, even when the translation is a complete thought. The only exception is if the translation ends with context-relevant punctuation, as in this example from Ps&nbsp;47:7:
+Do not conclude translations and explanations with a period, even when the translation is a complete thought. The only exception is if the translation ends with context-relevant punctuation, as in this example from Ps 47:7:
 
 > the Peshitta says "in splendor" [instead of "Praise!"]
 
@@ -179,23 +190,24 @@ Some Hebrew quotations will be preceded with the Hebrew single quote character, 
 When a reference is given to a specific manuscript (e.g., a manuscript of the Septuagint), give the Latin name of the manuscript and leave it to the reader to decipher.
 
 Known issues:
+
 - No standard for mdashes (ndashes?) that precede Hebrew words. (Use a maqaf or rafe?)
 
 ### Quotations from HALOT
 
 Only provide complete quotations. Match bolding. However, when the material contains abbreviations, spell things out. We're not as interested in saving space as they are. For instance, this excerpt from the entry on נַחֲלָה:
 
-> (inalienable) __hereditary possession__, __heritage__, acquired by individual or family by conquest or inheritance, both property (i.e., [originally "i.e."] land and [originally &] buildings) and \[originally &] (movable) goods
+> (inalienable) __hereditary possession__, __heritage__, acquired by individual or family by conquest or inheritance, both property (i.e., [originally "i.e."] land and [originally &] buildings) and [originally &] (movable) goods
 
 If it's necessary to deviate, put editorial comments in brackets. If only a small part of the reference is needed compared to the amount of editorial comments, it is better to give an editorial footnote and provide quotations from HALOT in quotes with the referenced item following in parentheses. For example:
 
 > ED In HALOT this verb is defined as "[provided definition]" ([referenced word, page number in HALOT]) which is interesting because....
 
-The default assumption is that the definition comes from _A Concise Hebrew and Aramaic Lexicon of the Old Testament_ by Holladay. If references are given from the unabridged HALOT, use the `\halotu` command.
+The default assumption is that the definition comes from _A Concise Hebrew and Aramaic Lexicon of the Old Testament_ by Holladay. If references are given from the unabridged HALOT (the two-volume study edition), use the `\halotu` command.
 
 When HALOT uses an mdash, it is always preceded and followed by a space, but never a non-breaking space; for instance,
 
-> __animals__, חַיּוֺת or collective singular, rarely a single animal Gn&nbsp;37<sub>20</sub>: --- 1.\ __animals__ of all kinds, mostly untamed... land animals... beasts of burden... water animals... --- 2. __wild, predatory animals__
+> __animals__, חַיּוֺת or collective singular, rarely a single animal Gn 37<sub>20</sub>: --- 1.\\ __animals__ of all kinds, mostly untamed... land animals... beasts of burden... water animals... --- 2. __wild, predatory animals__
 
 References in HALOT use a `$\cdot$` instead of the typical `--` for ranges. Note that this `$\cdot$` must be in an inline math formula because the entire subscript is in a `\text{}` field.
 
@@ -216,7 +228,7 @@ Use the above rules for formatting units (e.g., ft, m, years) as well.
 
 Numbers smaller than one hundred should generally be written out in longhand. Larger numbers should be written in Arabic numerals with a `\thinspace` delimiting thousands. However, if a sentence has both large and small values, be consistent, as in:
 
-> The king of Aram said, "Go! I will send a letter to the king of Israel." So he went and took 10&nbsp;talents of silver, 6000&nbsp;gold pieces, and 10&nbsp;changes of clothes with him. (2&nbsp;Kings&nbsp;5:5)
+> The king of Aram said, "Go! I will send a letter to the king of Israel." So he went and took 10 talents of silver, 6000 gold pieces, and 10 changes of clothes with him. (2 Kings 5:5)
 
 Ages should always be written in Arabic numerals.
 
@@ -228,9 +240,9 @@ National Geographic's style manual says it best: "Small caps, periods, no space.
 
 ## Poetry
 
-Sometimes quotations or partial quotations will be typeset as poetry. In these instances, always start as unindented as possible. For instance, see 1&nbsp;Sam~15:22&ndash;23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
+Sometimes quotations or partial quotations will be typeset as poetry. In these instances, always start as unindented as possible. For instance, see 1 Sam~15:22–23. Here, the first line of poetry is typeset at depth `b` because verse~23 is the least indented so it must be at depth `a`.
 
-When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah&nbsp;6:3:
+When poetry starts following a `\verse` command, put a `\smallskip` at the end of the preceding line, as in Isaiah 6:3:
 
 > <sup style="color:red">3</sup>They proclaimed to each other, and said,<b>`\smallskip`</b>
 >
@@ -254,6 +266,22 @@ Always capitalize the proper names of deity. Additionally, always capitalize pro
 
 When there is ambiguity about a name of a foreign deity (for instance, does Asherah refer to the god of that name or to the consort of another god? Is that god's consort's name, Asherah?) and always leave footnotes explaining the choice that was made, its justification, and a literal rendering of the verse.
 
+## Repeat translations
+
+The goal is to translate every passage at least twice. When a passage that's already in a chapter file is translated again (from a different semester's notes, for example), the new version goes in a `.tex.repeat` file beside the chapter (`Isaiah/2.tex.repeat` for `Isaiah/2.tex`) instead of overwriting anything. When both versions are new, either one can go in the chapter file.
+
+Each block in a `.tex.repeat` opens with a comment banner naming the passage, its source (ink color and photo), and what to compare it with:
+
+```
+% ====================================================
+% REPEAT — Isaiah 65:17–25
+% Source: black ink, photo 51 (PXL_20261105_235925779.jpg)
+% Compare with: Isaiah/65.tex (blue ink, photo 46)
+% ====================================================
+```
+
+Repeat files aren't part of the build. Once the calls are made and merged into the chapter file, delete the `.tex.repeat`.
+
 ## Spacing
 
 Sometimes there will be horizontal or vertical spacing present in the BHS text. For horizontal spacing, use the command `\ilsp` to generate a clean horizontal break. The `\pa` command forces no indentation and adds a hanging indent to the paragraph which doesn't work for prose.
@@ -261,6 +289,7 @@ Sometimes there will be horizontal or vertical spacing present in the BHS text. 
 ## Specific renderings
 
 Use the following rules when rendering non-idiomatic Hebrew:
+
 - children of Israel (instead of sons of Israel, unless only men are being referred to)
 
 ## The Tetragrammaton
@@ -269,13 +298,18 @@ When translating the ineffable name of God, always render it in small caps. Howe
 
 ## TODO work
 
-Mark all TODO work with `xxxx`, always in lowercase.
+Mark all TODO work with `xxxx`, always in lowercase, so `grep -rn xxxx` finds every open item. It may appear inside a footnote (where it prints) or in a LaTeX comment (where it doesn't).
 
 Any inconsistencies found should be cataloged in [issue 51](https://gitlab.com/colby.goettel/bible/issues/51).
 
 ## Why is there a %% at the end of every line?
 
-LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem. However, there are two percent signs at the end of every line because when I revise the translation, I will remove one of the percent signs as a signal that that verse/line has been revised. The %% is just long-term planning ahead.
+LaTeX sometimes freaks out and is inconsistent with vertical spacing. Adding a % to the end of each line fixes this problem, so every line needs at least one.
+
+The second percent sign tracks revision:
+
+- `%%` means the line has been translated once.
+- `%` means it has had a second pass and is essentially final. Jonah 2 is the first chapter revised this way.
 
 Be sure to include %% even after footnotes in poetry verses.
 
