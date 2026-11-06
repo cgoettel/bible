@@ -47,6 +47,6 @@ Every merge request and every push to `main` runs [`.gitlab-ci.yml`](.gitlab-ci.
 The fonts in `fonts/` are:
 
 - [Apparatus SIL](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ApparatusSIL), for textual apparatus symbols
+- [Ezra SIL](https://software.sil.org/ezra/), for pointed and cantillated Hebrew (SIL Open Font License, with MIT/X11 for its Hebrew layout code, in `fonts/OFL-EzraSIL.txt`)
 - [Noto Sans Syriac](https://github.com/notofonts/syriac), in its default Estrangela style, for Syriac (SIL Open Font License, in `fonts/OFL-NotoSansSyriac.txt`)
 - [SBL Greek](https://www.sbl-site.org/educational/BiblicalFonts_SBLGreek.aspx)
-- [SBL Hebrew](https://www.sbl-site.org/educational/BiblicalFonts_SBLHebrew.aspx)
